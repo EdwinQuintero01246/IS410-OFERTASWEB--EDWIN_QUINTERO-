@@ -1,0 +1,231 @@
+@media  screen and (min-width: 1200px){
+  .btn-info2 {
+    color: #fff;
+    background-color: #11668B;
+    border-color: #11668B;
+  }
+  
+  .btn-info2:hover {
+    color: #fff;
+    background-color: #1db5cc;
+    border-color: #1db5cc;
+  }
+  }
+  @media  screen and (max-width: 1200px){
+    .btn-info2 {
+      color: #fff;
+      background-color: #11668B;
+      border-color: #11668B;
+    }
+    
+    .btn-info2:hover {
+      color: #fff;
+      background-color: #1db5cc;
+      border-color: #1db5cc;
+    }
+  }
+  @media  screen and (max-width: 992px){
+    .btn-info2 {
+      color: #2A7597;
+      background-color: rgb(255, 255, 255);
+      border-color: rgb(255, 255, 255);
+    }
+    
+    .btn-info2:hover {
+      color: #2A7597;
+      background-color: #a9adad;
+      border-color: #a9adad;
+    }
+  }
+  @media  screen and (max-width: 768px){
+    .btn-info2 {
+      color: #2A7597;
+      background-color: rgb(255, 255, 255);
+      border-color: rgb(255, 255, 255);
+    }
+    
+    .btn-info2:hover {
+      color: #2A7597;
+      background-color: #a9adad;
+      border-color: #a9adad;
+    }
+  }
+  @media  screen and (max-width: 576px){
+    .btn-info2 {
+      color: #2A7597;
+      background-color: rgb(255, 255, 255);
+      border-color: rgb(255, 255, 255);
+    }
+    
+    .btn-info2:hover {
+      color: #2A7597;
+      background-color: #a9adad;
+      border-color: #a9adad;
+    }
+  }
+#logo{
+  background-image: url(../../img/logo.png);
+}
+#body_confi{
+  background-color: rgb(240, 240, 240);
+}
+#tamanio-logo{
+  width: 120px;
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#text-logo{
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: teal;
+}
+#section_iniciar_seccion{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#div_section_iniciar_seccion{
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background-color:#11668B;
+  
+}
+#formulario{
+  background-color: rgb(240, 240, 240);
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  margin-top: 10px;
+}
+.ul_conf{
+  text-decoration: none;
+  list-style-type: none;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-top: 80px;
+}
+#Checkbutton{
+  margin-left: -20px;
+}
+#confi_li_checkbutton{
+  padding-left: 20px;
+}
+.line{
+  border-top: 1px solid #11668B;
+  display: block;
+  line-height: 1px;
+  margin: 15px 0;
+  position: relative;
+  text-align: center;
+}
+.span_line{
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: rgb(240, 240, 240);
+  font-size: 15px;
+  color: #11668B;
+}
+.tittle-iniciar-seccion{
+  font-size: 25px;
+  color: #11668B;
+  text-align: center;
+  font-weight: 600;
+}
+.li-form-iniciar-seccion{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#button-iniciar-seccion{
+  width: 70%;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+#span_conta{
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#button-Registrar{
+  width: 70%;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  border: 10px 10px 10px 10px;
+}
+.btn-registrar{
+  color: #000;
+  background-color: rgb(251, 251, 251);
+  border-color: #000;
+}
+
+.btn-registrar:hover {
+  color: #fff;
+  background-color: #00000094;
+  border-color: #2A7597;
+}
+#txt-not{
+  font-size: 17px;
+  color: rgb(195, 51, 51);
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+#crear-pagina{
+  font-size: 15px;
+  color: black;
+  font-weight: 500;
+}
+.a-text{
+  color: rgb(10, 13, 233)
+}
+#div-footer{
+  background-color:rgba(5, 5, 5, 0.76);
+  color: white;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+}
+.footer{
+  padding-left: 2px;
+  padding-right: 2px;
+}
+#div-footer2{
+  padding-top: 35px;
+}
+.div-footerQuitex{
+  padding-bottom: 20px;
+}
+.text-error{
+  color: rgba(255, 15, 15, 0.883);
+  font-size: 15px;
+}
+#form{
+}
+#contrasenia{
+  font-size: 17px;
+  height: 30px;
+}
+#usuario{
+  font-size: 17px;
+  height: 30px;
+}

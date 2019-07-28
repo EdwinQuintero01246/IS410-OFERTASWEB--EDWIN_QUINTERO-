@@ -1,0 +1,323 @@
+  @media  screen and (min-width: 1200px){
+    .text-estadistica{
+      font-size: 22px;
+    }
+    .li-estadisticas{
+      height: 80px;
+      width: 50%;
+    }
+    .tamaños_visualizacion{
+      width: 100%;
+      height: 250px;
+    }
+  }
+  @media  screen and (max-width: 1200px){
+    .text-estadistica{
+      font-size: 22px;
+    }
+    .li-estadisticas{
+      height: 80px;
+      width: 50%;
+    }
+    .tamaños_visualizacion{
+      width: 100%;
+      height: 130px;
+    }
+  }
+  @media  screen and (max-width: 992px){
+    .text-estadistica{
+      font-size: 22px;
+    }
+    .li-estadisticas{
+      height: 130px;
+      width: 70%;
+    }
+    .tamaños_visualizacion{
+      width: 100%;
+      height: 140px;
+    }
+  }
+  @media  screen and (max-width: 768px){
+    .text-estadistica{
+      font-size: 17px;
+    }
+    .li-estadisticas{
+      height: 100px;
+      width: 100%;
+    }
+    .tamaños_visualizacion{
+      width: 100%;
+      height: 200px;
+    }
+  }
+  @media  screen and (max-width: 576px){
+    .text-estadistica{
+      font-size: 17px;
+    }
+    .li-estadisticas{
+      height: 90px;
+      width: 100%;
+    }
+    .tamaños_visualizacion{
+      width: 100%;
+      height: 190px;
+    }
+  }
+/* navbar*/
+
+#logo-button{
+  color: rgb(240, 240, 240);
+  padding-top: 10px;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+.nav-button-option-navbar{
+  font-size: 22px;
+  text-transform: capitalize;
+  color: rgb(240, 240, 240);
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+.nav-button-option-navbar:hover, .nav-button-option-navbar:focus {
+  background-color: rgba(240, 240, 240, 0.63);
+  color: rgba(0, 123, 255, 0.856);
+  text-decoration: none;
+}
+
+.nav-button-option-navbar.disabled {
+  color: #6c757d;
+}
+.btn-Button-buscar-navbar {
+  color: rgb(0, 123, 255);
+  background-color: rgb(240, 240, 240);
+  border-color: rgb(0, 123, 255);
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  font-size: 17px;
+}
+
+.btn-Button-buscar-navbar:hover {
+  color: rgb(240, 240, 240);
+  background-color: rgb(0, 123, 255);
+  border-color: rgb(240, 240, 240);
+}
+#Text-Busqueda-Producto{
+  width: 80%;
+  font-size: 15px;
+}
+#barra-busqueda{
+  width: 500px;
+}
+/*div informacion del la empresa o usuario*/
+#tamanio-imagen-perfil{
+  width: 100%;
+  padding: 5px 15px 5px 15px; 
+}
+.tamanio_visualizacion-perfil{
+  width: 100%;
+  border-radius: 7px;
+}
+#div-class-option{
+  background-color: rgb(255, 255, 255);
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+}
+#section{
+  background-color: rgb(240, 240, 240);
+  padding: 40px 10px 40px 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 7px;
+}
+.ul_conf{
+  text-decoration: none;
+  list-style-type: none;
+}
+#ul-conf{
+  background-color: rgb(240, 240, 240);
+  margin-bottom: 0px;
+  padding-top: 20px;
+  padding-right: 5px;
+  padding-bottom: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 7px;
+}
+
+.btn-facebook{
+  color: #fff;
+  background-color: #4267B2;
+  border-color: #4267B2;
+}
+
+.btn-facebookhover {
+  color: #fff;
+  background-color: rgb(55, 87, 150);
+  border-color: rgb(55, 87, 150);
+}
+
+.btn-twitter{
+  color: #fff;
+  background-color: #1DA1F2;
+  border-color: #1DA1F2;
+}
+
+.btn-twitter:hover {
+  color: #fff;
+  background-color: #1B95E0;
+  border-color: #1B95E0;
+}
+
+.btn-instagram{
+  color: #fff;
+  background-color: #3897F0;
+  border-color: #3897F0;
+}
+
+.btn-instagram:hover {
+  color: #fff;
+  background-color: rgba(56, 151, 240, 0.787);
+  border-color: rgba(56, 151, 240, 0.787);
+}
+.tittle{
+  font-size: 22px;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  text-transform: capitalize;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.content-text{
+  font-size: 15px;
+  color: rgb(60, 60, 60);
+  font-weight: 400;
+  text-transform: capitalize;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+#button-Qr{
+  width: 80%;
+}
+.line{
+  border-top: 1px solid rgba(68, 69, 70, 0.842);
+  display: block;
+  line-height: 1px;
+  margin: 15px 0;
+  position: relative;
+  text-align: center;
+  width: 90%;
+}
+/*fin div informacion del la empresa o usuario*/
+/*Modal*/
+.tamaños_visualizacion-modal{
+  background-repeat: no-repeat; 
+  background-position: center center;
+  background-size: cover; 
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+}
+/*fin modal*/
+/* banner*/
+.tamanio_visualizacion-banner{
+  width: 100%;
+  border-radius: 7px;
+  height: 140px;
+  background-repeat: no-repeat; 
+  background-position: center center;
+  background-size: cover; 
+}
+#div-class-perfil{
+  padding-left: 20px;
+  padding-top: 5px;
+  background-color: rgb(249, 249, 249);
+}
+
+/*fin banner*/
+/*consola*/
+#div-consola{
+  width: 100%;
+}
+.tamanio-consola-button{
+  width: 33.3%;
+}
+.li-estadisticas{
+  padding-top: 30px;
+  background-color: rgb(248, 249, 250);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 7px;
+}
+
+.numero-estadistica{
+  font-size: 22px;
+  color: #000000;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.text-estadistica{
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 7px;
+}
+#color-comentario{
+  background-color: #747679;
+  color: rgb(0, 0, 0)
+}
+#color-not-like{
+  background-color: #C82333;
+  color: white;
+}
+#color-like{
+  background-color: #2987eb;
+  color: white;
+}
+.img-estadisticas{
+  width: 100%;
+}
+/*fin consola*/
+/*console productos*/
+.text-plano{
+  background-color: rgb(66, 144, 195);
+  color: #fff;
+  padding-left: 7px;
+  padding-right: 7px;
+  font-size: 17px;
+}
+.text-tabla{
+  background-color: rgb(80, 185, 255);
+  color: rgb(255, 255, 255);
+  padding-left: 7px;
+  padding-right: 7px;
+  font-size: 15px;
+}
+#tabla-ventas{
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgba(29, 129, 211, 0.582);
+  border-radius: 7px;
+  margin-top: 20px;
+}
+.config-tabla{
+  background-color: rgb(240, 240, 240);
+}
+/*fin console productos*/

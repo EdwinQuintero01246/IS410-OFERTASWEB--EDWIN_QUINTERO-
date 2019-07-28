@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inicio Sección Empresa</title>
+    <link rel="icon" type="image/png" href="../../img/logo.png">
+    <link rel="estilo-boostrap" href="../../css/bootstrap.min.css">
+    <link rel="estilo-boostrap" href="../../css/Style.css">
+    <link rel="stylesheet" type=" text/css" media="screen" href="../../css/bootstrap.css">
+    <link rel="stylesheet" type=" text/css" media="screen" href="css/Style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css" crossorigin="anonymous">
+    <script src="../../js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../custom.css">
+</head>
+<body id="body_confi">
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary" >
+        <a class="navbar-brand" id="logo-button" href="">Quintex</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-button-option-navbar" href="../us-inicio/index.html">Inicio </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-button-option-navbar" href="../us-perfil/index.html">Perfil </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-button-option-navbar" href="../us-productos/index.html">ofertas</a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+    <section id="section">
+        <div class="container-fluid" >
+            <div class="row">
+                <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2 col-12 " id="div-class-option">
+                    <div id="tamanio-imagen-perfil">
+                        <a data-toggle="modal" data-target="#exampleModal" >
+                            <img class="tamanio_visualizacion-perfil" src="img/logo-empresa/logo.png">
+                            </img>
+                        </a>
+                    </div>
+                    <ul class="ul_conf" id="ul-conf">
+                        <div>
+                            <li><span class="tittle">Información</span></li>
+                            <li><span class="content-text">Nombre empresa</span></li>
+                            <li><div class="line"></div></li>
+                            <li><span class="tittle">ubicacion</span></li>
+                            <li><input class="content-text" type="text" name="" id="text-lugar" placeholder="Lugar,Sitio"></li>
+                            <li><div class="line"></div></li>
+                            <li><span class="tittle">codigo Qr</span></li>
+                            <li><button type="button" class="btn btn-light btn-sm" ><img src="../../img/icon/qr.png" alt="qr" id="button-Qr"></button></li>
+                            <li><div class="line"></div></li>
+                            <li><span class="tittle">redes sociales</span></li>
+                            <li>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-facebook">facebook/</button>
+                                    <div class="input-group-text" id="btnGroupAddon">@</div>
+                                    <input type="text" class="form-control" placeholder="redes" aria-label="Input group example" aria-describedby="btnGroupAddon">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-twitter">twitter.com/</button>
+                                    <div class="input-group-text" id="btnGroupAddon">@</div>
+                                    <input type="text" class="form-control" placeholder="redes" aria-label="Input group example" aria-describedby="btnGroupAddon">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-instagram">instagram.com/</button>
+                                    <div class="input-group-text" id="btnGroupAddon">@</div>
+                                    <input type="text" class="form-control" placeholder="redes" aria-label="Input group example" aria-describedby="btnGroupAddon">
+                                </div>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-9 col-lg-9 col-xl-10 col-12 " id="div-class-perfil">
+                    <a data-toggle="modal" data-target="#bannerModal" >
+                        <img class="tamanio_visualizacion-banner" src="img/logo-empresa/banner.png">
+                        </img>
+                    </a>
+                    <ul class="ul_conf" id="ul-conf">
+                        <li>
+                            <div class="btn-group" role="group" aria-label="Basic example" id="div-consola">
+                                <button type="button" class="tamanio-consola-button btn btn-light ">Estadisticas</button>
+                                <button type="button" class="tamanio-consola-button btn btn-light ">Productos</button>
+                                <button type="button" class="tamanio-consola-button btn btn-light ">Ventas</button>
+                            </div>
+                        </li>
+                        <!--estadistica
+                        <li class="li-estadisticas">
+                            <img class="col-sm-2 col-md-2 col-lg-2 col-xl-1 col-2 img-estadisticas" src="../../img/icon/comentar.png"  alt="">
+                            <span class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-6 text-estadistica" id="color-comentario">Comentarios: </span>
+                            <span class="col-sm-4 col-md-4 col-lg-4 col-xl-5 col-4 numero-estadistica">numeros</span>
+                        </li>
+                        <li class="li-estadisticas">
+                            <img class="col-sm-2 col-md-2 col-lg-2 col-xl-1 col-2 img-estadisticas" src="../../img/icon/like.png"  alt="">
+                            <span class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-6 text-estadistica" id="color-like">me gustas: </span>
+                            <span class="col-sm-4 col-md-4 col-lg-4 col-xl-5 col-4 numero-estadistica">numeros</span>
+                        </li>
+                        <li class="li-estadisticas">
+                            <img class="col-sm-2 col-md-2 col-lg-2 col-xl-1 col-2 img-estadisticas" src="../../img/icon/not-like.png"  alt="">
+                            <span class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-6 text-estadistica" id="color-not-like">me molesta: </span>
+                            <span class="col-sm-4 col-md-4 col-lg-4 col-xl-5 col-4 numero-estadistica">numeros</span>
+                        </li>-->
+                    </ul>
+                    <!--productos
+                    <div class="container-fluid" >
+                        <div class="row" id="contenido">
+                            <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 col-12 " id="div-class-product">
+                                <div >
+                                    <a data-toggle="modal" data-target="#exampleModal" >
+                                        <div class="tamaños_visualizacion" style="background-image: url(../us-productos/img/prueba.jpg);background-repeat: no-repeat; background-position: center center;background-size: cover;border-radius: 10px">
+                                            <span class="fondo-span" id="modal-precios-oferta">Oferta</span>
+                                        </div>
+                                        <h5 id="modal-producto">Producto</h5>
+                                        <h5 id="modal-secundario">Lugar <span></span></h5>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>-->
+                    <!--ventas
+                    <div id="tabla-ventas">
+                        <table style="width: 100%">
+                            <thead class="config-tabla">
+                                <th><span class="text-plano">Producto</span></th>
+                                <th><span class="text-plano">Descripcion del producto</span></th>
+                                <th><span class="text-plano">Oferta</span></th>
+                                <th><span class="text-plano">Informacion del vendedor</span></th>
+                                <th><span class="text-plano">Empresa o nombre de vendedor</span></th>
+                            </thead>
+                            <tbody class="config-tabla">
+                                <tr>
+                                    <td><span class="text-tabla">Producto</span></td>
+                                    <td><span class="text-tabla">descripcion del producto</span></td>
+                                    <td><span class="text-tabla">Oferta</span></td>
+                                    <td><span class="text-tabla">Informacion del vendedor</span></td>
+                                    <td><span class="text-tabla">Empresa o nombre de vendedor</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+    </footer>
+</body>
+</html>
+<!--Modal-->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" >
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="container-fluid" >
+                    <div class="row" id="contenido">
+                        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 " >
+                            <img class="tamaños_visualizacion-modal" src="img/logo-empresa/logo.png">
+                            </img>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                    aria-describedby="inputGroupFileAddon01">
+                                    <label class="custom-file-label" for="inputGroupFile01">Foto Perfil</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 " >
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                    aria-describedby="inputGroupFileAddon01">
+                                    <label class="custom-file-label" for="inputGroupFile01">Foto Perfil</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

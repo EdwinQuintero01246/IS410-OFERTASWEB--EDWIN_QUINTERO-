@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inicio Sección Empresa</title>
+    <link rel="icon" type="image/png" href="../../img/logo1.jpg">
+    <link rel="estilo-boostrap" href="../../css/bootstrap.min.css">
+    <link rel="estilo-boostrap" href="../../css/Style.css">
+    <link rel="stylesheet" type=" text/css" media="screen" href="../../css/bootstrap.css">
+    <link rel="stylesheet" type=" text/css" media="screen" href="css/Style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css" crossorigin="anonymous">
+    <script src="../../js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../custom.css">
+</head>
+<body id="body_confi">
+  <nav>
+      <div>
+          <div id="div-logos">
+              <a href="../../index.html">
+                <img src="../../img/logo.png" alt="logo" id="tamanio-logo" >
+              </a>
+          </div>
+      </div>
+  </nav>
+  <hr>
+  <section id="section_iniciar_seccion">
+    <div id="div_section_iniciar_seccion">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 col-md-2 col-lg-4 col-xl-4 col-12 ">
+                </div>
+                <div class="col-sm-12 col-md-8 col-lg-4 col-xl-4 col-12 " id="form">
+                    <ul class="ul_conf" id="formulario">
+                        <h2 class="tittle-iniciar-seccion">Para continuar, inicia sesión</h2>
+                        <li class="li-form-iniciar-seccion">
+                            <div class="line">
+                                <span class="span_line">- O -</span>
+                            </div>
+                        </li>
+                        <li class="li-form-iniciar-seccion"><input type="email" class="form-control"  aria-describedby="emailHelp"  id="usuario" placeholder="Email"></li>
+                        <li class="li-form-iniciar-seccion"><div><h5 class="text-error">El correo o numero de telefono no coincide.</h5></div></li>
+                        <li class="li-form-iniciar-seccion"><input type="password" class="form-control" name="" id="contrasenia" placeholder="Password"></li>
+                        <li class="li-form-iniciar-seccion"><div><h5 class="text-error"  >Ha introducido una contraseña incorrecta.</h5></div></li>
+                        <li class="li-form-iniciar-seccion" id="confi_li_checkbutton">
+                            <input type="checkbox" name="" id="Checkbutton" onclick="VerContraseña()" class="ng-valid ng-dirty ng-valid-parse ng-touched ng-not-empty" >
+                            <span  class="span_line"> Recuérdame</span>
+                        </li>
+                        <li class="li-form-iniciar-seccion"><a href=""><button type="submit" class="btn btn-info2" id="button-iniciar-seccion" >Iniciar Sección</button></a></li>
+                        <li class="li-form-iniciar-seccion"></li>
+                        <li class="li-form-iniciar-seccion">
+                            <div class="line"></div>
+                        </li>
+                        <li><a href=""><span class="span_line" id="span_conta">¿Se te ha olvidado la contraseña?</span></a></li>
+                        <li class="li-form-iniciar-seccion">
+                            <div class="line">
+                            </div>
+                        </li>
+                        <li  class="li-form-iniciar-seccion"><span id="txt-not">¿No tienes cuenta?</span></li>
+                        <li class="li-form-iniciar-seccion"><a href="../registrar_usuario/index.html"> <input type="button" value="Registrate" class="btn btn-registrar" id="button-Registrar"></a></li>
+                        <li  class="li-form-iniciar-seccion" id="crear-pagina"><a href="../registrar_empresa/index.html" class="a-text">Crea Una Pagina</a><span> Para Uso Comercial.</span></li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-2 col-lg-4 col-xl-4 col-12 ">
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+ <hr>
+  <footer class="footer">
+      <div id="div-footer">
+        <div id="div-footer2">
+            <div id="letras-footer">Pasarás a estar registrado y aceptas los <a href="" class="a-text">Términos y Condiciones </a>  y <a href="" class="a-text">la Política de Privacidad</a>  de Quintex.</div>
+        </div>
+        <div class="div-footerQuitex">Company: Quintex© 2019 
+        </div>
+      </div>
+        
+      </footer>
+      
+  <script src="js/controlador.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+  @media  screen and (min-width: 1200px){
+   
+  }
+  @media  screen and (max-width: 1200px){
+    
+  }
+  @media  screen and (max-width: 992px){
+    
+  }
+  @media  screen and (max-width: 768px){
+    
+  }
+  @media  screen and (max-width: 576px){
+    
+  }
+/* navbar*/
+
+#logo-button{
+  color: rgb(240, 240, 240);
+  padding-top: 10px;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+.nav-button-option-navbar{
+  font-size: 22px;
+  text-transform: capitalize;
+  color: rgb(240, 240, 240);
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+.nav-button-option-navbar:hover, .nav-button-option-navbar:focus {
+  background-color: rgba(240, 240, 240, 0.63);
+  color: rgba(0, 123, 255, 0.856);
+  text-decoration: none;
+}
+
+.nav-button-option-navbar.disabled {
+  color: #6c757d;
+}
+.btn-Button-buscar-navbar {
+  color: rgb(0, 123, 255);
+  background-color: rgb(240, 240, 240);
+  border-color: rgb(0, 123, 255);
+
+
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  font-size: 17px;
+}
+
+.btn-Button-buscar-navbar:hover {
+  color: rgb(240, 240, 240);
+  background-color: rgb(0, 123, 255);
+  border-color: rgb(240, 240, 240);
+}
+#Text-Busqueda-Producto{
+  width: 80%;
+  font-size: 15px;
+}
+#barra-busqueda{
+  width: 500px;
+}
+#Option_config{
+  margin-right: 75px;
+}
+.tamanio-option{
+  width: 20px
+}
