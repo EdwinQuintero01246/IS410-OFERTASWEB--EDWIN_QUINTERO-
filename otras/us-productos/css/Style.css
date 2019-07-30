@@ -158,16 +158,11 @@ font-size: 3rem;
 }
 .movimiento{
   padding: 5px;
-  background-color: rgba(0, 0, 0, 0.109);
-  border-radius: 5px;
 }
 .movimiento:hover{
   background-color: rgba(0, 0, 0, 0.26);
   border-radius: 5px;
   color: white;
-}
-#contenido-Productos{
-  padding-bottom: 20px;
 }
 /*Modal*/
 .tamaños_visualizacion-modal{
@@ -211,68 +206,25 @@ font-size: 3rem;
   text-transform: capitalize;
   color: #A5DC99;
 }
-.numero-reacciones{
-  color: rgb(28, 2, 255);
-  font-size: 14px;
-  font-weight: bold;
-  text-decoration: underline;
+#ul-config{
+  padding-top: 20px;
 }
-.numero-reacciones:hover{
-  color: rgb(195, 57, 57);
+#div-comentarios{
+  background-color: rgba(0, 0, 0, 0.123);
+  border-radius: 5px;
 }
-.Palabras-reaccione{
-  color: rgb(195, 57, 57);
-  font-size: 14px;
-};
-#textareasComentarios{
-  background-color: #6c757d;
-  font-size: 17px;
+.buton-edi-del{
+  display: block;
+  margin-left: auto;
+}
+.span-text-usu{
+  color: rgb(0, 123, 255);
+  font-size: 12px;
+}
+.span-text-com{
+ color: rgb(30, 30, 30);
 }
 /*Fin Modal*/
 #Option_config{
   margin-right: 75px;
-}
-.tamanio-option{
-  width: 20px
-}
-.text-modal-ingresar-datos{
-  width: 100%;
-  height: 26px;
-  margin-top:7px;
-  font-size: 15px;
-  border-radius: 7px;
-}
-.modal-color{
-  background-color: #f0f0f0;
-  border-radius: 7px;
-  width: 95%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-.modal-color:hover{
-  background-color: #6d6b6b88;
-  width: 100%;
-}
-#Descripcion{
-  height: 52px;
-}
-.modal-text{
-  font-size: 25px;
-  font-weight: 700;
-  color: #007BFF;
-  text-transform: capitalize;
-}
-#file-confi{
-  margin-top: 15PX;
-  margin-left: 0px;
-  margin-right: 0px;
-}
-#ul-config-modal{
-  padding-left: 0px;
 }

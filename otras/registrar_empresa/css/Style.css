@@ -1,0 +1,206 @@
+@media  screen and (min-width: 1200px){
+  #margen-formularios{
+    padding: 100px 25% 20px 25%;
+  }
+  #color-formulario{
+    background-color: rgba(0, 0, 0, 0.534);
+    padding: 10px 10% 10px 10%;
+  }
+  }
+  @media  screen and (max-width: 1200px){
+    #margen-formularios{
+      padding: 100px 2% 20px 2%;
+    }
+    #color-formulario{
+      background-color: rgba(0, 0, 0, 0.534);
+      padding: 10px 5% 10px 3%;
+    }
+  }
+  @media  screen and (max-width: 992px){
+    #margen-formularios{
+      padding: 100px 2% 20px 2%;
+    }
+    #color-formulario{
+      background-color: rgba(0, 0, 0, 0.534);
+      padding: 10px 5% 10px 3%;
+    }
+  }
+  @media  screen and (max-width: 768px){
+    #margen-formularios{
+      padding: 100px 2% 20px 2%;
+    }
+    #color-formulario{
+      background-color: rgba(0, 0, 0, 0.534);
+      padding: 10px 5% 10px 3%;
+    }
+  }
+  @media  screen and (max-width: 576px){
+    #margen-formularios{
+      padding: 100px 2% 20px 2%;
+    }
+    #color-formulario{
+      background-color: rgba(0, 0, 0, 0.534);
+      padding: 10px 5% 10px 3%;
+    }
+  }
+  
+  #tamanio-logo{
+    width: 120px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #nav-logo{
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgba(255, 255, 255, 0.712);
+  }
+  
+  .ul_conf{
+  text-decoration: none;
+  list-style-type: none;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-top: 80px;
+  }
+  .tittle-registrarse-seccion{
+    font-size: 25px;
+    color: #A3C6EE;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .li-form-registrarse-seccion{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .line{
+    border-top: 1px solid #A3C6EE;
+    display: block;
+    line-height: 1px;
+    margin: 15px 0;
+    position: relative;
+    text-align: center;
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .span_line{
+    
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 15px;
+  color: #A3C6EE;
+  }
+  #h2-registrarse-seccion{
+    font-size: 20px;
+  }
+  .input-option{
+    height: 41.5px;
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    font-size: 15px;
+  }
+  #label-redes-facebook{
+    height: 41.5px;
+    background: #3b5998;
+    border: 1px solid #3b5998;
+    padding: 1.8em 1em 1.5em 1em;
+    color: #fff;
+    font-size: 1.5em;
+    line-height: 1;
+    text-align: center;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  #label-redes-twitter{
+    height: 41.5px;
+    background: #55acee;
+    border: 1px solid #55acee;
+    padding: 1.8em 1em 1.5em 1em;
+    color: #fff;
+    font-size: 1.5em;
+    line-height: 1;
+    text-align: center;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  #label-redes-instagram{
+    height: 41.5px;
+    background: #3f729b;
+    border: 1px solid #3f729b;
+    padding: 1.8em 1em 1.5em 1em;
+    color: #fff;
+    font-size: 1.5em;
+    line-height: 1;
+    text-align: center;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: color 0.3s
+  }
+  #button-registrar{
+    transition: color 3s;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  #input-file-banner{
+    width: 80%;
+    height: 41.5px;
+  }
+  #input-file-logo{  
+    width: 80%;
+    height: 41.5px;
+  }
+  .label-file{
+    background-color: #A3C6EE;
+    font-size: 17px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 7px;
+    color: rgba(255, 255, 255, 0.712);
+    font-weight: bold;
+  }
+  #textarea-descripcion{
+    width: 100%;
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+  .a-text{
+    color: rgb(10, 13, 233)
+  }
+  #div-footer{
+    background-color:rgba(5, 5, 5, 0.76);
+    color: white;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .footer{
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+  #div-footer2{
+    padding-top: 35px;
+  }
+  .div-footerQuitex{
+    padding-bottom: 20px;
+  }

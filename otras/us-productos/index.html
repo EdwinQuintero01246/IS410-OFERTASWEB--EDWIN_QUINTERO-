@@ -26,13 +26,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-button-option-navbar" href="../emp-productos/index.html">Inicio </a>
+                    <a class="nav-button-option-navbar" href="../us-inicio/index.html">Inicio </a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-button-option-navbar" href="../emp-perfil/index.html">Perfil </a>
+                    <a class="nav-button-option-navbar" href="../us-perfil/index.html">Perfil </a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-button-option-navbar" href="" data-toggle="modal" data-target="#NuevoProducto">Nuevo Producto</a>
+                    <a class="nav-button-option-navbar" href="../us-productos/index.html">ofertas</a>
                 </li>
             </ul>
             <div class="dropdown" id="Option_config">
@@ -41,7 +41,7 @@
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" href="#"><img src="../us-inicio/img/icon/confi.png" alt="" > configuración</a>
-                    <a class="dropdown-item" href="../../index.html"><img src="../us-inicio/img/icon/cerrar_seccion.png" alt="" > Cerrar Sección</a>
+                    <a class="dropdown-item" href="#"><img src="../us-inicio/img/icon/cerrar_seccion.png" alt="" > Cerrar Sección</a>
                 </div>
             </div>
         </div>
@@ -49,13 +49,32 @@
     <section id="section-config">
         <div class="container-fluid" >
             <div class="row">
-                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 " id="div-class-content">
+                <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2 col-12 " id="div-class-option">
+                    <ul class="ul_conf">
+                        <li>
+                            <a href="index.html" title="" class="li-home-img-marketplace"><img src="../../img/icon/marketplace.png" class="home-img-marketplace" alt="">MarketPlace</a>
+                        </li>
+                        <li><button class="btn-primary " id="button-vender">+ Vender algo</button></li>
+                        <li><span class="letter-option">Ubicación</span></li>
+                        <li><input class="letter-option" type="text" name="" id="text-lugar" placeholder="Lugar,Sitio"></li>
+                        <li><span class="letter-option">Cateforías</span></li>
+                        <li><a href="index.html" title="" class="letter-option li-home-img-marketplace movimiento"><img src="../../img/icon/1.png" class="home-img-marketplace" alt="">Todas las categorias</a></li>
+                        <li><a href="index.html" title="" class="letter-option li-home-img-marketplace movimiento"><img src="../../img/icon/2.png" class="home-img-marketplace" alt="">Vehículos</a></li>
+                        <li><a href="index.html" title="" class="letter-option li-home-img-marketplace movimiento"><img src="../../img/icon/3.png" class="home-img-marketplace" alt="">Electrónica</a></li>
+                        <li><a href="index.html" title="" class="letter-option li-home-img-marketplace movimiento"><img src="../../img/icon/4.png" class="home-img-marketplace" alt="">Ropa</a></li>
+                        <li><a href="index.html" title="" class="letter-option li-home-img-marketplace movimiento"><img src="../../img/icon/5.png" class="home-img-marketplace" alt="">Casa</a></li>
+                        <li><a href="index.html" title="" class="letter-option li-home-img-marketplace movimiento"><img src="../../img/icon/6.png" class="home-img-marketplace" alt="">Inmuebles</a></li>
+                        <li><a href="index.html" title="" class="letter-option li-home-img-marketplace movimiento"><img src="../../img/icon/7.png" class="home-img-marketplace" alt="">Entretenimientos</a></li>
+                        <li><a href="index.html" title="" class="letter-option li-home-img-marketplace movimiento"><img src="../../img/icon/8.png" class="home-img-marketplace" alt="">Alquileres</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-9 col-lg-9 col-xl-10 col-12 " id="div-class-content">
                     <form class="form-inline my-2 my-lg-0" id="barra-busqueda">
                         <input class="form-control mr-sm-1" id="Text-Busqueda-Producto" type="search" placeholder="Producto" aria-label="Search">
                         <button class=" btn-Button-buscar-navbar my-2 my-sm-0" type="submit"><span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>Buscar</button>
                     </form>
                     <div class="container-fluid" >
-                        <div class="row" id="contenido-Productos">
+                        <div class="row" id="contenido">
                             <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 col-12 " id="div-class-product">
                                 <div class="movimiento">
                                     <a  data-toggle="modal" data-target="#exampleModal" onclick="Ver_Producto_Modal()" >
@@ -82,8 +101,8 @@
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document" >
           <div class="modal-content">
+            
             <div class="modal-body">
-                
                 <div class="container-fluid" >
                     <div class="row" id="contenido">
                         <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 " >
@@ -95,31 +114,36 @@
                                 <li><span id="modal-producto">Producto</span></li>
                                 <li><span id="modal-secundario">Lugar</span></li>
                                 <li><span id="modal-secundario" >descripcion del producto</span></li>
+                                <li><span id="modal-precios">Precio</span></li>
                                 <li><span id="modal-precios-oferta">Oferta</span></li>
                                 <li><div class="line"></div></li>
+                                <li><span id="modal-producto">Informacion del vendedor</span></li>
+                                <li><span id="modal-secundario">Empresa o nombre de vendedor</span></li>
+                                <li><div class="line"></div></li>
+                                <li><a href="#"><button class="btn-danger" id="button-vender">Comprar Ya!</button></a></li>
                                 <li>
-                                    <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 col-4 "><h1 class="numero-reacciones col-xl-8">Numero<h1 class="Palabras-reaccione col-xl-4">Me Gusta</h1></h1></div>
-                                    <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-2 "><img src="img/like.png" alt=""></div>
-                                    <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-2 "><img src="img/dislike.png" alt=""></div>
-                                    <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 col-4 "><h1 class="numero-reacciones">Numero<h1 class="Palabras-reaccione">No Gusta</h1></h1></div>
-                                </li>
-                                <li>
-                                    <h1>Puntaciones</h1>
-                                    <hr>
-                                    <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-2 numero-reacciones">90.5%</div>
-                                    <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-2 "> <img src="img/estrella llena.png" alt=""></div>
-                                    <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-2 "> <img src="img/estrella llena.png" alt=""></div>
-                                    <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-2 "> <img src="img/estrella llena.png" alt=""></div>
-                                    <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-2 "> <img src="img/estrella llena.png" alt=""></div>
-                                    <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-2 "> <img src="img/estrella vacia.png" alt=""></div>
-                                </li>
-                                <li>
-                                    <h1>Comentarios</h1>
+                                    <h1>Comentar</h1>
                                     <hr>
                                     <div id="cometarios">
                                         <h3 class="numero-reacciones">usuario</h3>
                                         <textarea class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 " style="font-size: 15px;" id="textareasComentarios" name="comentarios"  cols="10" rows="3"></textarea>
                                         <hr>
+                                    </div>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                            <button type="button" class="btn btn-secondary">Enviar</button>
+                                        </div>
+                                </li>
+                                <li>
+                                    <h1>Comentarios</h1>
+                                    <hr>
+                                    <div id="div-comentarios">
+                                        <div><span class="span-text-usu">Usuario:<span class="span-text-com"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident, eveniet.
+                                        </span></span></div>
+                                        <div>
+                                    <div class="btn-group" id="btn-group " role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-primary">Editar</button>
+                                        <button type="button" class="btn btn-danger">borrar</button>
+                                    </div>
                                     </div>
                                 </li>
                             </ul>
@@ -130,61 +154,4 @@
           </div>
         </div>
       </div>
-      <div class="modal fade" id="NuevoProducto" tabindex="3" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document" >
-              <div class="modal-content">
-                <div class="modal-body">
-                    <span  id="modal-text" class="modal-text">Subir Imagen Del Producto</span>
-                    <div class="input-group" id="file-confi">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
-                        </div>
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="inputGroupFile01"
-                            aria-describedby="inputGroupFileAddon01">
-                            <label class="custom-file-label" for="inputGroupFile01">File</label>
-                        </div>
-                    </div>
-                    <div class="container-fluid" >
-                        <div class="modal-color">
-                            <ul class="ul_conf" id="ul-config-modal">
-                                <li class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 ">
-                                    <div >
-                                        <span class="col-lg-4 col-xl-4 modal-text" >Producto</span>
-                                        <input class="col-lg-8 col-xl-8 text-modal-ingresar-datos"  type="text" name="" id="" >
-                                    </div>
-                                </li>
-                                <li class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 ">
-                                    <div >
-                                        <span class="col-lg-4 col-xl-4 modal-text" >Lugar</span>
-                                        <input class="col-lg-8 col-xl-8 text-modal-ingresar-datos"  type="text" name="" id="" >
-                                    </div>
-                                </li>
-                                <li class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 ">
-                                    <div >
-                                        <span class="col-lg-12 col-xl-12 modal-text" >Descripcion</span>
-                                        <textarea class="col-lg-12 col-xl-12 text-modal-ingresar-datos" name="" id="Descripcion" cols="30" rows="3"></textarea>
-                                    </div>
-                                </li>
-                                <li class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 ">
-                                    <div >
-                                        <span class="col-lg-4 col-xl-4 modal-text" >Precio</span>
-                                        <input class="col-lg-8 col-xl-8 text-modal-ingresar-datos"  type="text" name="" id="" >
-                                    </div>
-                                </li>
-                                <li class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 ">
-                                    <div >
-                                        <span class="col-lg-4 col-xl-4 modal-text" >Oferta</span>
-                                        <input class="col-lg-8 col-xl-8 text-modal-ingresar-datos"  type="text" name="" id="" >
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     </body>
-    
-

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registrar Usuario</title>
+    <link rel="icon" type="image/png" href="../../img/logo_morado.png">
+    <link rel="estilo-boostrap" href="../../css/bootstrap.min.css">
+    <link rel="estilo-boostrap" href="../../css/Style.css">
+    <link rel="stylesheet" type=" text/css" media="screen" href="../../css/bootstrap.css">
+    <link rel="stylesheet" type=" text/css" media="screen" href="css/Style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css" crossorigin="anonymous">
+    <script src="../../js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../custom.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <style>
+    .body{
+        background-image: url(../../img/fondo3.jpg);background-repeat: no-repeat; background-position: center center;background-size: cover;background-attachment: fixed;
+    }
+    </style>
+</head>
+<body  class="body" >
+    <nav id="nav-logo">
+        <div>
+            <div id="div-logos">
+                <a href="../../index.html">
+                    <img src="../../img/logo_morado.png" alt="logo" id="tamanio-logo" >
+                </a>
+            </div>
+        </div>
+    </nav>
+    <section id="body_confi">
+        <div  id="margen-formularios">
+            <div  id="color-formulario">
+                <ul class="ul_conf" id="formulaario">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <h2 class="tittle-registrarse-seccion col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 ">Registra Un Usuario</h2><br>
+                            <li class="li-form-registrarse-seccion col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12" >
+                                <div class="line">
+                                </div>
+                            </li>
+                            <h2 class="tittle-registrarse-seccion col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12" id="h2-registrarse-seccion">Información de la empresa</h2>
+                            <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="text"   placeholder="Nombre ">
+                                <div class="valid-feedback">
+                                    Ok
+                                </div>
+                                <div class="invalid-feedback">
+                                    Campo obligatorio
+                                </div>
+                            </li>
+                            <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="text"   placeholder="Apellido"></li>
+                            <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="text"   placeholder="@Nickname"></li>
+                            <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="email"   placeholder="email"></li>
+                            <li class="text-activar-contrasenia li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12">
+                                <input class="input-option " type="password"  id="contrasenia" placeholder="password">
+                                <div class="col-md-12">
+                                    <div class="funkyradio">
+                                        <div class="funkyradio-primary">
+                                            <input type="checkbox" name="checkbox" id="checkbox1" checked onclick="myFunctioncontaseña()"/>
+                                            <label for="checkbox1" style="margin-top: 5px;color: #fff;" class="label-ver-contrasenia">Ver Contraseña</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="text-activar-contrasenia li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12">
+                                <input class="input-option " type="password" id="contraseniaConfirmar"  placeholder="confirmar password">
+                                <div class="col-md-12">
+                                    <div class="funkyradio">
+                                        <div class="funkyradio-primary">
+                                            <input type="checkbox" name="checkbox" id="checkbox2" checked onclick="myFunctioncontaseñaConfirmar()"/>
+                                            <label for="checkbox2" style="margin-top: 5px;color: #fff;" class="label-ver-contrasenia">Ver Contraseña</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="tel"   placeholder="telefono"></li>
+                            <li class="li-form-registrarse-seccion col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12">
+                                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12" id="div_cumple">
+                                    <label for="" class="label-file col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12">fecha de nacimiento</label>
+                                    <select class="Select_Compu col-sm-4 col-md-4 col-lg-4 col-xl-4 col-4 " name="cumpleanio_dia"  id="Cumple_dia">
+                                        <option value="0">Día</option>
+                                    </select>
+                                    <select class="Select_Compu col-sm-4 col-md-4 col-lg-4 col-xl-4 col-4 " name="cumpleanio_mes"  id="Cumple_mes">
+                                    </select>
+                                    <select class="Select_Compu col-sm-4 col-md-4 col-lg-4 col-xl-4 col-4 " name="cumpleanio_anio"  id="Cumple_anio">
+                                        <option value="0">Año</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li class="li-form-registrarse-seccion col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12">
+                                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12" id="div_cumple">
+                                    <label for="" class="label-file col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12">Sexo</label>
+                                    <div class="radio">
+                                        <label class="radion_sex col-sm-4 col-md-4 col-lg-4 col-xl-4 col-4 "><input type="radio" name="optradio" checked>Male</label>
+                                        <label class="radion_sex col-sm-4 col-md-4 col-lg-4 col-xl-4 col-4 "><input type="radio" name="optradio">Female</label>
+                                        <label class="radion_sex col-sm-4 col-md-4 col-lg-4 col-xl-4 col-4 "><input type="radio" name="optradio" disabled> There is no other</label>
+                                    
+                                </div>
+                            </li>
+                            <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><label for="" class="label-file">Pregunta de seguridad</label><input class="input-option " type="text"   placeholder="Tia(o) Favotita(o)"></li>
+                            <!--li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><label for="input-file-banner" class="label-file">Foto de perfil</label> <input class="btn btn-danger" id="input-file-banner" type="file"></li-->
+                            <li class="li-form-registrarse-seccion col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12">
+                                <div class="line">
+                                </div>
+                            </li>
+                            <h2 class="tittle-registrarse-seccion col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12" id="h2-registrarse-seccion">ubicacion</h2>
+                            <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12" ><input class="input-option " type="text"   placeholder="Dirrección"></li>
+                            <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="text"   placeholder="país"></li>
+                            <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="text"   placeholder="cuidad"></li>
+                            <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="text"   placeholder="Estado/Provincia/Región"></li>
+                            <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="text"   placeholder="Codigo Postal"></li>
+                            <li class="li-form-registrarse-seccion col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12">
+                                <div class="line">
+                                </div>
+                            </li>
+                            <h2 class="tittle-registrarse-seccion col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12" id="h2-registrarse-seccion">Redes Sociales</h2>
+                            <li class="li-form-registrarse-seccion col-sm-4 col-md-4 col-lg-4 col-xl-4 col-7"><label id="label-redes-facebook" for="facebookUsername" >facebook.com/</label></li>
+                            <li class="li-form-registrarse-seccion col-sm-8 col-md-8 col-lg-8 col-xl-8 col-12"><input class="input-option " type="text"></li>
+                            <li class="li-form-registrarse-seccion col-sm-4 col-md-4 col-lg-4 col-xl-4 col-7"><label id="label-redes-twitter" for="facebookUsername">twitter.com/</label></li>
+                            <li class="li-form-registrarse-seccion col-sm-8 col-md-8 col-lg-8 col-xl-8 col-12"><input class="input-option " type="text"></li>
+                            <li class="li-form-registrarse-seccion col-sm-4 col-md-4 col-lg-4 col-xl-4 col-7"><label id="label-redes-instagram" for="facebookUsername">instagram.com/</label></li>
+                            <li class="li-form-registrarse-seccion col-sm-8 col-md-8 col-lg-8 col-xl-8 col-12"><input class="input-option " type="text"></li>
+                            <li class="li-form-registrarse-seccion col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 " ><a href=""><button type="submit" class="btn btn-danger" id="button-registrar" >Registrar</button></a></li>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div id="div-footer">
+            <div id="div-footer2">
+                <div id="letras-footer">Pasarás a estar registrado y aceptas los <a href="" class="a-text">Términos y Condiciones </a>  y <a href="" class="a-text">la Política de Privacidad</a>  de Quintex.</div>
+            </div>
+            <div class="div-footerQuitex">Company: Quintex© 2019 
+            </div>
+        </div>
+    </footer>
+  <script src="../../js/jquery-3.3.1.min.js"></script>
+  <script src="../../js/bootstrap.min.js"></script>
+  <script src="js/controlador.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</body>
+</html>
