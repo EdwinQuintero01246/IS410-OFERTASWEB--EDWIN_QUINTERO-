@@ -224,7 +224,28 @@ font-size: 3rem;
 .span-text-com{
  color: rgb(30, 30, 30);
 }
+.numero-reacciones{
+  color: rgb(28, 2, 255);
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.numero-reacciones:hover{
+  color: rgb(195, 57, 57);
+}
+.Palabras-reaccione{
+  color: rgb(195, 57, 57);
+  font-size: 14px;
+};
+#textareasComentarios{
+  background-color: #6c757d;
+  font-size: 17px;
+}
 /*Fin Modal*/
 #Option_config{
   margin-right: 75px;
+}
+.button-estrella{
+  background-color: transparent;
+  border: transparent;
 }

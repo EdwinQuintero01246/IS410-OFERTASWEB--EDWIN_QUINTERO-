@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inicio Sección Empresa</title>
+    <link rel="icon" type="image/png" href="../../img/logo1.jpg">
+    <link rel="estilo-boostrap" href="../../css/bootstrap.min.css">
+    <link rel="estilo-boostrap" href="../../css/Style.css">
+    <link rel="stylesheet" type=" text/css" media="screen" href="../../css/bootstrap.css">
+    <link rel="stylesheet" type=" text/css" media="screen" href="css/Style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css" crossorigin="anonymous">
+    <script src="../../js/bootstrap.min.js" crossorigin="anonymous"></script>
+</head>
+<body id="body_confi">
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary" >
+            <a class="navbar-brand" id="logo-button" href="">Quintex</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-button-option-navbar" href="../us-inicio/index.html">Inicio </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-button-option-navbar" href="../us-perfil/index.html">Perfil </a>
+                    </li>
+                </ul>
+                <div class="dropdown" id="Option_config">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="../us-inicio/img/icon/option.png" alt="" >
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="../../index.html"><img src="../us-inicio/img/icon/cerrar_seccion.png" alt="" > Cerrar Sección</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    <section>
+        <div class="container-fluid" >
+            <div class="row">
+                <div class="col-sm-12 col-md-10 col-lg-6 col-xl-5 col-12 " id="div-class-option">
+                    <ul class="ul_conf" id="ul-conf">
+                        <div id="color_form">
+                            <li><span class="tittle">Información</span></li>
+                            <li class="SizeFormLi">
+                                <span class="content-text">Nombre empresa
+                                    <a onclick="ModalNombre()" data-toggle="modal" data-target="#NombreModal" class="boton_personalizado" href="">
+                                        <Img src="img/icon/editar.png">
+                                        </Img>
+                                    </a>
+                                </span>
+                            </li>
+                            <li class="SizeFormLi">
+                                <span class="content-text">Correo
+                                    <a onclick="ModalCorreo()" data-toggle="modal" data-target="#CorreoModal" class="boton_personalizado" href="">
+                                        <Img src="img/icon/editar.png">
+                                        </Img>
+                                    </a>
+                                </span>
+                            </li>
+                            <li class="SizeFormLi">
+                                <span class="content-text">Contraseña
+                                    <a onclick="ModalContraseña()" data-toggle="modal" data-target="#ContraseñaModal" class="boton_personalizado" href="">
+                                        <Img src="img/icon/editar.png">
+                                        </Img>
+                                    </a>
+                                </span>
+                            </li>
+                            <li class="SizeFormLi">
+                                <span class="content-text">Sexo
+                                    <a onclick="ModalSexo()" data-toggle="modal" data-target="#SexoModal" class="boton_personalizado" href="">
+                                        <Img src="img/icon/editar.png">
+                                        </Img>
+                                    </a>
+                                </span>
+                            </li>
+                            <li class="SizeFormLi">
+                                <span class="content-text">Telefono(s)
+                                    <a onclick="ModalTelefono()" data-toggle="modal" data-target="#TelefonoModal" class="boton_personalizado" href="">
+                                        <Img src="img/icon/editar.png">
+                                        </Img>
+                                    </a>
+                                </span>
+                            </li>
+                            <li><div class="line"></div></li>
+                            <li><span class="tittle">ubicacion</span></li>
+                            <li>
+                                <input class="content-text" type="text" name="" id="text-lugar" placeholder="Lugar,Sitio">
+                                <a onclick="ModalGPS()" data-toggle="modal" data-target="#GPSModal" class="boton_personalizado" href="">
+                                    <Img src="img/icon/localizacion.png">
+                                    </Img>
+                                </a>
+                            </li>
+                            <li><div class="line"></div></li>
+                            <li><span class="tittle">Numero de cuenta</span></li>
+                            <li>
+                                <a class="content-text">XXXX-XXXX-XXXX-2989</a>
+                                <a onclick="ModalTarjeta()" data-toggle="modal" data-target="#TarjetaModal" class="boton_personalizado" href="">
+                                    <Img src="img/icon/tarjetas.png">
+                                    </Img>
+                                </a>
+                            </li>
+                            <li><div class="line"></div></li>
+                            <li><span class="tittle">redes sociales</span></li>
+                            <li>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" onclick="ModalFacebook()" data-toggle="modal" data-target="#FacebookModal" class="btn btn-facebook">facebook/</button>
+                                    <div class="input-group-text" id="btnGroupAddon">@</div>
+                                    <input type="text" class="form-control" placeholder="redes" aria-label="Input group example" aria-describedby="btnGroupAddon">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" onclick="ModalTwitter()" data-toggle="modal" data-target="#TwitterModal" class="btn btn-twitter">twitter.com/</button>
+                                    <div class="input-group-text" id="btnGroupAddon">@</div>
+                                    <input type="text" class="form-control" placeholder="redes" aria-label="Input group example" aria-describedby="btnGroupAddon">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" onclick="ModalInstagram()" data-toggle="modal" data-target="#InstagramModal" class="btn btn-instagram">instagram.com/</button>
+                                    <div class="input-group-text" id="btnGroupAddon">@</div>
+                                    <input type="text" class="form-control" placeholder="redes" aria-label="Input group example" aria-describedby="btnGroupAddon">
+                                </div>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+    </footer>
+  <script src="../../js/jquery-3.3.1.min.js"></script>
+  <script src="../../js/bootstrap.min.js"></script>
+  <script src="js/controlador.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</body>
+<!--div id="GenerarModal">
+        
+</div-->
+<div class="modal fade" id="ContraseñaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document" >
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container-fluid" >
+                        <div class="row">
+                            <ul class="UlConfModal">
+                                <li><span class="tittle" id="tittleModal">Editar</span></li>
+                                <li>
+                                    <form class="form-horizontal">
+                                        <div class="form-group has-success has-feedback">
+                                            <label class="col-sm-2 control-label" for="inputSuccess"></label>
+                                            <div class="col-sm-12">
+                                                <input type="password" name="" id="Contraseña" id="inputSuccess" class="textContrasenias form-control" onchange="ContraseñaLocal()" placeholder="Contraseña Anterior">
+                                                <div id="generar"></div>
+                                            </div>
+                                        </div>
+                                        <div id="contentContaseñaLocal"></div>
+                                    </form>
+                                </li>
+                                <li>
+                                    <input type="password" name="" id="ContraseñaN" class="textContrasenias" onchange="vercambio()" placeholder="Contraseña Nueva">
+                                    
+                                </li>
+                                <li><input type="password" name="" id="ContraseñaC" class="textContrasenias" onchange="vercambio()" placeholder="Contraseña Nueva"></li>
+                                <li style="height: 70px;"><div id="contenidoRespuesta"></div></li>
+                                <li class="li-form-iniciar-seccion" id="confi_li_checkbutton">
+                                    <input type="checkbox" name="" id="Checkbutton" onclick="VerContraseña()" class="ng-valid ng-dirty ng-valid-parse ng-touched ng-not-empty" >
+                                    <span  class="span_line"> Recuérdame</span>
+                                </li>
+                                <li>
+                                    <input type="button" class="btn-danger" id="ButtonGuardar" value="Guardar">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/controlador.js"></script>
+    </div>

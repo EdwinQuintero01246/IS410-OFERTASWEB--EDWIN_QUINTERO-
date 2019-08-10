@@ -123,6 +123,9 @@
 #barra-busqueda{
   width: 500px;
 }
+#Option_config{
+  margin-right: 75px;
+}
 /*div informacion del la empresa o usuario*/
 #tamanio-imagen-perfil{
   width: 100%;
@@ -321,6 +324,3 @@
   background-color: rgb(240, 240, 240);
 }
 /*fin console productos*/
-#Option_config{
-  margin-right: 75px;
-}

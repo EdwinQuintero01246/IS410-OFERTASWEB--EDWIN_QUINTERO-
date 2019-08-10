@@ -220,6 +220,9 @@
   font-size: 15px;
 }
 #form{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 #contrasenia{
   font-size: 17px;

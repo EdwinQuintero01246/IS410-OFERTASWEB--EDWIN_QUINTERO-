@@ -121,6 +121,24 @@
                                 <li><span id="modal-secundario">Empresa o nombre de vendedor</span></li>
                                 <li><div class="line"></div></li>
                                 <li><a href="#"><button class="btn-danger" id="button-vender">Comprar Ya!</button></a></li>
+                                <li><div class="line"></div></li>
+                                <li>
+                                    <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 col-4 "><h1 class="numero-reacciones col-xl-8">Numero<h1 class="Palabras-reaccione col-xl-4">Me Gusta</h1></h1></div>
+                                    <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-2 "><button type="button" class="button-estrella" id="buttonLike"><img src="../emp-productos/img/like.png" alt=""></button></div>
+                                    <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-2 "><button type="button" class="button-estrella" id="buttonDislike"><img src="../emp-productos/img/dislike.png" alt=""></button></div>
+                                    <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 col-4 "><h1 class="numero-reacciones">Numero<h1 class="Palabras-reaccione">No Gusta</h1></h1></div>
+                                </li>
+                                <li>
+                                    <h1>Puntaciones</h1>
+                                    <hr >
+                                    <div id="ContenidoEstrellas">
+                                        <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-2 "> <button onclick="buttonEstrella_1()" class="button-estrella" type="button" id="estrella-1" ><img src="../emp-productos/img/estrella llena.png" alt=""></button></div>
+                                        <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-2 "> <button onclick="buttonEstrella_2()" class="button-estrella" type="button" id="estrella-2" ><img src="../emp-productos/img/estrella llena.png" alt=""></button></div>
+                                        <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-2 "> <button onclick="buttonEstrella_3()" class="button-estrella" type="button" id="estrella-3" ><img src="../emp-productos/img/estrella llena.png" alt=""></button></div>
+                                        <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-2 "> <button onclick="buttonEstrella_4()" class="button-estrella" type="button" id="estrella-4" ><img src="../emp-productos/img/estrella llena.png" alt=""></button></div>
+                                        <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-2 "> <button onclick="buttonEstrella_5()" class="button-estrella" type="button" id="estrella-5" ><img src="../emp-productos/img/estrella llena.png" alt=""></button></div>
+                                    </div>
+                                </li>
                                 <li>
                                     <h1>Comentar</h1>
                                     <hr>
@@ -130,7 +148,7 @@
                                         <hr>
                                     </div>
                                     <div class="btn-group" role="group" aria-label="Basic example">
-                                            <button type="button" class="btn btn-secondary">Enviar</button>
+                                            <button type="button" id="buttonComentariosEnviar" class="btn btn-secondary">Enviar</button>
                                         </div>
                                 </li>
                                 <li>
@@ -154,4 +172,9 @@
           </div>
         </div>
       </div>
+      
+  <script src="../../js/jquery-3.3.1.min.js"></script>
+  <script src="../../js/bootstrap.min.js"></script>
+  <script src="js/controlador.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     </body>
