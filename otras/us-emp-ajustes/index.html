@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Inicio Sección Empresa</title>
+    <link rel="estilo-boostrap" href="../../css/Style.css">
+    <link rel="stylesheet" type=" text/css" media="screen" href="css/Style.css">
     <link rel="icon" type="image/png" href="../../img/logo1.jpg">
     <link rel="estilo-boostrap" href="../../css/bootstrap.min.css">
-    <link rel="estilo-boostrap" href="../../css/Style.css">
     <link rel="stylesheet" type=" text/css" media="screen" href="../../css/bootstrap.css">
-    <link rel="stylesheet" type=" text/css" media="screen" href="css/Style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <script src="../../js/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="../../css/bootstrap.min.css" crossorigin="anonymous">
     <script src="../../js/bootstrap.min.js" crossorigin="anonymous"></script>
 </head>
@@ -137,14 +137,157 @@
     </section>
     <footer>
     </footer>
-  <script src="../../js/jquery-3.3.1.min.js"></script>
+  <script src="../../js/jquery-3.4.1.min.js"></script>
   <script src="../../js/bootstrap.min.js"></script>
   <script src="js/controlador.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-</body>
-<!--div id="GenerarModal">
+
+<div id="GenerarModal">
         
-</div-->
+</div>
+<!--div class="modal fade" id="TarjetaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" >
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="container-fluid" >
+                    <div class="row">
+                        <ul class="UlConfModal" id="nuevoTextTarjeta">
+                            <li><span class="tittle" id="tittleModal">Editar</span></li>
+                            <li><span class="content-text">Tarjeta Actual:<span class="content-text" id="colorinfoUsuarioViejo"> XXXX-XXXX-XXXX-2989</span></span></li>
+                            <li>
+                                <span class="content-text">
+                                    <form class="form-horizontal">
+                                        <div class="form-group has-success has-feedback">
+                                            <label class="col-sm-2 control-label" for="inputSuccess"></label>
+                                            <div class="col-sm-12">
+                                                <input style="display: block;" type="button" value="Datos nuevos tarjeta" class="btn btn-secondary buttonModalTarjeta" id="buttonNuevosAtribustosTarjeta" >
+                                                <input type="tel" name="" id="NuevoTelefono" id="inputSuccess" style="font-size: 2rem" class="form-control textContrasenias" placeholder="Nuevo Numero Telefonico">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </span>
+                            </li>
+                            <li><input onclick="guardarDatosTarjetaUsuario()" class="btn-danger" id="ButtonGuardar" type="button" value="Guardar"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="TelefonoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" >
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="container-fluid" >
+                    <div class="row">
+                        <ul class="UlConfModal">
+                            <li><span class="tittle" id="tittleModal">Editar</span></li>
+                            <li><span class="content-text">Telefono Actual:<span class="content-text" id="colorinfoUsuarioViejo"> 3247-1306</span></span></li>
+                            <li>
+                                <span class="content-text">
+                                    <form class="form-horizontal">
+                                        <div class="form-group has-success has-feedback">
+                                            <label class="col-sm-2 control-label" for="inputSuccess"></label>
+                                            <div class="col-sm-12">
+                                                <input type="tel" name="" id="NuevoTelefono" id="inputSuccess" style="font-size: 2rem" class="form-control textContrasenias" placeholder="Nuevo Numero Telefonico">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </span>
+                            </li>
+                            <li><input onclick="guardarDatosTelefonoUsuario()" class="btn-danger" id="ButtonGuardar" type="button" value="Guardar"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="SexoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" >
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="container-fluid" >
+                    <div class="row">
+                        <ul class="UlConfModal">
+                            <li><span class="tittle" id="tittleModal">Editar</span></li>
+                            <li><span class="content-text">Genero Actual:<span class="content-text" id="colorinfoUsuarioViejo"> Masculino</span></span></li>
+                            <li><select class="select-css" id="select-css" onchange="selectSexo()">
+                                    <option value="0">Seccione un Elemento</option>
+                                    <option value="1">Masculino</option>
+                                    <option value="2">Femenino</option>
+                                    <option  value="3">Otros</option>
+                                    <div id="otrosGenero"></div>
+                                </select>
+                                <div id="infoOtros">
+                                </div>
+                            </li>
+                            <li><input onclick="guardarDatosGeneroUsuario()" class="btn-danger" id="ButtonGuardar" type="button" value="Guardar"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="CorreoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" >
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="container-fluid" >
+                    <div class="row">
+                        <ul class="UlConfModal">
+                            <li><span class="tittle" id="tittleModal">Editar</span></li>
+                            <li><span class="content-text">Correo Actual:<span class="content-text" id="colorCorreoViejo"> Mrs.Robot@unah.hn</span></span></li>
+                            <li>
+                                <form class="form-horizontal">
+                                    <div class="form-group has-success has-feedback">
+                                        <label class="col-sm-2 control-label" for="inputSuccess"></label>
+                                        <div class="col-sm-12">
+                                            <input type="text" name="" id="Correo" id="inputSuccess" style="font-size: 2rem" class="form-control textContrasenias" placeholder="Nombre Nuevo">
+                                        </div>
+                                    </div>
+                                </form>
+                            </li>
+                            <li><input onclick="guardarDatosCorreoUsuario()" class="btn-danger" id="ButtonGuardar" type="button" value="Guardar"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="NombreModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document" >
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container-fluid" >
+                        <div class="row">
+                            <ul class="UlConfModal">
+                                <li><span class="tittle" id="tittleModal">Editar</span></li>
+                                <li><span class="content-text">Nombre Actual:<span class="content-text"> Mrs. Robot</span></span></li>
+                                <li>
+                                    <span class="content-text">
+                                        <form class="form-horizontal">
+                                            <div class="form-group has-success has-feedback">
+                                                <label class="col-sm-2 control-label" for="inputSuccess"></label>
+                                                <div class="col-sm-12">
+                                                    <input type="text" name="" id="Nombre" id="inputSuccess" style="font-size: 2rem" class="form-control textContrasenias" placeholder="Nombre Nuevo">
+                                                    <div id="generarSpanContaseñaNueva"></div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </span>
+                                </li>
+                                <li><input onclick="guardarDatosNombreUsuario()" class="btn-danger" id="ButtonGuardar" type="button" value="Guardar"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 <div class="modal fade" id="ContraseñaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document" >
             <div class="modal-content">
@@ -158,22 +301,39 @@
                                         <div class="form-group has-success has-feedback">
                                             <label class="col-sm-2 control-label" for="inputSuccess"></label>
                                             <div class="col-sm-12">
-                                                <input type="password" name="" id="Contraseña" id="inputSuccess" class="textContrasenias form-control" onchange="ContraseñaLocal()" placeholder="Contraseña Anterior">
-                                                <div id="generar"></div>
+                                                <input type="password" name="" id="Contraseña" id="inputSuccess" style="font-size: 2rem" class="form-control textContrasenias" onchange="ContraseñaLocal()" placeholder="Contraseña Anterior">
+                                                <div id="generarSpanContaseñaVieja"></div>
                                             </div>
                                         </div>
                                         <div id="contentContaseñaLocal"></div>
                                     </form>
                                 </li>
                                 <li>
-                                    <input type="password" name="" id="ContraseñaN" class="textContrasenias" onchange="vercambio()" placeholder="Contraseña Nueva">
-                                    
+                                    <form class="form-horizontal">
+                                        <div class="form-group has-success has-feedback">
+                                            <label class="col-sm-2 control-label" for="inputSuccess"></label>
+                                            <div class="col-sm-12">
+                                                <input type="password" name="" id="ContraseñaN" id="inputSuccess" style="font-size: 2rem" class="form-control textContrasenias" onchange="vercambio()" placeholder="Contraseña Nueva">
+                                                <div id="generarSpanContaseñaNueva"></div>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </li>
-                                <li><input type="password" name="" id="ContraseñaC" class="textContrasenias" onchange="vercambio()" placeholder="Contraseña Nueva"></li>
+                                <li>
+                                    <form class="form-horizontal">
+                                        <div class="form-group has-success has-feedback">
+                                            <label class="col-sm-2 control-label" for="inputSuccess"></label>
+                                            <div class="col-sm-12">
+                                                <input type="password" name="" id="ContraseñaC" id="inputSuccess" style="font-size: 2rem" class="form-control textContrasenias" onchange="vercambio()" placeholder="Contraseña Nueva">
+                                                <div id="generarSpanContaseñaNueva"></div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </li>
                                 <li style="height: 70px;"><div id="contenidoRespuesta"></div></li>
                                 <li class="li-form-iniciar-seccion" id="confi_li_checkbutton">
                                     <input type="checkbox" name="" id="Checkbutton" onclick="VerContraseña()" class="ng-valid ng-dirty ng-valid-parse ng-touched ng-not-empty" >
-                                    <span  class="span_line"> Recuérdame</span>
+                                    <span style="font-size: 15px" class="span_line"> Recuérdame</span>
                                 </li>
                                 <li>
                                     <input type="button" class="btn-danger" id="ButtonGuardar" value="Guardar">
@@ -185,4 +345,6 @@
             </div>
         </div>
         <script src="js/controlador.js"></script>
-    </div>
+    </div-->
+    <script src="js/controlador.js"></script>
+</body>
