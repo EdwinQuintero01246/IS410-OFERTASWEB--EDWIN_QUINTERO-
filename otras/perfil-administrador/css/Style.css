@@ -1,15 +1,95 @@
 @media  screen and (min-width: 1200px){
-   
+   #sectionConfig{
+    margin-top: 63px;
+  }
   }
   @media  screen and (max-width: 1200px){
-    
+    #sectionConfig{
+      margin-top: 63px;
+    }
   }
   @media  screen and (max-width: 992px){
-    
+    #sectionConfig{
+      margin-top: 98px;
+    }
   }
   @media  screen and (max-width: 768px){
-    
+    #sectionConfig{
+      margin-top: 63px;
+    }
   }
   @media  screen and (max-width: 576px){
-    
+    #sectionConfig{
+      margin-top: 70px;
+    }
   }
+/* navbar*/
+
+#logo-button{
+  color: rgb(240, 240, 240);
+  padding-top: 10px;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+#Option_config{
+  margin-right: 75px;
+}
+#NavbarConfi{
+  position: fixed;
+  width: 100%;
+  top: 0px;
+}
+.bg-primarys{
+  background-color: #082041;
+}
+.bg-primarys:hover{
+  background-color: #134689;
+}
+.btn-primarys{
+  color: #fff;
+  background-color: #082041;
+  border: #082041; 
+}
+.btn-primarys:hover{
+  background-color: #134689;
+  border: #007bff; 
+}
+/*fin  navbar*/
+#sectionConfig{
+  margin-left: 25px;
+  margin-right: 25px;
+  border-left-width: 10px;
+  padding-left: 25px;
+}
+
+#rowConfi{
+  background-color: rgba(255, 255, 255, 0.815);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+.buttonClientes{
+  font-size: 20px;
+  width: 100%;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  border-radius: 7px;
+}
+.ul_conf{
+  text-decoration: none;
+  list-style-type: none;
+ padding-left: 0px;
+}
+.infoButton{
+  padding-left: 30px;
+  margin-bottom: 15px;
+}
+.buttonConfInfo{
+  font-size: 17px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+/*informacion*/
+#colInfo{
+  
+}
+/*fin informacion*/

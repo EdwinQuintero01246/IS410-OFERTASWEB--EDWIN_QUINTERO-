@@ -15,11 +15,103 @@
     <link rel="stylesheet" href="../../css/bootstrap.min.css" crossorigin="anonymous">
     <script src="../../js/bootstrap.min.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../custom.css">
+    <style>
+    #body_confi{
+        background-image: url(img/fondo.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    </style>
 </head>
-<body id="body_confi">
-    <nav>
+<body id="body_confi" >
+    <nav class="navbar navbar-expand-lg navbar-light bg-primarys" id="NavbarConfi">
+        <a class="navbar-brand" id="logo-button" href="javascript:location.reload()">Quintex </a>
+        <img src="../../img/logoBlanco.png" alt="">
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            </ul>
+            <div class="dropdown" id="Option_config">
+                <button class="btn btn-primarys  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="../us-inicio/img/icon/option.png" alt="" >
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="../us-emp-ajustes/index.html"><img src="../us-inicio/img/icon/confi.png" alt="" > configuración</a>
+                    <a class="dropdown-item" href="../../index.html"><img src="../us-inicio/img/icon/cerrar_seccion.png" alt="" > Cerrar Sección</a>
+                </div>
+            </div>
+        </div>
     </nav>
-    <section>
+    <section id="sectionConfig">
+        <div class="container-fluid" >
+            <div class="row" id="rowConfi">
+                <div class="col-sm-3 col-md-4 col-lg-3 col-xl-2 col-12" id="colButton">
+                    <ul class="ul_conf">
+                        <li>
+                            <input type="button" onclick="buttonUsuario()" class="buttonClientes btn-primarys" value="Usuarios">
+                            <div class="infoButton" id="contenidoButtoonUsuario">
+                                <input type="button" class="col-12 buttonConfInfo" value="Informacion">
+                                <input type="button" class="col-12 buttonConfInfo" value="Compras">
+                                <input type="button" class="col-12 buttonConfInfo" value="Empresas a Seguir">
+                                <input type="button" class="col-12 buttonConfInfo" value="Borrar o Advertir">
+                            </div>
+                        </li>
+                        <li>
+                            <input type="button" onclick="buttonEmpresa()" class="buttonClientes btn-primarys" value="Empresas">
+                            <div class="infoButton" id="contenidoButtoonEmpresa">
+                                    <input type="button" class="col-12 buttonConfInfo" value="Informacion">
+                                    <input type="button" class="col-12 buttonConfInfo" value="Productos">
+                                    <input type="button" class="col-12 buttonConfInfo" value="Ventas">
+                                    <input type="button" class="col-12 buttonConfInfo" value="Sucurdales">
+                                    <input type="button" class="col-12 buttonConfInfo" value="Borrar o Advertir">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-9 col-md-8 col-lg-9 col-xl-8 col-12" id="colInfo">
+                    <ul class="ul_conf">
+                        <li>
+                            <div class="col-xl-3">
+                                    <h2>Codigo usuario</h2>
+                            </div>
+                            <div class="col-xl-3">
+                                <h2>Nombre Usuario</h2>
+                            </div>
+                            <div class="col-xl-3">
+                                <h2>Correo</h2>
+                            </div>
+                            <div class="col-xl-3">
+                                <h2>Longirud y Latitud</h2>
+                            </div>
+                            <div class="col-xl-3">
+                                <h2>Contraseña</h2>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="col-xl-3">
+                                <h2>US12254</h2>
+                            </div>
+                            <div class="col-xl-3">
+                                <a href="#juan">Juan</a>
+                            </div>
+                            <div class="col-xl-3">
+                                <h2>Juan@gmail.com</h2>
+                            </div>
+                            <div class="col-xl-3">
+                                <h2>tegucugalpa,Honduras</h2>
+                            </div>
+                            <div class="col-xl-3">
+                                <h2>soyOtroniver</h2>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
     </section>
     <footer>
     </footer>
