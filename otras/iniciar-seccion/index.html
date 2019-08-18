@@ -11,10 +11,9 @@
     <link rel="stylesheet" type=" text/css" media="screen" href="../../css/bootstrap.css">
     <link rel="stylesheet" type=" text/css" media="screen" href="css/Style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" href="../../css/bootstrap.min.css" crossorigin="anonymous">
     <script src="../../js/bootstrap.min.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../../custom.css">
 </head>
 <body id="body_confi">
   <nav>
@@ -40,14 +39,14 @@
                             </div>
                         </li>
                         <li class="li-form-iniciar-seccion"><input type="email" class="form-control"  aria-describedby="emailHelp"  id="usuario" placeholder="Email"></li>
-                        <li class="li-form-iniciar-seccion"><div><h5 class="text-error">El correo o numero de telefono no coincide.</h5></div></li>
+                        <li class="li-form-iniciar-seccion"><div><h5 class="text-error" id="ErrorUsuario"></h5></div></li>
                         <li class="li-form-iniciar-seccion"><input type="password" class="form-control" name="" id="contrasenia" placeholder="Password"></li>
-                        <li class="li-form-iniciar-seccion"><div><h5 class="text-error"  >Ha introducido una contraseña incorrecta.</h5></div></li>
+                        <li class="li-form-iniciar-seccion"><div><h5 class="text-error" id="ErrorContraseña"></h5></div></li>
                         <li class="li-form-iniciar-seccion" id="confi_li_checkbutton">
                             <input type="checkbox" name="" id="Checkbutton" onclick="VerContraseña()" class="ng-valid ng-dirty ng-valid-parse ng-touched ng-not-empty" >
                             <span  class="span_line"> Recuérdame</span>
                         </li>
-                        <li class="li-form-iniciar-seccion"><a href=""></a><button onclick="buttonIniciarSeccio()" type="button" class="btn btn-info2" id="button-iniciar-seccion" >Iniciar Sección</button></a></li>
+                        <li class="li-form-iniciar-seccion"><input  type="button" onclick="IniciarSeccion()" class="btn btn-info2" id="button-iniciar-seccion" value="Iniciar Sección"></li>
                         <li class="li-form-iniciar-seccion"></li>
                         <li class="li-form-iniciar-seccion">
                             <div class="line"></div>
@@ -78,6 +77,8 @@
         
       </footer>
       
-  <script src="js/controlador.js"></script>
+    <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="js/controlador.js"></script>
 </body>
 </html>

@@ -158,7 +158,18 @@
   background-color: rgb(255, 255, 255);
   border-radius: 7px;
 }
-
+#GenerarEstadistica{
+  background-color: rgb(240, 240, 240);
+  margin-bottom: 0px;
+  padding-top: 20px;
+  padding-right: 5px;
+  padding-bottom: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 7px;
+}
+#buttonControl{
+  margin-bottom: 12px;
+}
 .btn-facebook{
   color: #fff;
   background-color: #4267B2;
@@ -289,8 +300,10 @@
   background-color: #2987eb;
   color: white;
 }
-.img-estadisticas{
+#img-estadisticas{
   width: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 /*fin consola*/
 /*console productos*/

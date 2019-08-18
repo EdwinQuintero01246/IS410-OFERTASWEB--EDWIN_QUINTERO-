@@ -1,4 +1,10 @@
   @media  screen and (min-width: 1200px){
+    .textInfo{
+      font-size: 15px;
+    }
+    .textInfoSpan{
+      font-size: 20px;
+    }
     .text-estadistica{
       font-size: 22px;
     }
@@ -10,8 +16,30 @@
       width: 100%;
       height: 250px;
     }
+    .empresaMessegerButton{
+      font-size: 20px;
+    }
+    .textMSS1{
+      font-size: 19px;
+    }
+    .textMSS2{
+      font-size: 19px;
+    }
+    #Text-Busqueda-Empresa{
+      width: 80%;
+    }
+    .buttonBusqueda{
+      width: 15%;
+      font-size: 20px;
+    }
   }
   @media  screen and (max-width: 1200px){
+    .textInfo{
+      font-size: 15px;
+    }
+    .textInfoSpan{
+      font-size: 20px;
+    }
     .text-estadistica{
       font-size: 22px;
     }
@@ -23,8 +51,29 @@
       width: 100%;
       height: 130px;
     }
+    .empresaMessegerButton{
+      font-size: 17px;
+    }.textMSS1{
+      font-size: 19px;
+    }
+    .textMSS2{
+      font-size: 19px;
+    }
+    #Text-Busqueda-Empresa{
+      width: 80%;
+    }
+    .buttonBusqueda{
+      width: 15%;
+      font-size: 20px;
+    }
   }
   @media  screen and (max-width: 992px){
+    .textInfo{
+      font-size: 15px;
+    }
+    .textInfoSpan{
+      font-size: 20px;
+    }
     .text-estadistica{
       font-size: 22px;
     }
@@ -36,8 +85,31 @@
       width: 100%;
       height: 140px;
     }
+    .empresaMessegerButton{
+      font-size: 16px;
+      width: 100%;
+    }
+    .textMSS1{
+      font-size: 19px;
+    }
+    .textMSS2{
+      font-size: 19px;
+    }
+    #Text-Busqueda-Empresa{
+      width: 80%;
+    }
+    .buttonBusqueda{
+      width: 15%;
+      font-size: 20px;
+    }
   }
   @media  screen and (max-width: 768px){
+    .textInfo{
+      font-size: 14px;
+    }
+    .textInfoSpan{
+      font-size: 18px;
+    }
     .text-estadistica{
       font-size: 17px;
     }
@@ -48,9 +120,31 @@
     .tamaños_visualizacion{
       width: 100%;
       height: 200px;
+    }.empresaMessegerButton{
+      font-size: 14px;
+      width: 100%;
+    }
+    .textMSS1{
+      font-size: 17px;
+    }
+    .textMSS2{
+      font-size: 17px;
+    }
+    #Text-Busqueda-Empresa{
+      width: 70%;
+    }
+    .buttonBusqueda{
+      width: 20%;
+      font-size: 20px;
     }
   }
   @media  screen and (max-width: 576px){
+    .textInfo{
+      font-size: 12px;
+    }
+    .textInfoSpan{
+      font-size: 14px;
+    }
     .text-estadistica{
       font-size: 17px;
     }
@@ -61,6 +155,23 @@
     .tamaños_visualizacion{
       width: 100%;
       height: 190px;
+    }
+    .empresaMessegerButton{
+      font-size: 12px;
+      width: 100%;
+    }
+    .textMSS1{
+      font-size: 15px;
+    }
+    .textMSS2{
+      font-size: 15px;
+    }
+    #Text-Busqueda-Empresa{
+      width: 80%;
+    }
+    .buttonBusqueda{
+      width: 15%;
+      font-size: 14px;
     }
   }
 /* navbar*/
@@ -324,3 +435,170 @@
   background-color: rgb(240, 240, 240);
 }
 /*fin console productos*/
+/* messegerQuintex*/
+#messegerQuintex{
+  padding: 10px 10px 10px 10px;
+  background-color: #F9F9F9;
+}
+#messegerQuintexRow{
+  background-color: white;
+}
+#usuariosMessegerButton{
+  background-color: rgba(0, 123, 255, 0.822);
+  padding-top: 15px;
+  border-radius: 7px;
+}
+.empresaMessegerButton{
+  background-color: rgb(235, 235, 235);
+  color: rgba(0, 123, 255, 0.822);
+  border-radius: 3px;
+  border: rgba(0, 123, 255, 0.513);
+  margin-top: 1.5px;
+  margin-bottom: 1.5px;
+  text-align: left;
+}
+.empresaMessegerButton:hover{
+  background-color: #EEF7FC;
+  font-weight: 900;
+}
+#colorContenido{
+  padding: 5px 5px 5px 5px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 7px;
+  border-top: solid rgba(0, 0, 0, 0.705);
+  border-left: solid rgba(0, 0, 0, 0.705);
+  border-right: solid rgba(0, 0, 0, 0.705);
+}
+.textMSS1{
+  background-color: rgb(137, 192, 219);
+  color: white;
+  border-radius: 4px;
+  text-align: left;
+  border: solid;
+  border-color: black;
+}
+.textMSS2{
+  background-color:rgba(0, 123, 255, 0.822);
+  color: white;
+  border-radius: 4px;
+  text-align: right;
+  border: solid;
+  border-color: black;
+}
+#cajaTextoEnviarMSS{
+  height: auto;
+    font-size: 19px;
+    border-radius: 5px;
+    margin-left: 1px;
+    border-left-width: 1px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left: black;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+#buttonEnviarMSS{
+  font-size: 17px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+/* fin  messegerQuintex*/
+/*Empresas Seguidas*/
+#div-class-content{
+  padding-left: 0PX;
+  padding-right: 0px;
+}
+#barra-busqueda{
+  margin: 0;
+  width: 100%;
+  padding-bottom: 10px;
+  padding-left: 12px;
+}
+#Text-Busqueda-Producto{
+  font-size: 15px;
+}
+#TextUsuaarioEncotrado{
+  font-size: 15px;
+  width: 98%;
+  background-color: #e9ecef;
+  opacity: 1;
+}
+.buttonBusqueda{
+  margin-top: 2px;
+  margin-bottom: 2px;
+  border-radius: 7px;
+  height: 30px;
+}
+
+.ul_confEmpresasSeguidas{
+  text-decoration: none;
+  list-style-type: none;
+ padding-left: 0px;
+}
+
+#colInfo{
+  margin-top: 12px;
+  background-color: rgba(150,150,150,0.25);
+  padding-left: 0px;
+  padding-top: 15px;
+  border-radius: 7px;
+  margin-right: 0px;
+  padding-right: 0px;
+  border-left-color: black;
+  border-left-width: 5px;
+
+}
+.liConfi{
+  -webkit-box-shadow: 0px 1px 0px 0px rgba(0,0,0,1);
+-moz-box-shadow: 0px 1px 0px 0px rgba(0,0,0,1);
+box-shadow: 0px 1px 0px 0px rgba(0,0,0,1);
+
+}
+.liConfInfo1{
+  background-color: #007BFF;
+  padding: 4px 2px 2px 2px;
+  border-radius: 7px;
+  margin-bottom: 2px;
+  color: white;
+}
+.liConfInfo2a{
+  background-color: rgb(198, 219, 230);
+}
+.liConfInfo2Comun{
+  padding: 4px 2px 2px 2px;
+  border-radius: 7px;
+  margin-bottom: 2px;
+  color: rgba(0, 0, 0, 0.897);
+  list-style-type: none;
+}
+.liConfInfo2b{
+  background-color: rgb(158, 198, 218);
+}
+.textA{
+  color: black;
+}
+.textA:hover{
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+.btn-primarys{
+  color: #fff;
+  background-color: #007BFF;
+  border: #007BFF; 
+}
+.btn-primarys:hover{
+  background-color: #134689;
+  border: rgb(76, 162, 255); 
+}
+#Text-Busqueda-Empresa{
+  font-size: 15px;
+}
+.buttonBusqueda{
+  margin-top: 2px;
+  margin-bottom: 2px;
+  border-radius: 7px;
+  height: 30px;
+}
+/*fin Empresas Seguidas*/
