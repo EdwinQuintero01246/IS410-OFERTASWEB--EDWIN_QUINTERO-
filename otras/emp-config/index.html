@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Configuracion Empresa</title>
+    <link rel="icon" type="image/png" href="../../img/logo.png">
+    <link rel="estilo-boostrap" href="../../css/bootstrap.min.css">
+    <link rel="estilo-boostrap" href="../../css/Style.css">
+    <link rel="stylesheet" type=" text/css" media="screen" href="../../css/bootstrap.css">
+    <link rel="stylesheet" type=" text/css" media="screen" href="css/Style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css" crossorigin="anonymous">
+    <script src="../../js/bootstrap.min.js" crossorigin="anonymous"></script>
+</head>
+<body id="body_confi">
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary" style="margin-bottom: 1px;">
+        <a class="navbar-brand" id="logo-button" href="">Quintex</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-button-option-navbar" href="../us-inicio/index.html">Inicio </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-button-option-navbar" href="../us-perfil/index.html">Perfil </a>
+                </li>
+            </ul>
+            <div class="dropdown" id="Option_config">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="../us-inicio/img/icon/option.png" alt="" >
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="../../index.html"><img src="../us-inicio/img/icon/cerrar_seccion.png" alt="" > Cerrar Sección</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="container-fluid" >
+            <div class="row" id="rowGeneral">
+                <div class="col-sm-4 col-md-4 col-lg-4 col-xl-3 col-4" id="LateralButton">
+                    <div style="margin-bottom: 12px">
+                        <div><span class="tittle">Información</span></div>
+                        <div class="SizeFormLi col-12 row">
+                            <h1 class="content-text col-12">Nombre empresa</h1>
+                            <h1 class="content-textInfo col-12">Centromatic</h1>
+                        </div>
+                        <div class="SizeFormLi col-12 row">
+                            <h1 class="content-text col-12">Correo</h1>
+                            <h1 class="content-textInfo col-12">cent@gmail.com</h1>
+                        </div>
+                        <div class="SizeFormLi col-12 row">
+                            <h1 class="content-text col-12">Contraseña</h1>
+                            <h1 class="content-textInfo col-12">........</h1>
+                        </div>
+                        <div class="SizeFormLi col-12 row">
+                            <h1 class="content-text col-12">Telefono(s)</h1>
+                            <h1 class="content-textInfo col-12">2284-5787</h1>
+                        </div>
+                        <a onclick="ModalNombre()" data-toggle="modal" data-target="#NombreModal" class="boton_personalizado row" id="buttonInfo">
+                            <Img class="imagenEditar" src="img/icon/desplegue.png">
+                            </Img>
+                        </a>
+                        <div><div class="line"></div></div>
+                        <div><span class="tittle">ubicacion</span></div>
+                        <div class="row" id="rowGeneral">
+                            <input class="content-text col-sm-10 col-12" type="text" name="" id="text-lugar" placeholder="Lugar,Sitio" >
+                            <a onclick="ModalGPS()" data-toggle="modal" data-target="#GPSModal" id="tamanioButton" class="boton_personalizado col-sm-2 col-md-2 col-lg-2 col-xl-1 col-3"  href="">
+                                <Img src="img/icon/localizacion.png" id="">
+                                </Img>
+                            </a>
+                        </div>
+                        <div><div class="line"></div></div>
+                        <div><span class="tittle">Numero de cuenta</span></div>
+                        <div>
+                            <h1 class="content-textInfo row col-sm-10 col-12">XXXX-XXXX-XXXX-2989</h1>
+                            <a onclick="ModalTarjeta()" data-toggle="modal" data-target="#TarjetaModal" id="tamanioButton" class="boton_personalizado col-sm-2 col-md-2 col-lg-2 col-xl-1 col-3" href="">
+                                <Img src="img/icon/tarjetas.png" id="">
+                                </Img>
+                            </a>
+                        </div>
+                        <div><div class="line" id="lineMargin"></div></div>
+                        <div><span class="tittle" id="redes">redes sociales</span></div>
+                        <div>
+                            <div class="btn-group col-12 ceroPadding " id="redes" role="group" aria-label="Basic example">
+                                <button type="button" onclick="ModalFacebook()" data-toggle="modal" data-target="#FacebookModal" class="btn btn-facebook">facebook/</button>
+                                <div class="input-group-text" id="btnGroupAddon">@</div>
+                                <input type="text" class="form-control" placeholder="redes" aria-label="Input group example" aria-describedby="btnGroupAddon">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="btn-group col-12 ceroPadding " id="redes" role="group" aria-label="Basic example">
+                                <button type="button" onclick="ModalTwitter()" data-toggle="modal" data-target="#TwitterModal" class="btn btn-twitter">twitter.com/</button>
+                                <div class="input-group-text" id="btnGroupAddon">@</div>
+                                <input type="text" class="form-control" placeholder="redes" aria-label="Input group example" aria-describedby="btnGroupAddon">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="btn-group col-12 ceroPadding " id="redes" role="group" aria-label="Basic example">
+                                <button type="button" onclick="ModalInstagram()" data-toggle="modal" data-target="#InstagramModal" class="btn btn-instagram">instagram.com/</button>
+                                <div class="input-group-text" id="btnGroupAddon">@</div>
+                                <input type="text" class="form-control" placeholder="redes" aria-label="Input group example" aria-describedby="btnGroupAddon">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-8 col-md-8 col-lg-8 col-xl-9 col-8" id="Información">
+                    <div class="col-6">
+                        <h1>Nombre Empresa Actual</h1>
+                        <h1>Centromatic</h1>
+                        <h1>Nombre Empresa cambiar</h1>
+                        <input type="text" name=""  id="">
+                    </div>
+                    <div class="col-6">
+                            <h1>Correo Actual</h1>
+                            <h1>Cent@Gmail.Com</h1>
+                            <h1>Correo cambiar</h1>
+                            <input type="text" name=""  id="">
+                    </div>
+                    <div class="col-6">
+                            <h1>Contraseña cambiar</h1>
+                            <input type="password" name="" id="">
+                            <h1>confirmar Contraseña</h1>
+                            <input type="password" name="" id="">
+                    </div>
+                    <div class="col-6">
+                            <h1>Telefono Actual</h1>
+                            <h1>2284-5787</h1>
+                            <h1>Telefono cambiar</h1>
+                            <input type="text" name=""  id="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+<div id="GenerarModal">
+</div>
+<script src="../../js/jquery-3.4.1.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="js/controlador.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
