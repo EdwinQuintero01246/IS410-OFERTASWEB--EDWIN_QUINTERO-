@@ -1,0 +1,46 @@
+[
+    {"CodigoUsuario":"US12254","NombreUsuario":"Juan","Correo":"Juan1@gmail.com","LongirudyLatitud":"Tegucugalpa,Honduras","Contraseña":"soyOtronivel", 
+        "Compras":[
+            {"codigodecompras":"CP-0052", "NombreUsuarioUsuario": "jetstereo", "Producto":"iPad Air","Precio": 32999.00,"moneda":"L."},
+            {"codigodecompras":"CP-1541", "NombreUsuarioUsuario": "caribe comp", "Producto":"iPad mini","Precio": 24999,"moneda":"L."},
+            {"codigodecompras":"CP-5210", "NombreUsuarioUsuario": "Larach y Cía", "Producto":"apple watch series 3 precio","Precio": 299,"moneda":"$"}
+        ],
+        "EmpresaSeguidas":[
+            {"CodigoUsuarioEmpresa":"EM12254","NombreUsuarioEmpresa":"Centromatic"},
+            {"CodigoUsuarioEmpresa":"EM12869","NombreUsuarioEmpresa":"Ricoh"},
+            {"CodigoUsuarioEmpresa":"EM12884","NombreUsuarioEmpresa":"Diunsa"}
+        ]},
+    {"CodigoUsuario":"US12255","NombreUsuario":"Juan","Correo":"Juan2@gmail.com","LongirudyLatitud":"San Pedro,Honduras","Contraseña":"Fuerajoh", 
+        "Compras":[
+            {"codigodecompras":"CP-0052", "NombreUsuarioUsuario": "jetstereo", "Producto":"iPad Air","Precio": 32999.00,"moneda":"L."},
+            {"codigodecompras":"CP-1541", "NombreUsuarioUsuario": "caribe comp", "Producto":"iPad mini","Precio": 20999,"moneda":"L."},
+            {"codigodecompras":"CP-5210", "NombreUsuarioUsuario": "Larach y Cía", "Producto":"apple watch series 3 precio","Precio": 599,"moneda":"$"}
+        ],
+        "EmpresaSeguidas":[
+            {"CodigoUsuarioEmpresa":"","NombreUsuarioEmpresa":""},
+            {"CodigoUsuarioEmpresa":"","NombreUsuarioEmpresa":""},
+            {"CodigoUsuarioEmpresa":"","NombreUsuarioEmpresa":""}
+        ]},
+    {"CodigoUsuario":"US12922","NombreUsuario":"Pedro Garza","Correo":"Pedro_Garza@gmail.com","LongirudyLatitud":"Tegucugalpa,Honduras","Contraseña":"Mrs.Garza", 
+        "Compras":[
+            {"codigodecompras":"CP-0052", "NombreUsuarioUsuario": "jetstereo", "Producto":"iPad Air","Precio": 32999.00,"moneda":"L."},
+            {"codigodecompras":"CP-1541", "NombreUsuarioUsuario": "caribe comp", "Producto":"iPad mini","Precio": 24999,"moneda":"L."},
+            {"codigodecompras":"CP-5210", "NombreUsuarioUsuario": "Larach y Cía", "Producto":"apple watch series 3 precio","Precio": 599,"moneda":"$"}
+        ],
+        "EmpresaSeguidas":[
+            {"CodigoUsuarioEmpresa":"","NombreUsuarioEmpresa":""},
+            {"CodigoUsuarioEmpresa":"","NombreUsuarioEmpresa":""},
+            {"CodigoUsuarioEmpresa":"","NombreUsuarioEmpresa":""}
+        ]},
+    {"CodigoUsuario":"US12922","NombreUsuario":"Pedro Garza","Correo":"Pedro_Garza@gmail.com","LongirudyLatitud":"Tegucugalpa,Honduras","Contraseña":"Mrs.Garza", 
+        "Compras":[
+            {"codigodecompras":"CP-0052", "NombreUsuarioUsuario": "jetstereo", "Producto":"iPad Air","Precio": 32999.00,"moneda":"L."},
+            {"codigodecompras":"CP-1541", "NombreUsuarioUsuario": "caribe comp", "Producto":"iPad mini","Precio": 24999,"moneda":"L."},
+            {"codigodecompras":"CP-5210", "NombreUsuarioUsuario": "Larach y Cía", "Producto":"apple watch series 3 precio","Precio": 399,"moneda":"$"}
+        ],
+        "EmpresaSeguidas":[
+            {"CodigoUsuarioEmpresa":"","NombreUsuarioEmpresa":""},
+            {"CodigoUsuarioEmpresa":"","NombreUsuarioEmpresa":""},
+            {"CodigoUsuarioEmpresa":"","NombreUsuarioEmpresa":""}
+        ]}
+]

@@ -14,6 +14,7 @@
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
     <link rel="stylesheet" href="../../css/bootstrap.min.css" crossorigin="anonymous">
     <script src="../../js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
 </head>
 <body id="body_confi">
     <nav class="navbar navbar-expand-lg navbar-light bg-primary" >
@@ -101,13 +102,34 @@
                                 <input type="button" class="tamanio-consola-button btn btn-light" value="Ventas" onclick="EventoVentas()">
                             </div>
                         </li>
+                        
                     </ul>
                     <div id="GenerarProductosYVentas">
-
+                        <div class="col-8 row " id="EstadisticasGraficasButton" style="overflow: auto">
+                                <canvas id="myChart" class="col-12" width="400" height="150"></canvas>
+                            <input type="button" id="buttonEstadistica" class=" col-4 btn btn-warning" value="Comentarios">
+                            <input type="button" id="buttonEstadistica" class=" col-4 btn btn-light" value="Me Gusta">
+                            <input type="button" id="buttonEstadistica" class=" col-4 btn btn-dark" value="No Me Gusta">
+                            <select name="" id="selectMoneda" onclick="cambiarMoneda()" class="select-css col-6 row" style="margin-left: 0px; margin-right: 0px;">
+                                <option value="0">Lempiras</option>
+                                <option value="1">Dolar</option>
+                                <option value="1">Euro</option>
+                            </select>
+                            <select name="" id="selectMonedaCambiar" onclick="cambiarMoneda()" class="select-css col-6 row" style="margin-left: 0px; margin-right: 0px;">
+                                <option value="0">Lempiras</option>
+                                <option value="1">Dolar</option>
+                                <option value="1">Euro</option>
+                            </select>
+                        </div>
                     </div>
+                    
                 </div>
             </div>
         </div>
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+
+</script>
     </section>
     <footer>
     </footer>

@@ -162,7 +162,7 @@ function Compras(){
                 <h2 class="textInfo" style="color: rgb(255, 255, 255)">total</h2>
             </div>
             <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-2">
-                <h2 class="textInfo" style="color: rgb(255, 255, 255)">L. ${sumatoria}</h2>
+                <h2 class="textInfo" style="color: rgb(255, 255, 255)">L. -${sumatoria}</h2>
             </div>
         </li>
     `));
@@ -188,7 +188,7 @@ for(var i=0;i<empresasContactas.length;i++){
     $("#usuariosMessegerButton").append($(`
     <input class="col-12 empresaMessegerButton" onclick="VerCoversacion(${i})" type="button" value="${empresasContactas[i].NombreUsuarioEmpresa}">
 `));
-}
+};
 }
 
 

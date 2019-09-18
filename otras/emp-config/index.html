@@ -7,7 +7,6 @@
     <title>Configuracion Empresa</title>
     <link rel="icon" type="image/png" href="../../img/logo.png">
     <link rel="estilo-boostrap" href="../../css/bootstrap.min.css">
-    <link rel="estilo-boostrap" href="../../css/Style.css">
     <link rel="stylesheet" type=" text/css" media="screen" href="../../css/bootstrap.css">
     <link rel="stylesheet" type=" text/css" media="screen" href="css/Style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -48,39 +47,39 @@
                     <div style="margin-bottom: 12px">
                         <div><span class="tittle">Información</span></div>
                         <div class="SizeFormLi col-12 row">
-                            <h1 class="content-text col-12">Nombre empresa</h1>
-                            <h1 class="content-textInfo col-12">Centromatic</h1>
+                            <h1 class="TextPrincipal content-text col-12">Nombre empresa</h1>
+                            <h1 class="TextSecundario content-textInfo col-12">Centromatic</h1>
                         </div>
                         <div class="SizeFormLi col-12 row">
-                            <h1 class="content-text col-12">Correo</h1>
-                            <h1 class="content-textInfo col-12">cent@gmail.com</h1>
+                            <h1 class="TextPrincipal content-text col-12">Correo</h1>
+                            <h1 class="TextSecundario content-textInfo col-12">cent@gmail.com</h1>
                         </div>
                         <div class="SizeFormLi col-12 row">
-                            <h1 class="content-text col-12">Contraseña</h1>
-                            <h1 class="content-textInfo col-12">........</h1>
+                            <h1 class="TextPrincipal content-text col-12">Contraseña</h1>
+                            <h1 class="TextSecundario content-textInfo col-12">........</h1>
                         </div>
                         <div class="SizeFormLi col-12 row">
-                            <h1 class="content-text col-12">Telefono(s)</h1>
-                            <h1 class="content-textInfo col-12">2284-5787</h1>
+                            <h1 class="TextPrincipal content-text col-12">Telefono(s)</h1>
+                            <h1 class="TextSecundario content-textInfo col-12">2284-5787</h1>
                         </div>
-                        <a onclick="ModalNombre()" data-toggle="modal" data-target="#NombreModal" class="boton_personalizado row" id="buttonInfo">
+                        <a onclick="generarinfo()"  class="boton_personalizado row" id="buttonInfo">
                             <Img class="imagenEditar" src="img/icon/desplegue.png">
                             </Img>
                         </a>
                         <div><div class="line"></div></div>
                         <div><span class="tittle">ubicacion</span></div>
                         <div class="row" id="rowGeneral">
-                            <input class="content-text col-sm-10 col-12" type="text" name="" id="text-lugar" placeholder="Lugar,Sitio" >
-                            <a onclick="ModalGPS()" data-toggle="modal" data-target="#GPSModal" id="tamanioButton" class="boton_personalizado col-sm-2 col-md-2 col-lg-2 col-xl-1 col-3"  href="">
+                            <input disabled class="TextPrincipal content-text col-sm-10 col-12" type="text" name="" id="text-lugar" placeholder="Lugar,Sitio" >
+                            <a onclick="ModalGPS()" data-toggle="modal" data-target="#GPSModal" id="tamanioButton" class="boton_personalizado"   style="height: 33px; width: 27px;">
                                 <Img src="img/icon/localizacion.png" id="">
                                 </Img>
                             </a>
                         </div>
                         <div><div class="line"></div></div>
                         <div><span class="tittle">Numero de cuenta</span></div>
-                        <div>
-                            <h1 class="content-textInfo row col-sm-10 col-12">XXXX-XXXX-XXXX-2989</h1>
-                            <a onclick="ModalTarjeta()" data-toggle="modal" data-target="#TarjetaModal" id="tamanioButton" class="boton_personalizado col-sm-2 col-md-2 col-lg-2 col-xl-1 col-3" href="">
+                        <div class="row" style="margin-left: 0px;margin-right: 0px;">
+                            <h1 class="TextSecundario content-textInfo row col-sm-10 col-12">XXXX-XXXX-XXXX-2989</h1>
+                            <a onclick="ModalTarjeta()" data-toggle="modal" data-target="#TarjetaModal" id="tamanioButton" style="height: 24px; width: 27px;" class="boton_personalizado" href="">
                                 <Img src="img/icon/tarjetas.png" id="">
                                 </Img>
                             </a>
@@ -110,40 +109,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-8 col-md-8 col-lg-8 col-xl-9 col-8" id="Información">
-                    <div class="col-6">
-                        <h1>Nombre Empresa Actual</h1>
-                        <h1>Centromatic</h1>
-                        <h1>Nombre Empresa cambiar</h1>
-                        <input type="text" name=""  id="">
-                    </div>
-                    <div class="col-6">
-                            <h1>Correo Actual</h1>
-                            <h1>Cent@Gmail.Com</h1>
-                            <h1>Correo cambiar</h1>
-                            <input type="text" name=""  id="">
-                    </div>
-                    <div class="col-6">
-                            <h1>Contraseña cambiar</h1>
-                            <input type="password" name="" id="">
-                            <h1>confirmar Contraseña</h1>
-                            <input type="password" name="" id="">
-                    </div>
-                    <div class="col-6">
-                            <h1>Telefono Actual</h1>
-                            <h1>2284-5787</h1>
-                            <h1>Telefono cambiar</h1>
-                            <input type="text" name=""  id="">
-                    </div>
+                <div class="col-sm-8 col-md-8 col-lg-8 col-xl-9 col-8 row" id="Información">
+                    
                 </div>
             </div>
         </div>
     </section>
+    <div id="GenerarModal">
+    </div>
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="js/controlador.js"></script>
 </body>
-
-<div id="GenerarModal">
-</div>
-<script src="../../js/jquery-3.4.1.min.js"></script>
-<script src="../../js/bootstrap.min.js"></script>
-<script src="js/controlador.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>

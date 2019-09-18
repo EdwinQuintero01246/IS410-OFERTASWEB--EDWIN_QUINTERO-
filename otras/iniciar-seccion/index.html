@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" href="../../css/bootstrap.min.css" crossorigin="anonymous">
-    <script src="../../js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="../../js/bootstrap.min.js" crossorigin="anonymous">
+    </script><script src="https://kit.fontawesome.com/bd816e089d.js"></script>
 </head>
 <body id="body_confi">
   <nav>
@@ -40,11 +41,16 @@
                         </li>
                         <li class="li-form-iniciar-seccion"><input type="email" class="form-control"  aria-describedby="emailHelp"  id="usuario" placeholder="Email"></li>
                         <li class="li-form-iniciar-seccion"><div><h5 class="text-error" id="ErrorUsuario"></h5></div></li>
-                        <li class="li-form-iniciar-seccion"><input type="password" class="form-control" name="" id="contrasenia" placeholder="Password"></li>
+                        <li class="li-form-iniciar-seccion">
+                            <input type="password" class="form-control" name="" id="contrasenia" placeholder="Password">
+                            <div id="generarVisivilidad">
+                                <i id="mostrarContraseña" class=" fas fa-eye-slash"></i>
+                            </div>
+                        </li>
                         <li class="li-form-iniciar-seccion"><div><h5 class="text-error" id="ErrorContraseña"></h5></div></li>
-                        <li class="li-form-iniciar-seccion" id="confi_li_checkbutton">
+                        <li class="li-form-iniciar-seccion col-6" id="confi_li_checkbutton">
                             <input type="checkbox" name="" id="Checkbutton" onclick="VerContraseña()" class="ng-valid ng-dirty ng-valid-parse ng-touched ng-not-empty" >
-                            <span  class="span_line"> Recuérdame</span>
+                            <span  class="span_line"> Ver Contraseña</span>
                         </li>
                         <li class="li-form-iniciar-seccion"><input  type="button" onclick="IniciarSeccion()" class="btn btn-info2" id="button-iniciar-seccion" value="Iniciar Sección"></li>
                         <li class="li-form-iniciar-seccion"></li>

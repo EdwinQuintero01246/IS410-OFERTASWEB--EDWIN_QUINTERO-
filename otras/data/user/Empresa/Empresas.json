@@ -1,0 +1,20 @@
+[
+    {"CodigoUsuarioEmpresa":"EM12254","NombreUsuarioEmpresa":"Centromatic","Correo":"Centromatic@gmail.com", "LongirudyLatitud":"Tegucugalpa,Honduras","Contraseña":"MejorContra",
+        "Ventas":[
+            {"codigodecompras":"CP-0052", "NombreUsuarioUsuario": "Juan Perez", "Producto":"iPad Air","Precio": 32999.00,"moneda":"L."},
+            {"codigodecompras":"CP-1541", "NombreUsuarioUsuario": "Maria Padilla", "Producto":"iPad mini","Precio": 24999,"moneda":"L."},
+            {"codigodecompras":"CP-5210", "NombreUsuarioUsuario": "Fuera Joh", "Producto":"apple watch series 3 precio","Precio": 399,"moneda":"$"}
+        ]},
+    {"CodigoUsuarioEmpresa":"EM12869","NombreUsuarioEmpresa":"Ricoh","Correo":"Ricoh@gmail.com","LongirudyLatitud":"San Pedro,Honduras","Contraseña":"Ricohh",
+        "Ventas":[
+            {"codigodecompras":"CP-0052", "NombreUsuarioUsuario": "Juan Perez", "Producto":"iPad Air","Precio": 32999.00,"moneda":"L."},
+            {"codigodecompras":"CP-1541", "NombreUsuarioUsuario": "Maria Padilla", "Producto":"iPad mini","Precio": 24999,"moneda":"L."},
+            {"codigodecompras":"CP-5210", "NombreUsuarioUsuario": "Fuera Joh", "Producto":"apple watch series 3 precio","Precio": 399,"moneda":"$"}
+        ]},
+    {"CodigoUsuarioEmpresa":"EM12884","NombreUsuarioEmpresa":"Diunsa","Correo":"Diunsa@gmail.com","LongirudyLatitud":"Tegucugalpa,Honduras","Contraseña":"1234",
+        "Ventas":[
+            {"codigodecompras":"CP-0052", "NombreUsuarioUsuario": "Juan Perez", "Producto":"iPad Air","Precio": 32999.00,"moneda":"L."},
+            {"codigodecompras":"CP-1541", "NombreUsuarioUsuario": "Maria Padilla", "Producto":"iPad mini","Precio": 24999,"moneda":"L."},
+            {"codigodecompras":"CP-5210", "NombreUsuarioUsuario": "Fuera Joh", "Producto":"apple watch series 3 precio","Precio": 399,"moneda":"$"}
+        ]}
+]

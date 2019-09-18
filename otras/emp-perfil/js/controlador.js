@@ -1,3 +1,12 @@
+var ventassarreglo=[];
+ventassarreglo=[
+    {codigodecompras:"CP-0052", NombreUsuarioUsuario: "Juan Perez", Producto:"iPad Air",Precio: 32999.00,moneda:"L."},
+    {codigodecompras:"CP-1541", NombreUsuarioUsuario: "Maria Padilla", Producto:"iPad mini",Precio: 24999,moneda:"L."},
+    {codigodecompras:"CP-5210", NombreUsuarioUsuario: "Fuera Joh", Producto:"apple watch series 3 precio",Precio: 399,moneda:"$"}
+];
+var moneda;
+moneda={dolar:"$", Lempiras:"L.",Euros:"€"};
+
 function EventoEstadisticas(){
     $("#GenerarEstadistica").html($(`
         <li id="buttonControl">
@@ -9,21 +18,14 @@ function EventoEstadisticas(){
         </li>
     `));
     $("#GenerarEstadistica").append($(`
-        <li class="li-estadisticas">
-            <img class="col-sm-2 col-md-2 col-lg-2 col-xl-1 col-2" id="img-estadisticas" src="../../img/icon/comentar.png"  alt="">
-            <span class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-6 text-estadistica" id="color-comentario">Comentarios: </span>
-            <span class="col-sm-4 col-md-4 col-lg-4 col-xl-5 col-4 numero-estadistica">numeros</span>
-        </li>
-        <li class="li-estadisticas">
-            <img class="col-sm-2 col-md-2 col-lg-2 col-xl-1 col-2" id="img-estadisticas" src="../../img/icon/like.png"  alt="">
-            <span class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-6 text-estadistica" id="color-like">me gustas: </span>
-            <span class="col-sm-4 col-md-4 col-lg-4 col-xl-5 col-4 numero-estadistica">numeros</span>
-        </li>
-        <li class="li-estadisticas">
-            <img class="col-sm-2 col-md-2 col-lg-2 col-xl-1 col-2" id="img-estadisticas" src="../../img/icon/not-like.png"  alt="">
-            <span class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-6 text-estadistica" id="color-not-like">me molesta: </span>
-            <span class="col-sm-4 col-md-4 col-lg-4 col-xl-5 col-4 numero-estadistica">numeros</span>
-        </li>>
+    <div class="col-8 row " id="EstadisticasGraficasButton" style="overflow: auto">
+        <canvas id="myChart" class="col-12" width="400" height="150"></canvas>
+        <input type="button" id="buttonEstadistica" class=" col-4 btn btn-warning" value="Comentarios">
+        <input type="button" id="buttonEstadistica" class=" col-4 btn btn-light" value="Me Gusta">
+        <input type="button" id="buttonEstadistica" class=" col-4 btn btn-dark" value="No Me Gusta">
+    </div>
+    
+    <script src="js/controlador.js"></script>
     `));
     $("#GenerarProductosYVentas").html($(`
     `));
@@ -53,35 +55,151 @@ function EventoProductos(){
     `));
 }
 function EventoVentas(){
-    $("#GenerarEstadistica").html($(`
-        <li>
-            <div class="btn-group" role="group" aria-label="Basic example" id="div-consola">
-                <input type="button" class="tamanio-consola-button btn btn-light" value="Estadisticas" onclick="EventoEstadisticas()">
-                <input type="button" class="tamanio-consola-button btn btn-light" value="Productos" onclick="EventoProductos()">
-                <input type="button" class="tamanio-consola-button btn btn-light" value="Ventas" onclick="EventoVentas()">
+    var sumatoria=0;
+    var monedaSumatoria="";
+    $("#GenerarProductosYVentas").html($(`
+    <ul class="ul_confEmpresasSeguidas">
+        <li class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 liConfInfo1">
+            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2 col-12">
+                <h2 class="textInfo">Codigo de Compra</h2>
+            </div>
+            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 col-12">
+                <h2 class="textInfo">Empresa</h2>
+            </div>
+            <div class="col-sm-12 col-md-3 col-lg-4 col-xl-5 col-12">
+                <h2 class="textInfo">Producto</h2>
+            </div>
+            <div class="col-sm-12 col-md-2 col-lg-2 col-xl-2 col-12">
+                <h2 class="textInfo">precio</h2>
             </div>
         </li>
+    </ul>
     `));
-    $("#GenerarProductosYVentas").html($(`
-        <div id="tabla-ventas">
-            <table style="width: 100%">
-                <thead class="config-tabla">
-                    <th><span class="text-plano">Producto</span></th>
-                    <th><span class="text-plano">Descripcion del producto</span></th>
-                    <th><span class="text-plano">Oferta</span></th>
-                    <th><span class="text-plano">Informacion del vendedor</span></th>
-                    <th><span class="text-plano">Empresa o nombre de vendedor</span></th>
-                </thead>
-                <tbody class="config-tabla">
-                    <tr>
-                        <td><span class="text-tabla">Producto</span></td>
-                        <td><span class="text-tabla">descripcion del producto</span></td>
-                        <td><span class="text-tabla">Oferta</span></td>
-                        <td><span class="text-tabla">Informacion del vendedor</span></td>
-                        <td><span class="text-tabla">Empresa o nombre de vendedor</span></td>
-                    </tr>
-                </tbody>
-            </table>
+    for(var i=0; i<ventassarreglo.length;i++){
+        
+
+            $("#GenerarProductosYVentas").append($(`
+                <li class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 liConfInfo2a liConfInfo2Comun">
+                    <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2 col-12">
+                        <h2 class="textInfo">${ventassarreglo[i].codigodecompras}</h2>
+                    </div>
+                    <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 col-12">
+                        <a href="#${ventassarreglo[i].NombreUsuarioUsuario}" class="textInfo textA"><span class="textInfoSpan"> · </span>${ventassarreglo[i].NombreUsuarioUsuario}</a>
+                    </div>
+                    <div class="col-sm-12 col-md-3 col-lg-4 col-xl-5 col-12">
+                        <h2 class="textInfo">${ventassarreglo[i].Producto}</h2>
+                    </div>
+                    <div class="col-sm-12 col-md-2 col-lg-2 col-xl-2 col-12">
+                        <h2 class="textInfo">${ventassarreglo[i].moneda} ${ventassarreglo[i].Precio}</h2>
+                    </div>
+                </li>
+            `));
+    };
+    for(var i=0; i<ventassarreglo.length;i++){
+        var  valor=0;
+        if(ventassarreglo[i].moneda=="L."){
+            valor=ventassarreglo[i].Precio;
+        }if(ventassarreglo[i].moneda=="$"){
+            valor=ventassarreglo[i].Precio*24.45;
+        }if(ventassarreglo[i].moneda=="€"){
+            valor=ventassarreglo[i].Precio*27.14;
+        };
+        sumatoria=valor+ sumatoria;
+        monedaSumatoria="L."
+    };
+    var json=[];
+        json={
+            sumatoria: sumatoria,
+            monedas: monedaSumatoria
+        };
+        //console.log(json);
+        var localStorage = window.localStorage;
+        localStorage.clear();
+        localStorage.setItem("MONEDA",JSON.stringify(json));
+    $("#GenerarProductosYVentas").append($(`
+        <hr>
+        <li class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 liConfInfo2a liConfInfo2Comun" style="background-color: rgb(137, 192, 219);">
+            <div class="col-sm-10 col-md-9 col-lg-10 col-xl-10 col-10">
+                <h2 class="textInfo" style="color: rgb(255, 255, 255)">total</h2>
+            </div>
+            <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-2">
+                <h2 class="textInfo" id="SumatoriaTotal"style="color: rgb(255, 255, 255)">${monedaSumatoria} ${sumatoria}</h2>
+            </div>
+        </li>
+        <div class="col-8 row " id="EstadisticasGraficasButton" style="overflow: auto">
+        <div id="cambioMoneda" class="col-12"><input type="text" name="" class="col-3" value="" style="font-size: 15px;border-radius: 5px;"></div>
+            <select name="" id="selectMoneda" onclick="cambiarMoneda()" class="select-css col-6 row" style="margin-left: 0px; margin-right: 0px;">
+                <option value="0">Lempiras</option>
+            </select>
+            <select name="" id="selectMonedaCambiar" onclick="cambiarMoneda()" class="select-css col-6 row" style="margin-left: 0px; margin-right: 0px;">
+                <option value="0">Lempiras</option>
+                <option value="1">Dolar</option>
+                <option value="2">Euro</option>
+            </select>
         </div>
     `));
+}
+/* estadistica */
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Comentarios', 'Me Gusta', 'No me gusta'],
+        datasets: [{
+            label: '# of Votes',
+            data: [3, 2, 3,],
+            backgroundColor: [
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(255, 255, 255, 0.2)',
+                'rgba(100, 100, 100, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 206, 86, 1)',
+                'rgba(100, 100, 100, 1)',
+                'rgba(0, 0, 0, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
+function cambiarMoneda(){
+    var JsonMoneda = JSON.parse(localStorage.getItem("MONEDA"));
+    var Moneda1=0;
+    var moneda2=0;
+        Moneda1 = $('#selectMoneda').val();
+        Moneda2 = $('#selectMonedaCambiar').val();
+      if( Moneda1==moneda2){
+      $("#cambioMoneda").html($(`
+        <input type="text" name="" class="col-3" value="${moneda.Lempiras} ${JsonMoneda.sumatoria}" style="font-size: 15px;border-radius: 5px;">
+      `));
+      }
+      if(Moneda1==0&&Moneda2==1){
+        var valorMoneda =0;
+        valorMoneda=JsonMoneda.sumatoria/24.45
+        $("#cambioMoneda").html($(`
+        <input type="text" name="" class="col-3" value="${moneda.dolar} ${valorMoneda}" style="font-size: 15px;border-radius: 5px;">
+      `));
+      }
+      if(Moneda1==0&&Moneda2==2){
+        var valorMoneda =0;
+        valorMoneda=JsonMoneda.sumatoria/27.14
+        $("#cambioMoneda").html($(`
+        <input type="text" name="" class="col-3" value="${moneda.Euros} ${valorMoneda}" style="font-size: 15px;border-radius: 5px;">
+      `));
+      };
 }

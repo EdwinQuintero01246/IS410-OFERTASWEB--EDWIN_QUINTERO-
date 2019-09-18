@@ -447,6 +447,8 @@
   background-color: rgba(0, 123, 255, 0.822);
   padding-top: 15px;
   border-radius: 7px;
+  height: 284.5px;
+  overflow: auto;
 }
 .empresaMessegerButton{
   background-color: rgb(235, 235, 235);
@@ -468,6 +470,8 @@
   border-top: solid rgba(0, 0, 0, 0.705);
   border-left: solid rgba(0, 0, 0, 0.705);
   border-right: solid rgba(0, 0, 0, 0.705);
+  overflow: auto;
+  height: 250px;
 }
 .textMSS1{
   background-color: rgb(137, 192, 219);

@@ -1,93 +1,156 @@
 @media  screen and (min-width: 1200px){
-   #sectionConfig{
+  #sectionConfig{
     margin-top: 63px;
   }
   .textInfo{
-      font-size: 15px;
-    }
-.buttonConfInfo{
-  font-size: 17px;
-}
-  #Text-Busqueda-Producto{
-  width: 80%;
-}
-.buttonBusqueda{
-  width: 15%;
+    font-size: 15px;
+  }
+  .buttonConfInfo{
+    font-size: 17px;
+  }
+    #Text-Busqueda-Producto{
+    width: 80%;
+  }
+  .buttonBusqueda{
+    width: 15%;
+    font-size: 20px;
+  }
+  #FotoPerfilAdmin{
+      top: -90px;
+  }
+.empresaMessegerButton{
   font-size: 20px;
 }
+
+.tamaños_visualizacion{
+      width: 100%;
+      height: 250px;
+    }
+}
+@media  screen and (max-width: 1200px){
+  #sectionConfig{
+    margin-top: 63px;
   }
-  @media  screen and (max-width: 1200px){
-    #sectionConfig{
-      margin-top: 63px;
-    }
-    .textInfo{
-      font-size: 15px;
-    }
-.buttonConfInfo{
+  .textInfo{
+    font-size: 15px;
+  }
+  .buttonConfInfo{
+    font-size: 17px;
+  }
+    #Text-Busqueda-Producto{
+    width: 80%;
+  }
+  .buttonBusqueda{
+    width: 15%;
+    font-size: 20px;
+  }
+  #FotoPerfilAdmin{
+      top: -65px;
+  }
+.empresaMessegerButton{
   font-size: 17px;
 }
-  #Text-Busqueda-Producto{
-  width: 80%;
+
+.tamaños_visualizacion{
+      width: 100%;
+      height: 130px;
+    }
 }
-.buttonBusqueda{
-  width: 15%;
-  font-size: 20px;
-}
+@media  screen and (max-width: 992px){
+  #sectionConfig{
+    margin-top: 98px;
   }
-  @media  screen and (max-width: 992px){
-    #sectionConfig{
-      margin-top: 98px;
-    }
-    .textInfo{
-      font-size: 15px;
-    }
-.buttonConfInfo{
-  font-size: 17px;
-}
-  #Text-Busqueda-Producto{
-  width: 80%;
-}
-.buttonBusqueda{
-  width: 15%;
-  font-size: 20px;
-}
+  .textInfo{
+    font-size: 15px;
   }
-  @media  screen and (max-width: 768px){
-    #sectionConfig{
-      margin-top: 63px;
-    }
-    .textInfo{
-      font-size: 14px;
-    }
-.buttonConfInfo{
-  font-size: 12px;
-}
-  #Text-Busqueda-Producto{
-  width: 70%;
-}
-.buttonBusqueda{
-  width: 20%;
-  font-size: 20px;
-}
+  .buttonConfInfo{
+    font-size: 17px;
   }
-  @media  screen and (max-width: 576px){
-    #sectionConfig{
-      margin-top: 70px;
-    }
-    .textInfo{
-      font-size: 12px;
-    }
-.buttonConfInfo{
-  font-size: 17px;
+    #Text-Busqueda-Producto{
+    width: 80%;
+  }
+  .buttonBusqueda{
+    width: 15%;
+    font-size: 20px;
+  }
+  #FotoPerfilAdmin{
+    top: -40px;
+  }
+.empresaMessegerButton{
+  font-size: 16px;
 }
-  #Text-Busqueda-Producto{
-  width: 80%;
+
+.tamaños_visualizacion{
+      width: 100%;
+      height: 140px;
+    }
 }
-.buttonBusqueda{
-  width: 15%;
+@media  screen and (max-width: 768px){
+  #sectionConfig{
+    margin-top: 63px;
+  }
+  .textInfo{
+    font-size: 14px;
+  }
+  .buttonConfInfo{
+    font-size: 12px;
+  }
+    #Text-Busqueda-Producto{
+    width: 70%;
+  }
+  .buttonBusqueda{
+    width: 20%;
+    font-size: 20px;
+  }
+  #FotoPerfilAdmin{
+      top: -38px;
+  }
+  #DivInfo{
+    top: -50px;
+    margin-top: 0px;
+  }
+.empresaMessegerButton{
   font-size: 14px;
 }
+
+.tamaños_visualizacion{
+      width: 100%;
+      height: 200px;
+    }
+}
+@media  screen and (max-width: 576px){
+  #sectionConfig{
+    margin-top: 70px;
   }
+  .textInfo{
+    font-size: 12px;
+  }
+  .buttonConfInfo{
+    font-size: 17px;
+  }
+    #Text-Busqueda-Producto{
+    width: 80%;
+  }
+  .buttonBusqueda{
+    width: 15%;
+    font-size: 14px;
+  }
+  #FotoPerfilAdmin{
+      top: -55px;
+  }
+  #DivInfo{
+    top: -50px;
+    margin-top: 0px;
+  }
+.empresaMessegerButton{
+  font-size: 12px;
+}
+
+.tamaños_visualizacion{
+      width: 100%;
+      height: 190px;
+    }
+}
 /* navbar*/
 
 #logo-button{
@@ -134,6 +197,8 @@
   padding-right: 10px;
   padding-bottom: 10px;
 }
+#colInfo2{
+}
 .buttonClientes{
   font-size: 20px;
   width: 100%;
@@ -172,7 +237,7 @@
   padding-right: 0px;
   border-left-color: black;
   border-left-width: 5px;
-
+  overflow: auto;
 }
 .liConfi{
   -webkit-box-shadow: 0px 1px 0px 0px rgba(0,0,0,1);
@@ -236,4 +301,235 @@ box-shadow: 0px 1px 0px 0px rgba(0,0,0,1);
   font-weight: bold;
   color: black;
 }
+/*informacion*/
+#DivBanner{
+  width: 100%;
+  height: 200px;
+  padding: 3px 3px 3px 3px;
+  /*background-image: url();*/
+}
+#StyleBanner{
+  background-color: rgb(240, 240, 240);
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+}
+#FotoPerfilAdmin{
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+  position: relative;
+  border-radius: 7px;
+  margin-top: 0;
+  left: 10px;
+  padding: 2px 2px 2px 2px;
+  background-color: white;
+}
+#DivInfo{
+  padding-left: 20px;
+}
+
+.btn-facebook{
+  color: #fff;
+  background-color: #4267B2;
+  border-color: #4267B2;
+}
+
+.btn-facebookhover {
+  color: #fff;
+  background-color: rgb(55, 87, 150);
+  border-color: rgb(55, 87, 150);
+}
+
+.btn-twitter{
+  color: #fff;
+  background-color: #1DA1F2;
+  border-color: #1DA1F2;
+}
+
+.btn-twitter:hover {
+  color: #fff;
+  background-color: #1B95E0;
+  border-color: #1B95E0;
+}
+
+.btn-instagram{
+  color: #fff;
+  background-color: #3897F0;
+  border-color: #3897F0;
+}
+
+.btn-instagram:hover {
+  color: #fff;
+  background-color: rgba(56, 151, 240, 0.787);
+  border-color: rgba(56, 151, 240, 0.787);
+}
+.ceroPadding{
+  padding-left: 0px;
+  padding-right: 0px;
+}
 /*fin informacion*/
+/* messegerQuintex*/
+#messegerQuintex{
+  padding: 10px 10px 10px 10px;
+  background-color: #F9F9F9;
+}
+#messegerQuintexRow{
+  background-color: white;
+}
+#usuariosMessegerButton{
+  background-color: #082041;
+  padding-top: 15px;
+  border-radius: 7px;
+  height: 284.5px;
+  overflow: auto;
+}
+.empresaMessegerButton{
+  background-color: #C5CCD5;
+  color: #082041;
+  border-radius: 3px;
+  border: rgba(0, 123, 255, 0.513);
+  margin-top: 1.5px;
+  margin-bottom: 1.5px;
+  text-align: left;
+  width: 100%;
+}
+.empresaMessegerButton:hover{
+  background-color: rgb(255, 255, 255);
+  font-weight: 900;
+}
+#colorContenido{
+  padding: 5px 5px 5px 5px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 7px;
+  border-top: solid rgba(0, 0, 0, 0.705);
+  border-left: solid rgba(0, 0, 0, 0.705);
+  border-right: solid rgba(0, 0, 0, 0.705);
+  overflow: auto;
+  height: 250px;
+}
+.textMSS1{
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border-radius: 4px;
+  text-align: left;
+  border: solid;
+  border-color: black;
+  overflow-wrap: break-word;
+}
+.textMSS2{
+  background-color:#C4C9CF;
+  color: black;
+  border-radius: 4px;
+  text-align: right;
+  border: solid;
+  border-color: black;
+  overflow-wrap: break-word;
+}
+#cajaTextoEnviarMSS{
+  height: auto;
+    font-size: 19px;
+    border-radius: 5px;
+    margin-left: 1px;
+    border-left-width: 1px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left: black;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+#buttonEnviarMSS{
+  font-size: 17px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+/* fin  messegerQuintex*/
+/* textarea Advertencia*/
+.amber-textarea textarea.md-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #082041;
+  box-shadow: 0 1px 0 0 #082041;
+}
+.active-amber-textarea.md-form label.active {
+  color: #082041;
+}
+.active-amber-textarea.md-form textarea.md-textarea:focus:not([readonly])+label {
+  color: #082041;
+}
+.active-amber-textarea-2 textarea.md-textarea {
+  border-bottom: 1px solid #082041;
+  box-shadow: 0 1px 0 0 #082041;
+}
+.active-amber-textarea-2.md-form label.active {
+  color: #082041;
+}
+.active-amber-textarea-2.md-form label {
+  color: #082041;
+}
+.active-amber-textarea-2.md-form textarea.md-textarea:focus:not([readonly])+label {
+  color: #082041;
+}
+
+/*fin textarea Advertencia*/
+
+/*PRODUCTOS*/
+#div-class-product{
+  padding-top: 20px;
+}
+.movimiento{
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.109);
+  border-radius: 5px;
+}
+.movimiento:hover{
+  background-color: #082041;
+  border-radius: 5px;
+  color: white;
+}
+#modal-producto{
+  font-size: 25px;
+  font-weight: 700;
+  color: black;
+  text-transform: capitalize;
+}
+#modal-precios-oferta{
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #A5DC99;
+}
+#modal-producto:hover{
+  color: white;
+}
+.fondo-span{
+  background-color: rgb(240, 240, 240);
+  padding-left: 5px;
+  padding-right: 5px;margin-left: 5px;
+  border-radius: 5px;
+}
+#modal-secundario{
+  font-size: 15px;
+  font-weight: 400;
+  color: rgba(44, 43, 43, 0.897);
+  text-transform: capitalize;
+}
+#modal-secundario:hover{
+  color: white;
+}
+/*modal producto*/
+.tamaños_visualizacion-modal {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+}
+#modal-precios-oferta {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #A5DC99;
+}
+/*fin modal producto*/
+/*FIN PRODUCTOS*/
