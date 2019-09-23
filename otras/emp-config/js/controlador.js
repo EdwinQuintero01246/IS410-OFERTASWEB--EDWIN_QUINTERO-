@@ -33,7 +33,7 @@ function ModalNombre(){
                     <div class="container-fluid" >
                         <div class="row">
                             <ul class="UlConfModal">
-                                <li><span class="tittle" id="tittleModal">Editar</span></li>
+                                <li><span id="TittleModal">Editar</span></li>
                                 <li><span class="content-text">Nombre Actual:<span class="content-text" id="colorinfoUsuarioViejo"> Mrs. Robot</span></span></li>
                                 <li>
                                     <span class="content-text">
@@ -41,7 +41,7 @@ function ModalNombre(){
                                             <div class="form-group has-success has-feedback">
                                                 <label class="col-sm-2 control-label" for="inputSuccess"></label>
                                                 <div class="col-sm-12">
-                                                    <input type="text" name="" id="Nombre" id="inputSuccess" style="font-size: 2rem" class="form-control textContrasenias" placeholder="Nombre Nuevo">
+                                                    <input type="text" name="" id="Nombre" id="inputSuccess" style="font-size: 1.2rem" class="form-control textContrasenias" placeholder="Nombre Nuevo">
                                                     <div id="generarSpanContaseñaNueva"></div>
                                                 </div>
                                             </div>
@@ -68,14 +68,14 @@ function ModalCorreo(){
                     <div class="container-fluid" >
                         <div class="row">
                             <ul class="UlConfModal">
-                                <li><span class="tittle" id="tittleModal">Editar</span></li>
+                                <li><span id="TittleModal">Editar</span></li>
                                 <li><span class="content-text">Correo Actual:<span class="content-text" id="colorinfoUsuarioViejo"> Mrs.Robot@unah.hn</span></span></li>
                                 <li>
                                     <form class="form-horizontal">
                                         <div class="form-group has-success has-feedback">
                                             <label class="col-sm-2 control-label" for="inputSuccess"></label>
                                             <div class="col-sm-12">
-                                                <input type="text" name="" id="Correo" id="inputSuccess" style="font-size: 2rem" class="form-control textContrasenias" placeholder="Nombre Nuevo">
+                                                <input type="text" name="" id="Correo" id="inputSuccess" style="font-size: 1.2rem" class="form-control textContrasenias" placeholder="Nombre Nuevo">
                                             </div>
                                         </div>
                                     </form>
@@ -99,13 +99,13 @@ function ModalContraseña(){
                     <div class="container-fluid" >
                         <div class="row">
                             <ul class="UlConfModal">
-                                <li><span class="tittle" id="tittleModal">Editar</span></li>
+                                <li><span id="TittleModal">Editar</span></li>
                                 <li>
                                     <form class="form-horizontal">
                                         <div class="form-group has-success has-feedback">
                                             <label class="col-sm-2 control-label" for="inputSuccess"></label>
                                             <div class="col-sm-12">
-                                                <input type="password" name="" id="Contraseña" id="inputSuccess" style="font-size: 2rem" class="form-control textContrasenias" onchange="ContraseñaLocal()" placeholder="Contraseña Anterior">
+                                                <input type="password" name="" id="Contraseña" id="inputSuccess" style="font-size: 1.2rem" class="form-control textContrasenias" onchange="ContraseñaLocal()" placeholder="Contraseña Anterior">
                                                 <div id="generarSpanContaseñaVieja"></div>
                                             </div>
                                         </div>
@@ -117,7 +117,7 @@ function ModalContraseña(){
                                         <div class="form-group has-success has-feedback">
                                             <label class="col-sm-2 control-label" for="inputSuccess"></label>
                                             <div class="col-sm-12">
-                                                <input type="password" name="" id="ContraseñaN" id="inputSuccess" style="font-size: 2rem" class="form-control textContrasenias" onchange="vercambio()" placeholder="Contraseña Nueva">
+                                                <input type="password" name="" id="ContraseñaN" id="inputSuccess" style="font-size: 1.2rem" class="form-control textContrasenias" onchange="vercambio()" placeholder="Contraseña Nueva">
                                                 <div id="generarSpanContaseñaNueva"></div>
                                             </div>
                                         </div>
@@ -128,7 +128,7 @@ function ModalContraseña(){
                                         <div class="form-group has-success has-feedback">
                                             <label class="col-sm-2 control-label" for="inputSuccess"></label>
                                             <div class="col-sm-12">
-                                                <input type="password" name="" id="ContraseñaC" id="inputSuccess" style="font-size: 2rem" class="form-control textContrasenias" onchange="vercambio()" placeholder="Contraseña Nueva">
+                                                <input type="password" name="" id="ContraseñaC" id="inputSuccess" style="font-size: 1.2rem" class="form-control textContrasenias" onchange="vercambio()" placeholder="Contraseña Nueva">
                                                 <div id="generarSpanContaseñaNueva"></div>
                                             </div>
                                         </div>
@@ -211,7 +211,7 @@ function ModalSexo(){
                 <div class="container-fluid" >
                     <div class="row">
                         <ul class="UlConfModal">
-                            <li><span class="tittle" id="tittleModal">Editar</span></li>
+                            <li><span id="TittleModal">Editar</span></li>
                             <li><span class="content-text">Genero Actual:<span class="content-text" id="colorinfoUsuarioViejo"> Masculino</span></span></li>
                             <li><select class="select-css" id="select-css" onchange="selectSexo()">
                                     <option value="0">Seccione un Elemento</option>
@@ -241,7 +241,7 @@ function selectSexo(){
             <div class="form-group has-success has-feedback">
                 <label class="col-sm-2 control-label" for="inputSuccess"></label>
                 <div class="col-sm-12">
-                    <input type="text" name="" id="NuevoGenero" id="inputSuccess" style="font-size: 2rem" class="form-control textContrasenias" placeholder="Nombre Nuevo">
+                    <input type="text" name="" id="NuevoGenero" id="inputSuccess" style="font-size: 1.2rem" class="form-control textContrasenias" placeholder="Nombre Nuevo">
                 </div>
             </div>
         </form>
@@ -274,7 +274,7 @@ function ModalTelefono(){
                     <div class="container-fluid" >
                         <div class="row">
                             <ul class="UlConfModal">
-                                <li><span class="tittle" id="tittleModal">Editar</span></li>
+                                <li><span id="TittleModal">Editar</span></li>
                                 <li><span class="content-text">Telefono Actual:<span class="content-text" id="colorinfoUsuarioViejo"> 3247-1306</span></span></li>
                                 <li>
                                     <span class="content-text">
@@ -282,7 +282,7 @@ function ModalTelefono(){
                                             <div class="form-group has-success has-feedback">
                                                 <label class="col-sm-2 control-label" for="inputSuccess"></label>
                                                 <div class="col-sm-12">
-                                                    <input type="tel" name="" id="NuevoTelefono" id="inputSuccess" style="font-size: 2rem" class="form-control textContrasenias" placeholder="Nuevo Numero Telefonico">
+                                                    <input type="tel" name="" id="NuevoTelefono" id="inputSuccess" style="font-size: 1.2rem" class="form-control textContrasenias" placeholder="Nuevo Numero Telefonico">
                                                 </div>
                                             </div>
                                         </form>
@@ -318,7 +318,7 @@ function ModalTarjeta(){
                     <div class="container-fluid" >
                         <div class="row">
                             <ul class="UlConfModal" id="nuevoTextTarjeta">
-                                <li><span class="tittle" id="tittleModal">Editar</span></li>
+                                <li><span id="TittleModal">Editar</span></li>
                                 <li><span class="content-text">Tarjeta Actual:<span class="content-text" id="colorinfoUsuarioViejo"> XXXX-XXXX-XXXX-2989</span></span></li>
                                 <li>
                                     <span class="content-text">
@@ -327,7 +327,7 @@ function ModalTarjeta(){
                                                 <label class="col-sm-2 control-label" for="inputSuccess"></label>
                                                 <div class="col-sm-12">
                                                     <input style="display: block;" type="button" value="Datos nuevos tarjeta" class="btn btn-secondary buttonModalTarjeta" id="buttonNuevosAtribustosTarjeta" >
-                                                    <!--input type="tel" name="" id="NuevoTelefono" id="inputSuccess" style="font-size: 2rem" class="form-control textContrasenias" placeholder="Nuevo Numero Telefonico"-->
+                                                    <!--input type="tel" name="" id="NuevoTelefono" id="inputSuccess" style="font-size: 1.2rem" class="form-control textContrasenias" placeholder="Nuevo Numero Telefonico"-->
                                                 </div>
                                             </div>
                                         </form>
@@ -395,7 +395,7 @@ function AtribustosAnteriorTarjeta(){
         console.log(datosTarjeta);
         console.log("entro");
         $("#nuevoTextTarjeta").html($(`
-            <li><span class="tittle" id="tittleModal">Editar</span></li>
+            <li><span id="TittleModal">Editar</span></li>
             <li><span class="content-text">Tarjeta Actual:<span class="content-text" id="colorinfoUsuarioViejo"> ${datosTarjeta.NuevoDatoTarjeta}</span></span></li>
             <li><input type="button" onclick"location.reload()" type="button" style="display: block;" class="btn btn-warning buttonModalTarjeta" data-dismiss="modal" value="Close" ></li>
             <script src="js/controlador.js"></script>
