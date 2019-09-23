@@ -29,13 +29,19 @@ function IniciarSeccion(){
       if(datos[i].Contraseña==parametros.Contraseña){
         $("#ErrorContraseña").html($(``));
         $("#ErrorUsuario").html($(``));
-        alert("iniciar: "+datos[i].usuario+" es " + datos[i].rango);
-        redireccionar();
+        if(datos[i].rango=="usuario"){
+        window.location.assign("../us-perfil/index.html");
+        }else 
+        if(datos[i].rango=="empresa"){
+          window.location.assign("../emp-perfil/index.html");
+        }else
+        if(datos[i].rango=="administrador"){
+          window.location.assign("../perfil-administrador/index.html");
+        };
         break;
       }else{
         $("#ErrorContraseña").html($(`<div>Ha introducido una contraseña incorrecta.</div>`));
         $("#ErrorUsuario").html($(``));
-        alert("error contaseña");
         break;
       }
     }else{
@@ -46,6 +52,3 @@ function IniciarSeccion(){
     };
   };
 }
-function redireccionar(){
-  window.locationf="http://www.google.com";
-} 
