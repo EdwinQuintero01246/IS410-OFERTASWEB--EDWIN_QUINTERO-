@@ -14,7 +14,6 @@
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
     <link rel="stylesheet" href="../../css/bootstrap.min.css" crossorigin="anonymous">
     <script src="../../js/bootstrap.min.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../../custom.css">
     <style>
     .body{
         background-image: url(../../img/fondo2.jpg);background-repeat: no-repeat; background-position: center center;background-size: cover;background-attachment: fixed;
@@ -36,45 +35,34 @@
             <div  id="color-formulario">
                 <ul class="ul_conf" id="formulaario">
                     <div class="container-fluid">
-                        <div class="row">
-                            <h2 class="tittle-registrarse-seccion col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 ">Registra Tu Empresa</h2><br>
-                            <li class="li-form-registrarse-seccion col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12" >
+                        <div class="row" id="información">
+                            <div class="row" style="margin-left: 0px;margin-right: 0px;">
+                                <img class="col-4" src="../registrar_usuario/img/icon/puntosFom1.png" alt="" id="PointsPoint">
+                            </div>
+                            <h2 class="tittle-registrarse-seccion col-12 ">Registra Tu Empresa</h2><br>
+                            <li class="li-form-registrarse-seccion col-12" >
                                 <div class="line">
                                 </div>
                             </li>
-                            <h2 class="tittle-registrarse-seccion col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12" id="h2-registrarse-seccion">Información de la empresa</h2>
+                            <h2 class="tittle-registrarse-seccion col-12" id="h2-registrarse-seccion">Información de la empresa</h2>
                             <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="text"   placeholder="Nombre De La Empresa"></li>
                             <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="email"   placeholder="email"></li>
                             <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="password"   placeholder="password"></li>
                             <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="password"   placeholder="confirmar password"></li>
                             <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="text"   placeholder="dirección"></li>
                             <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="tel"   placeholder="telefono"></li>
-                            <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><label for="" class="label-file">Pregunta de seguridad</label><input class="input-option " type="text"   placeholder="Tia(o) Favotita(o)"></li>
-                            <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><label for="input-file-banner" class="label-file">Selecione Un Banner</label> <input class="btn btn-danger" id="input-file-banner" type="file"></li>
-                            <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><label for="input-file-logo" class="label-file">Selecione Un Logotipo</label><input class="btn btn-danger" id="input-file-logo" type="file"></li>
-                            <li class="li-form-registrarse-seccion col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12"><textarea name=""  rows="4" placeholder="Descripcion en el muro de tu perfil (Opcional)" id="textarea-descripcion"></textarea></li>
-                            <li class="li-form-registrarse-seccion col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12">
-                                <div class="line">
+                            <li class="li-form-registrarse-seccion col-12">
+                                <select class="select-css" id="select-css" onchange="preguntaSeguridad()">
+                                    <option value="0">Pregunta de seguridad</option>
+                                    <option value="1">Primer Auto</option>
+                                    <option value="2">Tía Favorita</option>
+                                    <option value="3">Pregunta(Usuario)</option>
+                                </select>
+                                <div id="preguntaSeguridad">
                                 </div>
                             </li>
-                            <h2 class="tittle-registrarse-seccion col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12" id="h2-registrarse-seccion">ubicacion</h2>
-                            <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12" ><input class="input-option " type="text"   placeholder="Dirrección"></li>
-                            <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="text"   placeholder="país"></li>
-                            <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="text"   placeholder="cuidad"></li>
-                            <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="text"   placeholder="Estado/Provincia/Región"></li>
-                            <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="text"   placeholder="Codigo Postal"></li>
-                            <li class="li-form-registrarse-seccion col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12">
-                                <div class="line">
-                                </div>
-                            </li>
-                            <h2 class="tittle-registrarse-seccion col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12" id="h2-registrarse-seccion">Redes Sociales</h2>
-                            <li class="li-form-registrarse-seccion col-sm-4 col-md-4 col-lg-4 col-xl-4 col-7"><label id="label-redes-facebook" for="facebookUsername" >facebook.com/</label></li>
-                            <li class="li-form-registrarse-seccion col-sm-8 col-md-8 col-lg-8 col-xl-8 col-12"><input class="input-option " type="text"></li>
-                            <li class="li-form-registrarse-seccion col-sm-4 col-md-4 col-lg-4 col-xl-4 col-7"><label id="label-redes-twitter" for="facebookUsername">twitter.com/</label></li>
-                            <li class="li-form-registrarse-seccion col-sm-8 col-md-8 col-lg-8 col-xl-8 col-12"><input class="input-option " type="text"></li>
-                            <li class="li-form-registrarse-seccion col-sm-4 col-md-4 col-lg-4 col-xl-4 col-7"><label id="label-redes-instagram" for="facebookUsername">instagram.com/</label></li>
-                            <li class="li-form-registrarse-seccion col-sm-8 col-md-8 col-lg-8 col-xl-8 col-12"><input class="input-option " type="text"></li>
-                            <li class="li-form-registrarse-seccion col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 " ><a href=""><button type="submit" class="btn btn-danger" id="button-registrar" >Registrar</button></a></li>
+                            <li class="li-form-registrarse-seccion col-12"><textarea name=""  rows="4" placeholder="Descripcion en el muro de tu perfil (Opcional)" id="textarea-descripcion"></textarea></li>
+                            <input type="button" class="btn btn-danger buttonForm3 col-6" id="confiButtonSiguiente" value="Siguiente" onclick="activarSiguiente()">
                         </div>
                     </div>
                 </ul>
@@ -91,4 +79,8 @@
         </div>
     </footer>
 </body>
+<script src="../../js/jquery-3.3.1.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="js/controlador.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 </html>
