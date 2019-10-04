@@ -606,3 +606,31 @@ box-shadow: 0px 1px 0px 0px rgba(0,0,0,1);
   height: 30px;
 }
 /*fin Empresas Seguidas*/
+/*CodigoQr*/
+#ImgCodigoQr{
+  width: 100%;
+  border-radius: 10px;
+}
+#divImgQr{
+  display: block;
+  margin-right: auto;
+  background-color: #007BFF;
+  padding-left: 0px;
+  padding-right: 0px;
+  border-radius: 10px;
+}
+#divControlQr{
+  display: block;
+  margin-left: auto;
+}
+#MarginQR{
+  padding: 10px;
+}
+#buttonGenerarCodigoQR{
+  height: 40.99306px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+/*CodigoQr*/

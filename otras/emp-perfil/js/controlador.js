@@ -203,3 +203,59 @@ function cambiarMoneda(){
       `));
       };
 }
+function codigoqr(){
+    $("#GenerarProductosYVentas").html($(`
+    <h1>
+        Cuando se active la cámara, apunta tu teléfono hacia esta pantalla para escanear el código
+    </h1>
+    <div class="row">
+        <div class="col-3 col-sm-4 col-md-5 col-lg-3 col-xl-3" id="divControlQr">
+            <form class="form-horizontal" id="codeForm">
+                <div class="form-group">
+                    <label class="control-label">Información : </label>
+                    <input class="form-control col-xs-1" id="content" value="text" type="text" required="required">
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Nivel del código (ECC) : </label>
+                    <select class="form-control col-xs-10" id="ecc">
+                        <option value="H">H - Mejor</option>
+                        <option value="M">M</option>
+                        <option value="Q">Q</option>
+                        <option value="L">L - Peor</option>                         
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Tamaño : </label>
+                    <input type="number" min="1" max="10" step="1" class="form-control col-xs-10" id="size" value="5">
+                </div>
+                <div class="form-group">
+                    <input type="button" class="btn-primary" value="Generar codigoQR" id="buttonGenerarCodigoQR" onclick="GenerarCodigoQr()">
+                </div>
+            </form>
+        </div>
+        <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 " id="divImgQr">
+            <div id="MarginQR">
+                <img src="../codigoQR/img/CodigoEjemplo.gif" alt="" id="ImgCodigoQr">
+            </div>
+        </div>
+    </div>
+    <a href="">¿Necesitas ayuda para comenzar?</a>
+    `));
+}
+function GenerarCodigoQr(){
+    
+    $.ajax({
+        url:"../codigoQr/ajax/Obtener.php",
+        method:"POST",
+        data:{formData:$("#content").val(), ecc:$("#ecc").val(), size:$("#size").val()},
+        success:function(respuesta){
+            console.log(respuesta);
+            $("#MarginQR").html($(`
+                <img src="../../otras/codigoQR/temp/${respuesta}" alt="" id="ImgCodigoQr">
+            `));
+        },
+        error:function(respuesta){
+
+        }
+    });
+}
