@@ -1,154 +1,100 @@
 function generarinfo(){
     $("#Información").html($( `
     <div class="col-sm-10 col-md-10 col-lg-7 col-xl-7 col-12  margenDivInfo">
-    <h1 class="TextPrincipal  textinfo col-12">Nombre Empresa Actual</h1>
-    <h1 class="TextSecundario  textinfo col-12">Centromatic</h1>
-    <input class="col-sm-8 col-md-8 col-lg-8 col-xl-6 col-12 btn btn-primary" data-toggle="modal" data-target="#NombreModal" onclick="ModalNombre()" type="button" value="Cambiar Nombre">
-</div>
-<div class="col-sm-10 col-md-10 col-lg-7 col-xl-7 col-12  margenDivInfo">
+        <h1 class="TextPrincipal  textinfo col-12">Nombre Empresa Actual</h1>
+        <h1 class="TextSecundario  textinfo col-12">Centromatic</h1>
+        <input class="col-sm-8 col-md-8 col-lg-8 col-xl-6 col-12 btn btn-primary" data-toggle="modal" data-target="#NombreModal" onclick="ModalNombre()" type="button" value="Cambiar Nombre">
+        <div id="generarNombre" class="col-12 row" style="padding-top: 10px;">
+            
+        </div>
+    </div>
+    <div class="col-sm-10 col-md-10 col-lg-7 col-xl-7 col-12  margenDivInfo">
         <h1 class="TextPrincipal  textinfo col-12">Correo Actual</h1>
         <h1 class="TextSecundario  textinfo col-12">Cent@Gmail.Com</h1>
         <input class="col-sm-8 col-md-8 col-lg-8 col-xl-6 col-12 btn btn-primary" data-toggle="modal" data-target="#CorreoModal" onclick="ModalCorreo()" type="button" value="Cambiar Correo">
-</div>
-<div class="col-sm-10 col-md-10 col-lg-7 col-xl-7 col-12  margenDivInfo">
+        <div id="generarCorreo" class="col-12 row" style="padding-top: 10px;"></div>
+    </div>
+    <div class="col-sm-10 col-md-10 col-lg-7 col-xl-7 col-12  margenDivInfo">
         <h1 class="TextPrincipal  textinfo col-6">Contraseña cambiar</h1>
         <h1 class="TextSecundario  textinfo col-6">R********0</h1>
         <input class="col-sm-8 col-md-8 col-lg-8 col-xl-6 col-12 btn btn-primary" data-toggle="modal" data-target="#ContraseñaModal" onclick="ModalContraseña()" type="button" value="Cambiar Contraseña">
-</div>
-<div class="col-sm-10 col-md-10 col-lg-7 col-xl-7 col-12  margenDivInfo">
+        <div id="generarContraseña" class="col-12 row " style="padding-top: 10px;"></div>
+    </div>
+    <div class="col-sm-10 col-md-10 col-lg-7 col-xl-7 col-12  margenDivInfo">
         <h1 class="TextPrincipal  textinfo col-12">Telefono Actual</h1>
         <div id="allTel" class="col-12">
             <h1 class="TextSecundario  textinfo col-12">2284-5787</h1>
         </div>
-        <input class="col-sm-8 col-md-8 col-lg-8 col-xl-6 col-12 btn btn-primary" data-toggle="modal" data-target="#TelefonoModal" onclick="ModalSexo()" type="button" value="Cambiar o Agregar Telefonos">
-</div>  
+        <input class="col-sm-8 col-md-8 col-lg-8 col-xl-6 col-12 btn btn-primary" data-toggle="modal" data-target="#TelefonoModal" onclick="ModalTelefono()" type="button" value="Cambiar o Agregar Telefonos">
+        <div id="generarTelefono" class="col-12 row" style="padding-top: 10px;">
+            
+        </div>
+    </div>  
     `));
 }
 function ModalNombre(){
-    $("#GenerarModal").html($( `
-    <div class="modal fade" id="NombreModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document" >
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="container-fluid" >
-                        <div class="row">
-                            <ul class="UlConfModal">
-                                <li><span id="TittleModal">Editar</span></li>
-                                <li><span class="content-text">Nombre Actual:<span class="content-text" id="colorinfoUsuarioViejo"> Mrs. Robot</span></span></li>
-                                <li>
-                                    <span class="content-text">
-                                        <form class="form-horizontal">
-                                            <div class="form-group has-success has-feedback">
-                                                <label class="col-sm-2 control-label" for="inputSuccess"></label>
-                                                <div class="col-sm-12">
-                                                    <input type="text" name="" id="Nombre" id="inputSuccess" style="font-size: 1.2rem" class="form-control textContrasenias" placeholder="Nombre Nuevo">
-                                                    <div id="generarSpanContaseñaNueva"></div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </span>
-                                </li>
-                                <li><input onclick="guardarDatosNombreUsuario()" class="btn-danger" id="ButtonGuardar" type="button" value="Guardar"></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    $("#generarNombre").html($( `
+        <input type="text" class="col-sm-8 col-md-8 col-lg-8 col-xl-6 col-12" name="" id="NombreTextCambiar" style="font-size: 1.2rem" class="form-control textContrasenias" placeholder="Nombre Nuevo">
+        <div class="col-12">
+            <input class="col-sm-8 col-md-8 col-lg-8 col-xl-6 col-12 btn-danger" onclick="guardarDatosNombreUsuario()" id="ButtonGuardar" type="button" value="Guardar">
         </div>
-    </div>
     `));
     
 }
 function ModalCorreo(){
-    $("#GenerarModal").html($( `
-    <div class="modal fade" id="CorreoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document" >
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="container-fluid" >
-                        <div class="row">
-                            <ul class="UlConfModal">
-                                <li><span id="TittleModal">Editar</span></li>
-                                <li><span class="content-text">Correo Actual:<span class="content-text" id="colorinfoUsuarioViejo"> Mrs.Robot@unah.hn</span></span></li>
-                                <li>
-                                    <form class="form-horizontal">
-                                        <div class="form-group has-success has-feedback">
-                                            <label class="col-sm-2 control-label" for="inputSuccess"></label>
-                                            <div class="col-sm-12">
-                                                <input type="text" name="" id="Correo" id="inputSuccess" style="font-size: 1.2rem" class="form-control textContrasenias" placeholder="Nombre Nuevo">
-                                            </div>
-                                        </div>
-                                    </form>
-                                </li>
-                                <li><input onclick="guardarDatosCorreoUsuario()" class="btn-danger" id="ButtonGuardar" type="button" value="Guardar"></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    $("#generarCorreo").html($( `
+        <input type="text" name="" id="Correo" id="inputSuccess" style="font-size: 1.2rem" class="col-sm-8 col-md-8 col-lg-8 col-xl-6 col-12 form-control textContrasenias" placeholder="Correo Nuevo">
+        <div class="col-12">
+            <input onclick="guardarDatosCorreoUsuario()" class="col-sm-8 col-md-8 col-lg-8 col-xl-6 col-12 btn-danger" id="ButtonGuardar" type="button" value="Guardar">
         </div>
-    </div>
+    `));
+}
+function ModalTelefono(){
+    $("#generarTelefono").html($( `
+            <input type="tel" name="" id="NuevoTelefono" id="inputSuccess" style="font-size: 1.2rem" class="form-control textContrasenias col-sm-8 col-md-8 col-lg-8 col-xl-6 col-12" placeholder="Nuevo Numero Telefonico">
+            <div class="col-12">
+                <input onclick="guardarDatosTelefonoUsuario()" class="col-sm-8 col-md-8 col-lg-8 col-xl-6 col-12 btn-danger" id="ButtonGuardar" type="button" value="Guardar">
+            </div>
     `));
 }
 function ModalContraseña(){
-    $("#GenerarModal").html($( `
-    <div class="modal fade" id="ContraseñaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document" >
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="container-fluid" >
-                        <div class="row">
-                            <ul class="UlConfModal">
-                                <li><span id="TittleModal">Editar</span></li>
-                                <li>
-                                    <form class="form-horizontal">
-                                        <div class="form-group has-success has-feedback">
-                                            <label class="col-sm-2 control-label" for="inputSuccess"></label>
-                                            <div class="col-sm-12">
-                                                <input type="password" name="" id="Contraseña" id="inputSuccess" style="font-size: 1.2rem" class="form-control textContrasenias" onchange="ContraseñaLocal()" placeholder="Contraseña Anterior">
-                                                <div id="generarSpanContaseñaVieja"></div>
-                                            </div>
-                                        </div>
-                                        <div id="contentContaseñaLocal"></div>
-                                    </form>
-                                </li>
-                                <li>
-                                    <form class="form-horizontal">
-                                        <div class="form-group has-success has-feedback">
-                                            <label class="col-sm-2 control-label" for="inputSuccess"></label>
-                                            <div class="col-sm-12">
-                                                <input type="password" name="" id="ContraseñaN" id="inputSuccess" style="font-size: 1.2rem" class="form-control textContrasenias" onchange="vercambio()" placeholder="Contraseña Nueva">
-                                                <div id="generarSpanContaseñaNueva"></div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </li>
-                                <li>
-                                    <form class="form-horizontal">
-                                        <div class="form-group has-success has-feedback">
-                                            <label class="col-sm-2 control-label" for="inputSuccess"></label>
-                                            <div class="col-sm-12">
-                                                <input type="password" name="" id="ContraseñaC" id="inputSuccess" style="font-size: 1.2rem" class="form-control textContrasenias" onchange="vercambio()" placeholder="Contraseña Nueva">
-                                                <div id="generarSpanContaseñaNueva"></div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </li>
-                                <li style="height: 70px;"><div id="contenidoRespuesta"></div></li>
-                                <li class="li-form-iniciar-seccion" id="confi_li_checkbutton">
-                                    <input type="checkbox" name="" id="Checkbutton" onclick="VerContraseña()" class="ng-valid ng-dirty ng-valid-parse ng-touched ng-not-empty" >
-                                    <span style="font-size: 15px" class="span_line"> Recuérdame</span>
-                                </li>
-                                <li>
-                                    <input type="button" class="btn-danger" id="ButtonGuardar" value="Guardar">
-                                </li>
-                            </ul>
-                        </div>
+    $("#generarContraseña").html($( `
+            <form class="form-horizontal col-12 row">
+                <div class="form-group has-success has-feedback">
+                    <label class="col-sm-2 control-label" for="inputSuccess"></label>
+                    <div class="col-sm-12">
+                        <input type="password" name="" id="Contraseña" id="inputSuccess" style="font-size: 1.2rem" class="form-control textContrasenias col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12" onchange="ContraseñaLocal()" placeholder="Contraseña Anterior">
+                        <div id="generarSpanContaseñaVieja" class="col-12"></div>
                     </div>
                 </div>
-            </div>
+                <div id="contentContaseñaLocal"></div>
+            </form>
+            <form class="form-horizontal col-12 row">
+                <div class="form-group has-success has-feedback">
+                    <label class="col-sm-2 control-label" for="inputSuccess"></label>
+                    <div class="col-sm-12">
+                        <input type="password" name="" id="ContraseñaN" id="inputSuccess" style="font-size: 1.2rem" class="form-control textContrasenias col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12" onchange="vercambio()" placeholder="Contraseña Nueva">
+                        <div id="generarSpanContaseñaNueva" class="col-12"></div>
+                    </div>
+                </div>
+            </form>
+            <form class="form-horizontal col-12 row">
+                <div class="form-group has-success has-feedback">
+                    <label class="col-sm-2 control-label" for="inputSuccess"></label>
+                    <div class="col-sm-12">
+                        <input type="password" name="" id="ContraseñaC" id="inputSuccess" style="font-size: 1.2rem" class="form-control textContrasenias col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12" onchange="vercambio()" placeholder="Contraseña Nueva">
+                        <div id="generarSpanContaseñaNueva" class="col-12"></div>
+                    </div>
+                </div>
+            </form>
+        <div style="height: 70px;"class="row col-12"><div id="contenidoRespuesta" class="col-12"></div></div>
+        <div class="li-form-iniciar-seccion col-12" id="confi_li_checkbutton">
+            <input type="checkbox" name="" id="Checkbutton" onclick="VerContraseña()" class="ng-valid ng-dirty ng-valid-parse ng-touched ng-not-empty" >
+            <span style="font-size: 15px" class="span_line"> Recuérdame</span>
         </div>
-        <script src="js/controlador.js"></script>
+        <div>
+            <input type="button" class="btn-danger" id="ButtonGuardar" value="Guardar">
+        </div>
     `));
 }
 function VerContraseña() {
@@ -265,39 +211,7 @@ function selectSexo(){
     };
  }
  
-function ModalTelefono(){
-    $("#GenerarModal").html($( `
-    <div class="modal fade" id="TelefonoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document" >
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="container-fluid" >
-                        <div class="row">
-                            <ul class="UlConfModal">
-                                <li><span id="TittleModal">Editar</span></li>
-                                <li><span class="content-text">Telefono Actual:<span class="content-text" id="colorinfoUsuarioViejo"> 3247-1306</span></span></li>
-                                <li>
-                                    <span class="content-text">
-                                        <form class="form-horizontal">
-                                            <div class="form-group has-success has-feedback">
-                                                <label class="col-sm-2 control-label" for="inputSuccess"></label>
-                                                <div class="col-sm-12">
-                                                    <input type="tel" name="" id="NuevoTelefono" id="inputSuccess" style="font-size: 1.2rem" class="form-control textContrasenias" placeholder="Nuevo Numero Telefonico">
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </span>
-                                </li>
-                                <li><input onclick="guardarDatosTelefonoUsuario()" class="btn-danger" id="ButtonGuardar" type="button" value="Guardar"></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    `));
-}
+
 function guardarDatosTelefonoUsuario(){
     var tel = $("#NuevoTelefono").val();
     console.log(tel); 

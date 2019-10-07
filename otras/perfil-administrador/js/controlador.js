@@ -1,4 +1,5 @@
 var usuario=[];
+var usuario1=[];
 usuario=[
     {CodigoUsuario:"US12254",NombreUsuario:"Juan",Correo:"Juan1@gmail.com",LongirudyLatitud:"Tegucugalpa,Honduras",Contraseña:"soyOtronivel", 
         Compras:[
@@ -46,6 +47,7 @@ usuario=[
         ]},
 ]
 var empresas=[];
+var empresas1=[];
 empresas=[
     {CodigoUsuarioEmpresa:"EM12254",NombreUsuarioEmpresa:"Centromatic",Correo:"Centromatic@gmail.com",LongirudyLatitud:"Tegucugalpa,Honduras",Contraseña:"MejorContra",
         Ventas:[
@@ -103,51 +105,64 @@ function generarTablainformacion(){
     `));
 }
 function generarUsuario(){
-    for(var i=0 ,j=-1; i<usuario.length;i++){
-        j++;
-        if(i%2==0){
-            $("#colInfo2").append($(`
-            <li class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 liConfInfo2a liConfInfo2Comun">
-                <div class="col-sm-12 col-md-3 col-lg-1 col-xl-1 col-6">
-                    <h2 class="textInfo">${usuario[i].CodigoUsuario}</h2>
-                </div>
-                <div class="col-sm-5 col-md-3 col-lg-2 col-xl-2 col-6">
-                    <a href="#${usuario[i].NombreUsuario}" onclick="verButonesUsuario(${j})" class="textInfo textA">${usuario[i].NombreUsuario}</a>
-                </div>
-                <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 col-6">
-                    <h2 class="textInfo">${usuario[i].Correo}</h2>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 col-6">
-                    <h2 class="textInfo">${usuario[i].LongirudyLatitud}</h2>
-                </div>
-                <div class="col-sm-6 col-md-3 col-lg-2 col-xl-2 col-6">
-                    <h2 class="textInfo">${usuario[i].Contraseña}</h2>
-                </div>
-            </li>
-            `));
-        }else{
-        $("#colInfo2").append($(`
-            <li class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 liConfInfo2b liConfInfo2Comun">
-            <div class="col-sm-12 col-md-3 col-lg-1 col-xl-1 col-6">
-                <h2 class="textInfo">${usuario[i].CodigoUsuario}</h2>
-                </div>
-                <div class="col-sm-5 col-md-3 col-lg-2 col-xl-2 col-6">
-                    <a href="#${usuario[i].NombreUsuario}" onclick="verButonesUsuario(${j})" class="textInfo textA">${usuario[i].NombreUsuario}</a>
-                </div>
-                <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 col-6">
-                    <h2 class="textInfo">${usuario[i].Correo}</h2>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 col-6">
-                    <h2 class="textInfo">${usuario[i].LongirudyLatitud}</h2>
-                </div>
-                <div class="col-sm-6 col-md-3 col-lg-2 col-xl-2 col-6">
-                    <h2 class="textInfo">${usuario[i].Contraseña}</h2>
-                </div>
-            </li>
-        </ul>
-    `));
-        };
-    };
+    
+    $.ajax({
+        url:"ajax/Usuario.php?accion=generaraUsuario",
+        method:"POST",
+        dataType:"json",
+        success:function(respuesta){
+            usuario1=respuesta;
+            for(var i=0 ,j=-1; i<respuesta.length;i++){
+                j++;
+                if(i%2==0){
+                    $("#colInfo2").append($(`
+                    <li class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 liConfInfo2a liConfInfo2Comun">
+                        <div class="col-sm-12 col-md-3 col-lg-1 col-xl-1 col-6">
+                            <h2 class="textInfo">US0000${i+1}</h2>
+                        </div>
+                        <div class="col-sm-5 col-md-3 col-lg-2 col-xl-2 col-6">
+                            <a href="#${respuesta[i].NombreUsuario}" onclick="verButonesUsuario(${j})" class="textInfo textA">${respuesta[i].NombreUsuario}</a>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 col-6">
+                            <h2 class="textInfo">${respuesta[i].Email}</h2>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 col-6">
+                            <h2 class="textInfo">${respuesta[i].ciudad},${respuesta[i].país}</h2>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-lg-2 col-xl-2 col-6">
+                            <h2 class="textInfo">${respuesta[i].Password1}</h2>
+                        </div>
+                    </li>
+                    `));
+                }else{
+                    $("#colInfo2").append($(`
+                        <li class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 liConfInfo2b liConfInfo2Comun">
+                        <div class="col-sm-12 col-md-3 col-lg-1 col-xl-1 col-6">
+                            <h2 class="textInfo">US0000${i+1}</h2>
+                            </div>
+                            <div class="col-sm-5 col-md-3 col-lg-2 col-xl-2 col-6">
+                                <a href="#${respuesta[i].NombreUsuario}" onclick="verButonesUsuario(${j})" class="textInfo textA">${respuesta[i].NombreUsuario}</a>
+                            </div>
+                            <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 col-6">
+                                <h2 class="textInfo">${respuesta[i].Email}</h2>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 col-6">
+                                <h2 class="textInfo">${respuesta[i].ciudad},${respuesta[i].país}</h2>
+                            </div>
+                            <div class="col-sm-6 col-md-3 col-lg-2 col-xl-2 col-6">
+                                <h2 class="textInfo">${respuesta[i].Password1}</h2>
+                            </div>
+                        </li>
+                    </ul>
+                `));
+                };
+            };
+        },
+        error:function(respuesta){
+            console.log("Error");
+        }
+    });
+    
 }
 function verButonesUsuario(j){
     indice=j;
@@ -404,6 +419,7 @@ function verButonesUsuarioEmpresa(j){
     `));
 };
 function generarUsuarioBuscar(j){
+    
         var i =j;
         if(i%2==0){
             $("#colInfo").append($(`
@@ -534,51 +550,64 @@ function generarTablainformacionEmpresa(){
     `));
 }
 function generarEmpresa(){
-    for(var i=0 ,j=-1; i<usuario.length;i++){
-        j++;
-        if(i%2==0){
-            $("#colInfo2").append($(`
-            <li class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 liConfInfo2a liConfInfo2Comun">
-                <div class="col-sm-12 col-md-3 col-lg-1 col-xl-1 col-6">
-                    <h2 class="textInfo">${empresas[i].CodigoUsuarioEmpresa}</h2>
-                </div>
-                <div class="col-sm-5 col-md-3 col-lg-2 col-xl-2 col-6">
-                    <a href="#${empresas[i].NombreUsuarioEmpresa}" onclick="verButonesUsuarioEmpresa(${j})" class="textInfo textA">${empresas[i].NombreUsuarioEmpresa}</a>
-                </div>
-                <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 col-6">
-                    <h2 class="textInfo">${empresas[i].Correo}</h2>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 col-6">
-                    <h2 class="textInfo">${empresas[i].LongirudyLatitud}</h2>
-                </div>
-                <div class="col-sm-6 col-md-3 col-lg-2 col-xl-2 col-6">
-                    <h2 class="textInfo">${empresas[i].Contraseña}</h2>
-                </div>
-            </li>
-            `));
-        }else{
-        $("#colInfo2").append($(`
-            <li class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 liConfInfo2b liConfInfo2Comun">
-                <div class="col-sm-12 col-md-3 col-lg-1 col-xl-1 col-6">
-                    <h2 class="textInfo">${empresas[i].CodigoUsuarioEmpresa}</h2>
-                </div>
-                <div class="col-sm-5 col-md-3 col-lg-2 col-xl-2 col-6">
-                    <a href="#${empresas[i].NombreUsuarioEmpresa}" onclick="verButonesUsuarioEmpresa(${j})" class="textInfo textA">${empresas[i].NombreUsuarioEmpresa}</a>
-                </div>
-                <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 col-6">
-                    <h2 class="textInfo">${empresas[i].Correo}</h2>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 col-6">
-                    <h2 class="textInfo">${empresas[i].LongirudyLatitud}</h2>
-                </div>
-                <div class="col-sm-6 col-md-3 col-lg-2 col-xl-2 col-6">
-                    <h2 class="textInfo">${empresas[i].Contraseña}</h2>
-                </div>
-            </li>
-        </ul>
-    `));
-        };
-    };
+    
+    $.ajax({
+        url:"ajax/Empresa.php?accion=generarEmpresa",
+        method:"POST",
+        dataType:"json",
+        success:function(respuesta){
+            empresas1=respuesta;
+            for(var i=0 ,j=-1; i<empresas1.length;i++){
+                j++;
+                if(i%2==0){
+                    $("#colInfo2").append($(`
+                    <li class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 liConfInfo2a liConfInfo2Comun">
+                        <div class="col-sm-12 col-md-3 col-lg-1 col-xl-1 col-6">
+                            <h2 class="textInfo">EM000${i+1}</h2>
+                        </div>
+                        <div class="col-sm-5 col-md-3 col-lg-2 col-xl-2 col-6">
+                            <a href="#${empresas1[i].NombreEmpresa}" onclick="verButonesUsuarioEmpresa(${j})" class="textInfo textA">${empresas1[i].NombreEmpresa}</a>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 col-6">
+                            <h2 class="textInfo">${empresas1[i].Email}</h2>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 col-6">
+                            <h2 class="textInfo">${empresas1[i].ciudad},${empresas1[i].país}</h2>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-lg-2 col-xl-2 col-6">
+                            <h2 class="textInfo">${empresas1[i].password1}</h2>
+                        </div>
+                    </li>
+                    `));
+                }else{
+                    $("#colInfo2").append($(`
+                        <li class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 liConfInfo2b liConfInfo2Comun">
+                            <div class="col-sm-12 col-md-3 col-lg-1 col-xl-1 col-6">
+                                <h2 class="textInfo">EM000${i+1}</h2>
+                            </div>
+                            <div class="col-sm-5 col-md-3 col-lg-2 col-xl-2 col-6">
+                                <a href="#${empresas1[i].NombreEmpresa}" onclick="verButonesUsuarioEmpresa(${j})" class="textInfo textA">${empresas1[i].NombreEmpresa}</a>
+                            </div>
+                            <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 col-6">
+                                <h2 class="textInfo">${empresas1[i].Email}</h2>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 col-6">
+                                <h2 class="textInfo">${empresas1[i].ciudad},${empresas1[i].país}</h2>
+                            </div>
+                            <div class="col-sm-6 col-md-3 col-lg-2 col-xl-2 col-6">
+                                <h2 class="textInfo">${empresas1[i].password1}</h2>
+                            </div>
+                        </li>
+                    </ul>
+                `));
+                };
+            };
+        },
+        error:function(respuesta){
+            console.log("Error");
+        }
+    });
+    
 }
 function VentasButton(j){
     var sumatoria=0;

@@ -58,10 +58,11 @@
         public static function GuardarUsuario($datos){
             $data= json_encode($datos);
             $ch = curl_init();    // initialize curl handle
-            curl_setopt($ch, CURLOPT_URL, "https://quintex-ofertas.firebaseio.com/Usuario.json");
+            curl_setopt($ch, CURLOPT_URL, "https://quintex-ofertas.firebaseio.com/empresa.json");
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
             $d =json_encode(curl_exec($ch));
+            
             $res=curl_errno($ch);
             curl_close($ch);
         return $res;
@@ -79,7 +80,7 @@
           }
         public static function verificarUsuarioEmpresa($NombreEmpresa,$Email){
                 $ch = curl_init();    // initialize curl handle
-                curl_setopt($ch, CURLOPT_URL, "https://quintex-ofertas.firebaseio.com/Usuario");
+                curl_setopt($ch, CURLOPT_URL, "https://quintex-ofertas.firebaseio.com/empresa.json");
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
                 curl_setopt($ch, CURLOPT_HTTPHEADER, array("Accept: application/json"));
                 $datos=array();
@@ -93,7 +94,7 @@
                 $respuesta=array();
                 $variablefinal="";
                 for($i=0;$i<count($datos);$i++){
-                    if($NombreEmpresa==$datos[$i]["NombreEmpresa"] and $NombreEmpresa!=""){
+                    if($NombreEmpresa==$datos[$i]["NombreEmpresa"]){
                         if(($Email==$datos[$i]["Email"])){
                             $variablefinal="01000101";//nombre igual y email igual = E 01001010
                         };

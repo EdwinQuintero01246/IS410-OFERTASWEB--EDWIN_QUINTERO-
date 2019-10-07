@@ -17,35 +17,22 @@ class Usuario{
         }
 
         public static function infoUsuario($usuario,$Contrasenia){
-                /*$archivo= json_decode(file_get_contents("../../data/data_json/usuarios.json"),true);
-                $datos=array();
-                $indice=0;
-                for($i=0;$i<count($archivo);$i++){
-                        if($usuario==$archivo[$i]["NombreUsuario"]){
-                                if($contraseña==$archivo[$i]["Contraseña"]){
-                                        $datos[$indice]=$archivo[$i];
-                                        //$indice=$indice+1;
-                                }
-                        }
-                }
-                return  json_encode($datos);*/
-                //      return json_encode(file_get_contents("../../data/data_json/usuarios.json"));
-                //return file_get_contents("../data/usuarios.json");
           $ch = curl_init();    // initialize curl handle
+          $datos=array();
+          $contador=0;
           curl_setopt($ch, CURLOPT_URL, "https://quintex-ofertas.firebaseio.com/Usuario.json");
           curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
           curl_setopt($ch, CURLOPT_HTTPHEADER, array("Accept: application/json"));
-          $datos=array();
-          $contador=0;
           $d = json_decode(curl_exec($ch),true);
           foreach($d as $key => $value){
-                $datos[$contador]["Usuario"]=$d[$key]["usuario"];
-                $datos[$contador]["Contrasenia"]=$d[$key]["Contrasenia"];
-                $datos[$contador]["Rango"]=$d[$key]["rango"];
-
+                $datos[$contador]["Usuario"]=$d[$key]["Email"];
+                $datos[$contador]["Contrasenia"]=$d[$key]["Password1"];
+                $datos[$contador]["Rango"]="Usuario";
             $contador=$contador+1;
           }
           curl_setopt($ch, CURLOPT_URL, "https://quintex-ofertas.firebaseio.com/Administrador.json");
+          curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+          curl_setopt($ch, CURLOPT_HTTPHEADER, array("Accept: application/json"));
           $d = json_decode(curl_exec($ch),true);
           foreach($d as $key => $value){
                 $datos[$contador]["Usuario"]=$d[$key]["usuario"];
@@ -58,12 +45,13 @@ class Usuario{
           curl_setopt($ch, CURLOPT_HTTPHEADER, array("Accept: application/json"));
           $d = json_decode(curl_exec($ch),true);
           foreach($d as $key => $value){
-                $datos[$contador]["Usuario"]=$d[$key]["usuario"];
-                $datos[$contador]["Contrasenia"]=$d[$key]["Contrasenia"];
-                $datos[$contador]["Rango"]=$d[$key]["rango"];
+                $datos[$contador]["Usuario"]=$d[$key]["Email"];
+                $datos[$contador]["Contrasenia"]=$d[$key]["password1"];
+                $datos[$contador]["Rango"]="Empresa";
 
             $contador=$contador+1;
-          }$respuesta=array();
+          }
+          $respuesta=array();
           for($i=0;$i<count($datos);$i++){
                 if($usuario==$datos[$i]["Usuario"]){
                         if($Contrasenia==$datos[$i]["Contrasenia"]){
@@ -72,7 +60,7 @@ class Usuario{
                 }
           }
           curl_close($ch);
-        return json_encode($respuesta);
+          return json_encode($respuesta);
         }
 
 

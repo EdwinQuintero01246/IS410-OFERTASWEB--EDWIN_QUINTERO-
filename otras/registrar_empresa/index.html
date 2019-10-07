@@ -45,17 +45,19 @@
                                 </div>
                             </li>
                             <h2 class="tittle-registrarse-seccion col-12" id="h2-registrarse-seccion">Información de la empresa</h2>
-                            <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="text"   placeholder="Nombre De La Empresa"></li>
-                            <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="email"   placeholder="email"></li>
-                            <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="password"   placeholder="password"></li>
-                            <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="password"   placeholder="confirmar password"></li>
-                            <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="text"   placeholder="dirección"></li>
-                            <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="tel"   placeholder="telefono"></li>
+                            <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " id="NombreEmpresa" type="text"   placeholder="Nombre De La Empresa"></li>
+                            <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " id="Email" type="email"   placeholder="email"></li>
+                            <div id="ValidarUsuario" class="col-12"></div>
+                            <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " id="password1" type="password"   placeholder="password"></li>
+                            <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " id="password2" type="password"   placeholder="confirmar password"></li>
+                            <div id="ValidarPassword" class="col-12"></div>
+                            <p class="col-12" id="textCheckButton"><input class="w3-check" type="checkbox" onclick="VerContraseña()"> Ver Contraseña</p>
+                            <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " id="Telefono" type="tel"   placeholder="telefono"></li>
                             <li class="li-form-registrarse-seccion col-12">
                                 <select class="select-css" id="select-css" onchange="preguntaSeguridad()">
                                     <option value="0">Pregunta de seguridad</option>
-                                    <option value="1">Primer Auto</option>
-                                    <option value="2">Tía Favorita</option>
+                                    <option value="1">Primer Cliente</option>
+                                    <option value="2">Nombre Promietario</option>
                                     <option value="3">Pregunta(Usuario)</option>
                                 </select>
                                 <div id="preguntaSeguridad">

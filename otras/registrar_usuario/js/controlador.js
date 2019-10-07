@@ -25,6 +25,10 @@ function myFunctioncontaseñaConfirmar() {
     }
 }
 var parametro=[];
+var parametros1;
+var parametros2;
+var parametros3;
+var parametrosCrearArchivos;
 function activarSiguiente(){
   if($("#Nombre").val()==""){
     $("#ValidadNombre").html($(`
@@ -140,7 +144,6 @@ RadioMale: $("#RadioMale").val(),
 RadioFemale: $("#RadioFemale").val(),
 PreguntaSegurida: $("#PreguntaSegurida").val()
   }
-console.log(parametro);
   if(
     $("#Nombre").val()!=""&&
     $("#Apellido").val()!=""&&
@@ -153,17 +156,50 @@ console.log(parametro);
     $("#Cumple_dia").val()!=0&&
     $("#Cumple_mes").val()!=0&&
     $("#Cumple_anio").val()!=0){
-      console.log($("#Nombre").val())
+      //console.log($("#Nombre").val());
+      parametros1=
+      'NombreUsuario='+$("#Nombre").val()+"&"+
+      'Apellido='+$("#Apellido").val()+"&"+
+      'Apodo=@'+$("#Apodo").val()+"&"+
+      'Email='+$("#Email").val()+"&"+
+      'Password1='+$("#contrasenia").val()+"&"+
+      'Paseword2='+$("#contraseniaConfirmar").val()+"&"+
+      'Telefono='+$("#Telefono").val()+"&"+
+      'Cumple_dia='+$("#Cumple_dia").val()+"&"+
+      'Cumple_mes='+$("#Cumple_mes").val()+"&"+
+      'Cumple_anio='+$("#Cumple_anio").val()+"&";
+      var parametrosdata=
+      'NombreUsuario='+$("#Nombre").val()+"&"+
+      'Email='+$("#Email").val();
+      parametrosCrearArchivos=
+        'NombreUsuario='+$("#Nombre").val()+"&"+
+        'Url='+"../../data/user/Usuario/";
+        console.log(parametros1);
+        
+      $.ajax({
+        url:"ajax/Usuario.php?hacer=VerificarUsuario",
+        method:"POST",
+        dataType:"json",
+        data: parametrosdata,
+        success:function(respuesta){
+          console.log(respuesta);
+        },
+        error:function(respuesta){
+          console.log("Error");
+        }
+      });
+
+
       $("#información").html($(`
         <div class="row" style="margin-left: 0px;margin-right: 0px;">
           <img class="col-4" src="img/icon/puntosFom2.png" alt="" id="PointsPoint">
       </div>
         <h2 class="tittle-registrarse-seccion  col-12" id="h2-registrarse-seccion">ubicacion</h2>
-        <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12" ><input class="input-option " type="text"   placeholder="Dirrección"></li>
-        <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="text"   placeholder="país"></li>
-        <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="text"   placeholder="cuidad"></li>
-        <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="text"   placeholder="Estado/Provincia/Región"></li>
-        <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="text"   placeholder="Codigo Postal"></li>
+        <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12" ><input class="input-option " type="text" id="Dirrección" placeholder="Dirrección"></li>
+        <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="text"  id="país" placeholder="país"></li>
+        <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="text"  id="cuidad" placeholder="cuidad"></li>
+        <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="text"  id="Estado" placeholder="Estado/Provincia/Región"></li>
+        <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="text"  id="Codigo" placeholder="Codigo Postal"></li>
         <li class="li-form-registrarse-seccion  col-12">
             <div class="line">
             </div>
@@ -269,19 +305,25 @@ function activarAnteriorForm1(){
   `));
 }
 function activarSiguienteForm2(){
+  parametros2=
+  'Dirrección='+$("#Dirrección").val()+"&"+
+  'país='+$("#país").val()+"&"+
+  'cuidad='+$("#cuidad").val()+"&"+
+  'Estado='+$("#Estado").val()+"&"+
+  'Codigo='+$("#Codigo").val()+"&";
   $("#información").html($(`
     <div class="row" style="margin-left: 0px;margin-right: 0px;">
       <img class="col-4" src="img/icon/puntosFom3.png" alt="" id="PointsPoint">
     </div>
     <h2 class="tittle-registrarse-seccion  col-12" id="h2-registrarse-seccion">Redes Sociales</h2>
     <li class="li-form-registrarse-seccion col-sm-4 col-md-4 col-lg-4 col-xl-4 col-7"><label id="label-redes-facebook" for="facebookUsername" >facebook.com/</label></li>
-    <li class="li-form-registrarse-seccion col-sm-8 col-md-8 col-lg-8 col-xl-8 col-12"><input class="input-option " type="text"></li>
+    <li class="li-form-registrarse-seccion col-sm-8 col-md-8 col-lg-8 col-xl-8 col-12"><input class="input-option " id="Facebook" type="text"></li>
     <li class="li-form-registrarse-seccion col-sm-4 col-md-4 col-lg-4 col-xl-4 col-7"><label id="label-redes-twitter" for="facebookUsername">twitter.com/</label></li>
-    <li class="li-form-registrarse-seccion col-sm-8 col-md-8 col-lg-8 col-xl-8 col-12"><input class="input-option " type="text"></li>
+    <li class="li-form-registrarse-seccion col-sm-8 col-md-8 col-lg-8 col-xl-8 col-12"><input class="input-option " id="Twitter" type="text"></li>
     <li class="li-form-registrarse-seccion col-sm-4 col-md-4 col-lg-4 col-xl-4 col-7"><label id="label-redes-instagram" for="facebookUsername">instagram.com/</label></li>
-    <li class="li-form-registrarse-seccion col-sm-8 col-md-8 col-lg-8 col-xl-8 col-12"><input class="input-option " type="text"></li>
+    <li class="li-form-registrarse-seccion col-sm-8 col-md-8 col-lg-8 col-xl-8 col-12"><input class="input-option " id="instagram" type="text"></li>
     <li class="li-form-registrarse-seccion  col-6 " ><input type="button" class="btn btn-danger buttonForm3" value="Anterior" onclick="activarAnteriorForm2()"></li>
-    <li class="li-form-registrarse-seccion  col-6 " ><input type="button" class="btn btn-danger buttonForm3" id="button-registrar" value="Registrar"></li>
+    <li class="li-form-registrarse-seccion  col-6 " ><input type="button" class="btn btn-danger buttonForm3" onclick="Registrar()" id="button-registrar" value="Registrar"></li>
   `));
 }
 function activarAnteriorForm2(){
@@ -290,11 +332,11 @@ function activarAnteriorForm2(){
       <img class="col-4" src="img/icon/puntosFom2.png" alt="" id="PointsPoint">
     </div>
     <h2 class="tittle-registrarse-seccion  col-12" id="h2-registrarse-seccion">ubicacion</h2>
-    <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12" ><input class="input-option " type="text"   placeholder="Dirrección"></li>
-    <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="text"   placeholder="país"></li>
-    <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="text"   placeholder="cuidad"></li>
-    <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="text"   placeholder="Estado/Provincia/Región"></li>
-    <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="text"   placeholder="Codigo Postal"></li>
+    <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12" ><input class="input-option " type="text" id="Dirrección" placeholder="Dirrección"></li>
+    <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="text"  id="país" placeholder="país"></li>
+    <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="text"  id="cuidad" placeholder="cuidad"></li>
+    <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="text"  id="Estado" placeholder="Estado/Provincia/Región"></li>
+    <li class="li-form-registrarse-seccion col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12"><input class="input-option " type="text"  id="Codigo" placeholder="Codigo Postal"></li>
     <li class="li-form-registrarse-seccion  col-12">
         <div class="line">
         </div>
@@ -302,4 +344,39 @@ function activarAnteriorForm2(){
     <input type="button" class="btn btn-danger" value="Anterior" onclick="activarAnteriorForm1()">
     <input type="button" class="btn btn-danger" value="Siguiente" onclick="activarSiguienteForm2()">
   `));
+}
+function Registrar(){
+  parametros3=
+  'Facebook='+$("#Facebook").val()+"&"+
+  'Twitter='+$("#Twitter").val()+"&"+
+  'instagram='+$("#instagram").val()
+  ;
+  var parametros= parametros1+parametros2+parametros3;
+  //console.log(parametrosCrearArchivos);
+  $.ajax({
+      url:"ajax/Usuario.php?hacer=CrearAchivos",
+      method:"POST",
+      dataType:"json",
+      data: parametrosCrearArchivos,
+      success:function(respuesta){
+          console.log(respuesta);
+      },
+      error:function(respuesta){
+          console.log("Error");
+      }
+  });
+  $.ajax({
+      url:"ajax/Usuario.php?hacer=GuardarUsuario",
+      method:"POST",
+      dataType:"json",
+      data: parametros,
+      success:function(respuesta){
+        console.log(respuesta);
+        alert("Usuario Creado, ya puedes iniciar seccion");
+        window.setTimeout(window.location.assign("../iniciar-seccion"),300);
+      },
+      error:function(respuesta){
+
+      }
+  });
 }

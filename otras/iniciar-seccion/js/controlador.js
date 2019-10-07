@@ -53,7 +53,7 @@ function IniciarSeccion(){
         }
       },
       error:function(respuesta){
-        
+        console.log("error");
       }
     });
 }
