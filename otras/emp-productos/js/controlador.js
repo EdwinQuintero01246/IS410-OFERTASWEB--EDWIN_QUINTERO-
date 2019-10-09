@@ -1,4 +1,4 @@
-function VerProductoModal(){
+function VerProductoModal(i){
     $("#generarModal").html($(`
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document" >
@@ -13,10 +13,11 @@ function VerProductoModal(){
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 ">
                                 <ul class="ul_conf" id="ul-config">
-                                    <li><span id="modal-producto">Producto</span></li>
+                                    <li><span id="modal-producto">${productos[i].Nombre}Producto</span></li>
                                     <li><span id="modal-secundario">Lugar</span></li>
-                                    <li><span id="modal-secundario" >descripcion del producto</span></li>
-                                    <li><span id="modal-precios-oferta">Oferta</span></li>
+                                    <li><span id="modal-secundario" >${productos[i].Descripcion}</span></li>
+                                    <li><span id="modal-precios-oferta">${productos[i].Oferta}</span></li>
+                                    <li><span id="modal-precios">${productos[i].Precio}</span></li>
                                     <li><div class="line"></div></li>
                                     <li>
                                         <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 col-4 "><h1 class="numero-reacciones col-xl-8">Numero<h1 class="Palabras-reaccione col-xl-4">Me Gusta</h1></h1></div>
@@ -27,7 +28,7 @@ function VerProductoModal(){
                                     <li>
                                         <h1>Puntaciones</h1>
                                         <hr>
-                                        <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-2 numero-reacciones">90.5%</div>
+                                        <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-2 numero-reacciones" id="generarEstrellas">4.5</div>
                                         <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-2 "> <img src="img/estrella llena.png" alt=""></div>
                                         <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-2 "> <img src="img/estrella llena.png" alt=""></div>
                                         <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-2 "> <img src="img/estrella llena.png" alt=""></div>
@@ -68,21 +69,30 @@ function NuevoProducto(){
                         <form>
                             <div class="form-group">
                                 <label for="recipient-name" class="col-form-labelOriginal">Producto:</label>
-                                <input type="text" class="form-control" id="NuevoProductoNombre">
+                                <input type="text" class="sizeTextProductNuevo form-control" id="NuevoProductoNombre">
                             </div>
                             <div class="form-group">
                                 <label for="recipient-name" class="col-form-labelOriginal">Precio:</label>
-                                <input type="number" class="form-control" id="NuevoProductoPrecio">
+                                <input type="text" class="sizeTextProductNuevo form-control" id="NuevoProductoPrecio">
                             </div>
                             <div class="form-group">
                                 <label for="recipient-name" class="col-form-labelOriginal">Oferta:</label>
-                                <input type="number" class="form-control" id="NuevoProductoOferta">
+                                <input type="text" class="sizeTextProductNuevo form-control" id="NuevoProductoOferta">
                             </div>
                             <div class="form-group">
                                 <label for="message-text" class="col-form-labelOriginal">Descripción Del Producto:</label>
-                                <textarea class="form-control" id="NuevoProductoDescripcion"></textarea>
+                                <textarea class="sizeTextProductNuevo form-control" id="NuevoProductoDescripcion"></textarea>
                             </div>
-                            
+                            <select class="select-css" id="select-css">
+                                <option value="Todas las Categorias">Todas las Categorias</option>
+                                <option value="Vehículos">Vehículos</option>
+                                <option value="Electronica">Electronica</option>
+                                <option value="Linea">Linea Blanca</option>
+                                <option value="Ropa">Ropa</option>
+                                <option value="Alquileres">Alquileres</option>
+                                <option value="Inmueble">Inmueble</option>
+                                <option value="Entretenimiento">Entretenimiento</option>
+                            </select>
                             Informacion Del Vendedor
                             Empresa O Nombre De Vendedor
                             
@@ -108,20 +118,90 @@ function NuevoProducto(){
     `));
 }
 function EnviarProducto(){
- var data=
+ var parametros=
  'NombreProducto='+$("#NuevoProductoNombre").val()+"&"+
  'PrecioProducto='+$("#NuevoProductoPrecio").val()+"&"+
  'OfertaProducto='+$("#NuevoProductoOferta").val()+"&"+
- 'DescripcionProducto='+$("#NuevoProductoDescripcion").val()+"&"
-  'Url='+"../../data/user/Empresa/";
- console.log(data);
+ 'DescripcionProducto='+$("#NuevoProductoDescripcion").val()+"&"+
+ 'Url='+"../../data/user/Empresa/"+"&"+
+ 'Categorias='+$("#select-css").val()+"&"+
+ 'InformacionVendedor='+"&"+
+ 'NombreEmpresa='+UsuarioImport;
  $.ajax({
     url:"ajax/Producto.php?accion=GuardarProducto",
     method:"POST",
+    data: parametros,
     dataType:"json",
-    success:function(respuesta){},
+    success:function(respuesta){
+        var dataparametro= parametros+"&"+
+        'LLaves='+llaveImport;
+        $.ajax({
+            url:"ajax/Producto.php?accion=GuardarProductoLLaves",
+            method:"POST",
+            data: dataparametro,
+            dataType:"json",
+            success:function(respuesta){
+                console.log(respuesta);
+                alert("Producto Guardado con exito");
+                window.location.reload();
+            },
+            error:function(respuesta){
+                console.log("Error");
+            }
+        });
+    },
     error:function(respuesta){
         console.log("Error");
     }
 });
+}
+var UsuarioImport;
+var llaveImport;
+var productos=[];
+$(document).ready(function(){
+    UsuarioImport = localStorage.getItem("NombreEmpresa");
+    llaveImport = localStorage.getItem("llave");
+    if(UsuarioImport==null){
+        alert("Inicie Seccion Primero");
+        window.location.assign("../../index.html");
+    };
+    $("#nombreUsuario").html($(`
+    <a class="nav-button-option-navbar" href="#${UsuarioImport}">${UsuarioImport}</a>
+    `));
+    var dataLLave=
+    'LLave='+ llaveImport;
+    ;
+    $.ajax({
+        url:"ajax/Producto.php?accion=VerProducto",
+        method:"POST",
+        dataType:"json",
+        data: dataLLave,
+        success:function(respuesta){
+            productos=respuesta;
+            for(var i=0; i<productos.length;i++){
+                $("#contenido-Productos").append($(`
+                    <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 col-12 " id="div-class-product">
+                        <div class="movimiento">
+                            <a  data-toggle="modal" data-target="#exampleModal" onclick="VerProductoModal(${i})" >
+                                <div class="tamaños_visualizacion" style="background-image: url(img/prueba.jpg);background-repeat: no-repeat; background-position: center center;background-size: cover;border-radius: 10px">
+                                    <span class="fondo-span" id="modal-precios-oferta">${productos[i].Oferta}</span>
+                                </div>
+                                <h5 id="modal-producto">${productos[i].Nombre}Producto</h5>
+                                <h5 id="modal-secundario">${productos[i].Descripcion}<span></span></h5>
+                            </a>
+                        </div>
+                    </div>
+                `));
+            }
+        },
+        error:function(respuesta){
+            console.log("Error");
+        }
+    });
+})
+function cerrarSesion(){
+    UsuarioImport="";
+    llaveImport="";
+    localStorage.clear();
+    window.location.assign("../../index.html");
 }

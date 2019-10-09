@@ -28,6 +28,8 @@ class Usuario{
                 $datos[$contador]["Usuario"]=$d[$key]["Email"];
                 $datos[$contador]["Contrasenia"]=$d[$key]["Password1"];
                 $datos[$contador]["Rango"]="Usuario";
+                $datos[$contador]["NombreEmpresa"]=$d[$key]["NombreUsuario"];
+                $datos[$contador]["Apellido"]=$d[$key]["Apellido"];
             $contador=$contador+1;
           }
           curl_setopt($ch, CURLOPT_URL, "https://quintex-ofertas.firebaseio.com/Administrador.json");
@@ -48,7 +50,7 @@ class Usuario{
                 $datos[$contador]["Usuario"]=$d[$key]["Email"];
                 $datos[$contador]["Contrasenia"]=$d[$key]["password1"];
                 $datos[$contador]["Rango"]="Empresa";
-
+                $datos[$contador]["NombreEmpresa"]=$d[$key]["NombreEmpresa"];
             $contador=$contador+1;
           }
           $respuesta=array();
@@ -62,8 +64,41 @@ class Usuario{
           curl_close($ch);
           return json_encode($respuesta);
         }
-
-
+        public static function ObtenerLlave($usuario,$Contrasenia){
+                $ch = curl_init();    // initialize curl handle
+                $respuesta=array();
+                curl_setopt($ch, CURLOPT_URL, "https://quintex-ofertas.firebaseio.com/empresa.json");
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+                curl_setopt($ch, CURLOPT_HTTPHEADER, array("Accept: application/json"));
+                $d = json_decode(curl_exec($ch),true);
+                foreach($d as $key => $value){
+                      if($usuario==$d[$key]["Email"]){
+                        if($Contrasenia==$d[$key]["password1"]){
+                                $dd=$key;
+                        }
+                      }
+                }
+                curl_close($ch);
+                return json_encode($dd);
+        }
+        
+        public static function ObtenerLlaveUsuario($usuario,$Contrasenia){
+                $ch = curl_init();    // initialize curl handle
+                $respuesta=array();
+                curl_setopt($ch, CURLOPT_URL, "https://quintex-ofertas.firebaseio.com/Usuario.json");
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+                curl_setopt($ch, CURLOPT_HTTPHEADER, array("Accept: application/json"));
+                $d = json_decode(curl_exec($ch),true);
+                foreach($d as $key => $value){
+                      if($usuario==$d[$key]["Email"]){
+                        if($Contrasenia==$d[$key]["Password1"]){
+                                $dd=$key;
+                        }
+                      }
+                }
+                curl_close($ch);
+                return json_encode($dd);
+        }
 
 
 

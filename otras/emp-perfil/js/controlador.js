@@ -243,7 +243,6 @@ function codigoqr(){
     `));
 }
 function GenerarCodigoQr(){
-    
     $.ajax({
         url:"../codigoQr/ajax/Obtener.php",
         method:"POST",
@@ -258,4 +257,21 @@ function GenerarCodigoQr(){
 
         }
     });
+}
+var UsuarioImport;
+$(document).ready(function(){
+    UsuarioImport = localStorage.getItem("NombreEmpresa");
+    console.log(UsuarioImport);
+    if(UsuarioImport==null){
+        alert("Inicie Seccion Primero");
+        window.location.assign("../../index.html");
+    };
+    $("#nombreUsuario").html($(`
+    <a class="nav-button-option-navbar" href="#${UsuarioImport}">${UsuarioImport}</a>
+    `));
+});
+function cerrarSesion(){
+    UsuarioImport="";
+    localStorage.clear();
+    window.location.assign("../../index.html");
 }

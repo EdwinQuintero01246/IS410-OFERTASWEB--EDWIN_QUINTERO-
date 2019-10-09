@@ -1,4 +1,7 @@
   @media  screen and (min-width: 1200px){
+    .textInfo{
+      font-size: 15px;
+    }
     .home-img-marketplace{
       width:15%;
     }
@@ -8,6 +11,9 @@
     }
   }
   @media  screen and (max-width: 1200px){
+    .textInfo{
+      font-size: 15px;
+    }
     .home-img-marketplace{
       width:18%;
     }
@@ -17,6 +23,9 @@
     }
   }
   @media  screen and (max-width: 992px){
+    .textInfo{
+      font-size: 15px;
+    }
     .home-img-marketplace{
       width:15%;
     }
@@ -26,6 +35,9 @@
     }
   }
   @media  screen and (max-width: 768px){
+    .textInfo{
+      font-size: 14px;
+    }
     .home-img-marketplace{
       width:10%;
     }
@@ -35,6 +47,9 @@
     }
   }
   @media  screen and (max-width: 576px){
+    .textInfo{
+      font-size: 12px;
+    }
     .home-img-marketplace{
       width:12%;
     }
@@ -141,7 +156,9 @@ background-color: rgb(229,228,227);
 
 .li-home-img-marketplace{
   color: #1d2129;
-  display: inline
+  /*display: inline;*/
+  background-color: transparent;
+  border-color: transparent;
 }
 .ul_conf{
   text-decoration: none;
@@ -260,3 +277,27 @@ background-color: rgb(229,228,227);
   background-color: transparent;
   border: transparent;
 }
+/*Compras Generar*/
+.ul_confEmpresasSeguidas {
+  text-decoration: none;
+  list-style-type: none;
+  padding-left: 0px;
+}
+.liConfInfo1 {
+  background-color: #007BFF;
+  padding: 4px 2px 2px 2px;
+  border-radius: 7px;
+  margin-bottom: 2px;
+  color: white;
+}
+.liConfInfo2a {
+  background-color: rgb(198, 219, 230);
+}
+.liConfInfo2Comun {
+  padding: 4px 2px 2px 2px;
+  border-radius: 7px;
+  margin-bottom: 2px;
+  color: rgba(0, 0, 0, 0.897);
+  list-style-type: none;
+}
+/*Fin Compras Generar*/

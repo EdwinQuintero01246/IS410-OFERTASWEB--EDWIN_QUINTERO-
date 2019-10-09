@@ -33,20 +33,95 @@
                 <li class="nav-item active">
                     <a class="nav-button-option-navbar" href="../us-productos/index.html">ofertas</a>
                 </li>
+                <li class="nav-item active" id="nombreUsuario">
+                </li>
             </ul>
             <div class="dropdown" id="Option_config">
                 <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <img src="../us-inicio/img/icon/option.png" alt="" >
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#"><img src="../us-inicio/img/icon/confi.png" alt="" > configuración</a>
-                    <a class="dropdown-item" href="#"><img src="../us-inicio/img/icon/cerrar_seccion.png" alt="" > Cerrar Sección</a>
+                    <a class="dropdown-item" href="../us-emp-ajustes/index.html"><img src="../us-inicio/img/icon/confi.png" alt="" > configuración</a>
+                    <a class="dropdown-item" onclick="cerrarSesion()" href="../../index.html"><img src="../us-inicio/img/icon/cerrar_seccion.png" alt="" > Cerrar Sección</a>
                 </div>
             </div>
         </div>
     </nav>
-    <section>
+    <section id="section">
+        <div class="container-fluid" >
+            <div class="row">
+                <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2 col-12 " id="div-class-option">
+                    <div id="tamanio-imagen-perfil">
+                        <a data-toggle="modal" data-target="#exampleModal" >
+                            <img class="tamanio_visualizacion-perfil" src="img/logo-empresa/logo.png">
+                            </img>
+                        </a>
+                    </div>
+                    <ul class="ul_conf" id="ul-conf">
+                        <div>
+                            <li><span class="tittle">Información</span></li>
+                            <li><span class="content-text">Nombre empresa</span></li>
+                            <li><div class="line"></div></li>
+                            <li><span class="tittle">ubicacion</span></li>
+                            <li><input class="content-text" type="text" name="" id="text-lugar" disabled placeholder="Londres, Inglaterra" ></li>
+                            <li><div class="line"></div></li>
+                            <li><span class="tittle">codigo Qr</span></li>
+                            <li><button type="button" class="btn btn-light btn-sm" onclick="codigoqr()" ><img src="../../img/icon/qr.png" alt="qr" id="button-Qr"></button></li>
+                            <li><div class="line"></div></li>
+                            <li><span class="tittle">Numero de cuenta</span></li>
+                            <li><span class="content-text">XXXX XXXX XXXX 2989</span></li>
+                            <li><div class="line"></div></li>
+                            <li><span class="tittle">redes sociales</span></li>
+                            <li>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-facebook">facebook/</button>
+                                    <div class="input-group-text" id="btnGroupAddon">@</div>
+                                    <input type="text" class="form-control" placeholder="redes" aria-label="Input group example" aria-describedby="btnGroupAddon">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-twitter">twitter.com/</button>
+                                    <div class="input-group-text" id="btnGroupAddon">@</div>
+                                    <input type="text" class="form-control" placeholder="redes" aria-label="Input group example" aria-describedby="btnGroupAddon">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-instagram">instagram.com/</button>
+                                    <div class="input-group-text" id="btnGroupAddon">@</div>
+                                    <input type="text" class="form-control" placeholder="redes" aria-label="Input group example" aria-describedby="btnGroupAddon">
+                                </div>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-9 col-lg-9 col-xl-10 col-12 " id="div-class-perfil">
+                    <a data-toggle="modal" data-target="#bannerModal" >
+                        <img class="tamanio_visualizacion-banner" src="img/logo-empresa/banner.png">
+                        </img>
+                    </a>
+                    <ul class="ul_conf" id="ul-conf">
+                        <li>
+                            <div class="btn-group" role="group" aria-label="Basic example" id="div-consola">
+                                <input type="button" class="tamanio-consola-button btn btn-light" onclick="EmpresasSeguidas()" value="Empresas Seguidas">
+                                <input type="button" class="tamanio-consola-button btn btn-light" onclick="Compras()" value="Compras">
+                                <input type="button" class="tamanio-consola-button btn btn-light" onclick="MessengerQuintex()" value="MessengerQuintex">
+                            </div>
+                        </li>
+                    </ul>
+                    <div id="generarContenido">
+                        
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <footer>
     </footer>
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="js/controlador.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 </body>

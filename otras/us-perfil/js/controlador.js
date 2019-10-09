@@ -101,13 +101,13 @@ function Compras(){
         <ul class="ul_confEmpresasSeguidas">
             <li class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 liConfInfo1">
                 <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2 col-12">
-                    <h2 class="textInfo">Codigo de Compra</h2>
+                    <h2 class="textInfo">Producto</h2>
                 </div>
                 <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 col-12">
                     <h2 class="textInfo">Empresa</h2>
                 </div>
                 <div class="col-sm-12 col-md-3 col-lg-4 col-xl-5 col-12">
-                    <h2 class="textInfo">Producto</h2>
+                    <h2 class="textInfo">Descripcion</h2>
                 </div>
                 <div class="col-sm-12 col-md-2 col-lg-2 col-xl-2 col-12">
                     <h2 class="textInfo">precio</h2>
@@ -115,57 +115,49 @@ function Compras(){
             </li>
         </ul>
     `));
-    for(var i=0; i<comprasarreglo.length;i++){
-        sumatoria=comprasarreglo[i].Precio+ sumatoria;
-        if(i%2==0){
+    var Parametros = 'Correo='+localStorage.getItem("Correo");
+    $.ajax({
+        url:"ajax/Compras.php?accion=VerCompras",
+        method:"POST",
+        dataType:"json",
+        data: Parametros,
+        success:function(respuesta){
+            for(var i=0; i<respuesta.length;i++){
+                sumatoria = parseInt(respuesta[i].Precio)  + sumatoria;
+                    $("#generarContenido").append($(`
+                        <li class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 liConfInfo2a liConfInfo2Comun">
+                            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2 col-12">
+                                <h2 class="textInfo">${respuesta[i].Producto}</h2>
+                            </div>
+                            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 col-12">
+                                <a href="#${respuesta[i].Empresa}" class="textInfo textA"><span class="textInfoSpan"> · </span>${respuesta[i].Empresa}</a>
+                            </div>
+                            <div class="col-sm-12 col-md-3 col-lg-4 col-xl-5 col-12">
+                                <h2 class="textInfo">${respuesta[i].Descripcion}</h2>
+                            </div>
+                            <div class="col-sm-12 col-md-2 col-lg-2 col-xl-2 col-12">
+                                <h2 class="textInfo">${respuesta[i].Precio}</h2>
+                            </div>
+                        </li>
+                    `));
+            }
             $("#generarContenido").append($(`
-                <li class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 liConfInfo2a liConfInfo2Comun">
-                    <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2 col-12">
-                        <h2 class="textInfo">${comprasarreglo[i].codigodecompras}</h2>
+                <hr>
+                <li class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 liConfInfo2a liConfInfo2Comun" style="background-color: rgb(137, 192, 219);">
+                    <div class="col-sm-10 col-md-9 col-lg-10 col-xl-10 col-10">
+                        <h2 class="textInfo" style="color: rgb(255, 255, 255)">total</h2>
                     </div>
-                    <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 col-12">
-                        <a href="#${comprasarreglo[i].NombreUsuarioEmpresa}" class="textInfo textA"><span class="textInfoSpan"> · </span>${comprasarreglo[i].NombreUsuarioEmpresa}</a>
-                    </div>
-                    <div class="col-sm-12 col-md-3 col-lg-4 col-xl-5 col-12">
-                        <h2 class="textInfo">${comprasarreglo[i].Producto}</h2>
-                    </div>
-                    <div class="col-sm-12 col-md-2 col-lg-2 col-xl-2 col-12">
-                        <h2 class="textInfo">${comprasarreglo[i].Precio}</h2>
+                    <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-2">
+                        <h2 class="textInfo" style="color: rgb(255, 255, 255)">L. ${sumatoria}</h2>
                     </div>
                 </li>
             `));
-        }else{
-            $("#generarContenido").append($(`
-                <li class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 liConfInfo2a liConfInfo2Comun">
-                    <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2 col-12">
-                        <h2 class="textInfo">${comprasarreglo[i].codigodecompras}</h2>
-                    </div>
-                    <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 col-12">
-                        <a href="#${comprasarreglo[i].NombreUsuarioEmpresa}" class="textInfo textA"><span class="textInfoSpan"> · </span>${comprasarreglo[i].NombreUsuarioEmpresa}</a>
-                    </div>
-                    <div class="col-sm-12 col-md-3 col-lg-4 col-xl-5 col-12">
-                        <h2 class="textInfo">${comprasarreglo[i].Producto}</h2>
-                    </div>
-                    <div class="col-sm-12 col-md-2 col-lg-2 col-xl-2 col-12">
-                        <h2 class="textInfo">${comprasarreglo[i].Precio}</h2>
-                    </div>
-                </li>
-                
-                
-            `));
-        };
-    };
-    $("#generarContenido").append($(`
-        <hr>
-        <li class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 liConfInfo2a liConfInfo2Comun" style="background-color: rgb(137, 192, 219);">
-            <div class="col-sm-10 col-md-9 col-lg-10 col-xl-10 col-10">
-                <h2 class="textInfo" style="color: rgb(255, 255, 255)">total</h2>
-            </div>
-            <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-2">
-                <h2 class="textInfo" style="color: rgb(255, 255, 255)">L. -${sumatoria}</h2>
-            </div>
-        </li>
-    `));
+        },
+        error:function(respuesta){
+            console.log("Error");
+        }
+    });
+    
 }
 function MessengerQuintex(){
     $("#generarContenido").html($(`
@@ -268,4 +260,21 @@ function GenerarCodigoQr(){
 
         }
     });
+}var UsuarioImport;
+$(document).ready(function(){
+    UsuarioImport = localStorage.getItem("NombreEmpresa");
+    console.log(UsuarioImport);
+    if(UsuarioImport==null){
+        alert("Inicie Seccion Primero");
+        window.location.assign("../../index.html");
+    };
+    UsuarioImport=UsuarioImport+" "+localStorage.getItem("Apellido");
+    $("#nombreUsuario").html($(`
+    <a class="nav-button-option-navbar" href="#${UsuarioImport}">${UsuarioImport}</a>
+    `));
+});
+function cerrarSesion(){
+    UsuarioImport="";
+    localStorage.clear();
+    window.location.assign("../../index.html");
 }

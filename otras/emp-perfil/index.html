@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Inicio Sección Empresa</title>
+    <title>Empresa</title>
     <link rel="icon" type="image/png" href="../../img/logo.png">
     <link rel="estilo-boostrap" href="../../css/bootstrap.min.css">
     <link rel="estilo-boostrap" href="../../css/Style.css">
@@ -26,10 +26,12 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-button-option-navbar" href="../emp-productos/index.html">Inicio </a>
+                        <a class="nav-button-option-navbar" href="../emp-productos/index.html">Mis Productos</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-button-option-navbar" href="../emp-perfil/index.html">Perfil </a>
+                    </li>
+                    <li class="nav-item active" id="nombreUsuario">
                     </li>
                 </ul>
                 <div class="dropdown" id="Option_config">
@@ -37,8 +39,8 @@
                         <img src="../us-inicio/img/icon/option.png" alt="" >
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="../us-emp-ajustes/index.html"><img src="../us-inicio/img/icon/confi.png" alt="" > configuración</a>
-                        <a class="dropdown-item" href="../../index.html"><img src="../us-inicio/img/icon/cerrar_seccion.png" alt="" > Cerrar Sección</a>
+                        <a class="dropdown-item" href="../emp-config/index.html"><img src="../us-inicio/img/icon/confi.png" alt="" > configuración</a>
+                        <a class="dropdown-item" onclick="cerrarSesion()"><img src="../us-inicio/img/icon/cerrar_seccion.png" alt="" > cerrar sesion</a>
                     </div>
                 </div>
             </div>
