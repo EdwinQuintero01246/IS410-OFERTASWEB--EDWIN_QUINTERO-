@@ -29,13 +29,15 @@
                 <li class="nav-item active">
                     <a class="nav-button-option-navbar" href="../us-perfil/index.html">Perfil </a>
                 </li>
+                <li class="nav-item active" id="nombreUsuario">
+                </li>
             </ul>
             <div class="dropdown" id="Option_config">
                 <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <img src="../us-inicio/img/icon/option.png" alt="" >
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="../../index.html"><img src="../us-inicio/img/icon/cerrar_seccion.png" alt="" > Cerrar Sección</a>
+                        <a class="dropdown-item" onclick="cerrarSesion()" href="../../index.html"><img src="../us-inicio/img/icon/cerrar_seccion.png" alt="" > Cerrar Sección</a>
                 </div>
             </div>
         </div>
@@ -44,70 +46,7 @@
         <div class="container-fluid" >
             <div class="row" id="rowGeneral">
                 <div class="col-sm-4 col-md-4 col-lg-4 col-xl-3 col-4" id="LateralButton">
-                    <div style="margin-bottom: 12px">
-                        <div><span class="tittle">Información</span></div>
-                        <div class="SizeFormLi col-12 row">
-                            <h1 class="TextPrincipal content-text col-12">Nombre empresa</h1>
-                            <h1 class="TextSecundario content-textInfo col-12">Centromatic</h1>
-                        </div>
-                        <div class="SizeFormLi col-12 row">
-                            <h1 class="TextPrincipal content-text col-12">Correo</h1>
-                            <h1 class="TextSecundario content-textInfo col-12">cent@gmail.com</h1>
-                        </div>
-                        <div class="SizeFormLi col-12 row">
-                            <h1 class="TextPrincipal content-text col-12">Contraseña</h1>
-                            <h1 class="TextSecundario content-textInfo col-12">........</h1>
-                        </div>
-                        <div class="SizeFormLi col-12 row">
-                            <h1 class="TextPrincipal content-text col-12">Telefono(s)</h1>
-                            <h1 class="TextSecundario content-textInfo col-12">2284-5787</h1>
-                        </div>
-                        <a onclick="generarinfo()"  class="boton_personalizado row" id="buttonInfo">
-                            <Img class="imagenEditar" src="img/icon/desplegue.png">
-                            </Img>
-                        </a>
-                        <div><div class="line"></div></div>
-                        <div><span class="tittle">ubicacion</span></div>
-                        <div class="row" id="rowGeneral">
-                            <input disabled class="TextPrincipal content-text col-sm-10 col-12" type="text" name="" id="text-lugar" placeholder="Lugar,Sitio" >
-                            <a onclick="ModalGPS()" data-toggle="modal" data-target="#GPSModal" id="tamanioButton" class="boton_personalizado"   style="height: 33px; width: 27px;">
-                                <Img src="img/icon/localizacion.png" id="">
-                                </Img>
-                            </a>
-                        </div>
-                        <div><div class="line"></div></div>
-                        <div><span class="tittle">Numero de cuenta</span></div>
-                        <div class="row" style="margin-left: 0px;margin-right: 0px;">
-                            <h1 class="TextSecundario content-textInfo row col-sm-10 col-12">XXXX-XXXX-XXXX-2989</h1>
-                            <a onclick="ModalTarjeta()" data-toggle="modal" data-target="#TarjetaModal" id="tamanioButton" style="height: 24px; width: 27px;" class="boton_personalizado" href="">
-                                <Img src="img/icon/tarjetas.png" id="">
-                                </Img>
-                            </a>
-                        </div>
-                        <div><div class="line" id="lineMargin"></div></div>
-                        <div><span class="tittle" id="redes">redes sociales</span></div>
-                        <div>
-                            <div class="btn-group col-12 ceroPadding " id="redes" role="group" aria-label="Basic example">
-                                <button type="button" onclick="ModalFacebook()" data-toggle="modal" data-target="#FacebookModal" class="btn btn-facebook">facebook/</button>
-                                <div class="input-group-text" id="btnGroupAddon">@</div>
-                                <input type="text" class="form-control" placeholder="redes" aria-label="Input group example" aria-describedby="btnGroupAddon">
-                            </div>
-                        </div>
-                        <div>
-                            <div class="btn-group col-12 ceroPadding " id="redes" role="group" aria-label="Basic example">
-                                <button type="button" onclick="ModalTwitter()" data-toggle="modal" data-target="#TwitterModal" class="btn btn-twitter">twitter.com/</button>
-                                <div class="input-group-text" id="btnGroupAddon">@</div>
-                                <input type="text" class="form-control" placeholder="redes" aria-label="Input group example" aria-describedby="btnGroupAddon">
-                            </div>
-                        </div>
-                        <div>
-                            <div class="btn-group col-12 ceroPadding " id="redes" role="group" aria-label="Basic example">
-                                <button type="button" onclick="ModalInstagram()" data-toggle="modal" data-target="#InstagramModal" class="btn btn-instagram">instagram.com/</button>
-                                <div class="input-group-text" id="btnGroupAddon">@</div>
-                                <input type="text" class="form-control" placeholder="redes" aria-label="Input group example" aria-describedby="btnGroupAddon">
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
                 <div class="col-sm-8 col-md-8 col-lg-8 col-xl-9 col-8 row" id="Información">
                     

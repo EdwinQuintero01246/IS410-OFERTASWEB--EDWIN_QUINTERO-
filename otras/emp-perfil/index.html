@@ -102,26 +102,17 @@
                                 <input type="button" class="tamanio-consola-button btn btn-light" value="Estadisticas" onclick="EventoEstadisticas()">
                                 <input type="button" class="tamanio-consola-button btn btn-light" value="Productos" onclick="EventoProductos()">
                                 <input type="button" class="tamanio-consola-button btn btn-light" value="Ventas" onclick="EventoVentas()">
+                                <input type="button" class="tamanio-consola-button btn btn-light" value="Seguidores" onclick="EventoSeguidores()">
                             </div>
                         </li>
                         
                     </ul>
                     <div id="GenerarProductosYVentas">
                         <div class="col-8 row " id="EstadisticasGraficasButton" style="overflow: auto">
-                                <canvas id="myChart" class="col-12" width="400" height="150"></canvas>
+                            <canvas id="myChart" class="col-12" width="400" height="150"></canvas>
                             <input type="button" id="buttonEstadistica" class=" col-4 btn btn-warning" value="Comentarios">
                             <input type="button" id="buttonEstadistica" class=" col-4 btn btn-light" value="Me Gusta">
                             <input type="button" id="buttonEstadistica" class=" col-4 btn btn-dark" value="No Me Gusta">
-                            <select name="" id="selectMoneda" onclick="cambiarMoneda()" class="select-css col-6 row" style="margin-left: 0px; margin-right: 0px;">
-                                <option value="0">Lempiras</option>
-                                <option value="1">Dolar</option>
-                                <option value="1">Euro</option>
-                            </select>
-                            <select name="" id="selectMonedaCambiar" onclick="cambiarMoneda()" class="select-css col-6 row" style="margin-left: 0px; margin-right: 0px;">
-                                <option value="0">Lempiras</option>
-                                <option value="1">Dolar</option>
-                                <option value="1">Euro</option>
-                            </select>
                         </div>
                     </div>
                     

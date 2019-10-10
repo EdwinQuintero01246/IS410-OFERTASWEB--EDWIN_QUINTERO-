@@ -1,8 +1,109 @@
+var UsuarioGeneral= [];
+$(document).ready(function(){
+    UsuarioImport = localStorage.getItem("NombreEmpresa");
+    llaveImport = localStorage.getItem("llave");
+    
+    if(UsuarioImport==null){
+        alert("Inicie Seccion Primero");
+        window.location.assign("../../index.html");
+    };
+    $("#nombreUsuario").html($(`
+        <a class="nav-button-option-navbar" href="#${UsuarioImport}">${UsuarioImport}</a>
+    `));
+    var dataLLave=
+    'LLave='+ llaveImport;
+    
+    console.log(dataLLave);
+    $.ajax({
+        url:"ajax/Empresa.php?accion=VerInfoEmpresa",
+        method:"POST",
+        dataType:"json",
+        data: dataLLave,
+        success:function(respuesta){
+            UsuarioGeneral = respuesta ;
+            console.log(respuesta);
+            $("#LateralButton").html($(`
+            <div style="margin-bottom: 12px">
+                <div><span class="tittle">Información</span></div>
+                    <div class="SizeFormLi col-12 row">
+                        <h1 class="TextPrincipal content-text col-12">Nombre empresa</h1>
+                        <h1 class="TextSecundario content-textInfo col-12">${respuesta[0].NombreEmpresa}</h1>
+                    </div>
+                    <div class="SizeFormLi col-12 row">
+                        <h1 class="TextPrincipal content-text col-12">Correo</h1>
+                        <h1 class="TextSecundario content-textInfo col-12">${respuesta[0].Email}</h1>
+                    </div>
+                    <div class="SizeFormLi col-12 row">
+                        <h1 class="TextPrincipal content-text col-12">Contraseña</h1>
+                        <h1 class="TextSecundario content-textInfo col-12">...</h1>
+                    </div>
+                    <div class="SizeFormLi col-12 row">
+                        <h1 class="TextPrincipal content-text col-12">Telefono(s)</h1>
+                        <h1 class="TextSecundario content-textInfo col-12">${respuesta[0].Telefono}</h1>
+                    </div>
+                    <a onclick="generarinfo()"  class="boton_personalizado row" id="buttonInfo">
+                        <Img class="imagenEditar" src="img/icon/desplegue.png">
+                        </Img>
+                    </a>
+                    <div><div class="line"></div></div>
+                    <div><span class="tittle">ubicacion</span></div>
+                    <div class="row" id="rowGeneral">
+                        <input disabled class="TextPrincipal content-text col-sm-10 col-12" type="text" name="" id="text-lugar" placeholder="Lugar,Sitio" >
+                        <a onclick="ModalGPS()" data-toggle="modal" data-target="#GPSModal" id="tamanioButton" class="boton_personalizado"   style="height: 33px; width: 27px;">
+                            <Img src="img/icon/localizacion.png" id="">
+                            </Img>
+                        </a>
+                    </div>
+                    <div><div class="line"></div></div>
+                    <div><span class="tittle">Numero de cuenta</span></div>
+                    <div class="row" style="margin-left: 0px;margin-right: 0px;">
+                        <h1 class="TextSecundario content-textInfo row col-sm-10 col-12">XXXX-XXXX-XXXX-2989</h1>
+                        <a onclick="ModalTarjeta()" data-toggle="modal" data-target="#TarjetaModal" id="tamanioButton" style="height: 24px; width: 27px;" class="boton_personalizado" href="">
+                            <Img src="img/icon/tarjetas.png" id="">
+                            </Img>
+                        </a>
+                    </div>
+                    <div><div class="line" id="lineMargin"></div></div>
+                    <div><span class="tittle" id="redes">redes sociales</span></div>
+                    <div>
+                        <div class="btn-group col-12 ceroPadding " id="redes" role="group" aria-label="Basic example">
+                            <button type="button" onclick="ModalFacebook()" data-toggle="modal" data-target="#FacebookModal" class="btn btn-facebook">facebook/</button>
+                            <div class="input-group-text" id="btnGroupAddon">@</div>
+                            <input type="text" class="form-control" disabled placeholder="${respuesta[0].Facebook}" aria-label="Input group example" aria-describedby="btnGroupAddon">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="btn-group col-12 ceroPadding " id="redes" role="group" aria-label="Basic example">
+                            <button type="button" onclick="ModalTwitter()" data-toggle="modal" data-target="#TwitterModal" class="btn btn-twitter">twitter.com/</button>
+                            <div class="input-group-text" id="btnGroupAddon">@</div>
+                            <input type="text" class="form-control" disabled placeholder="${respuesta[0].Twitter}" aria-label="Input group example" aria-describedby="btnGroupAddon">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="btn-group col-12 ceroPadding " id="redes" role="group" aria-label="Basic example">
+                            <button type="button" onclick="ModalInstagram()" data-toggle="modal" data-target="#InstagramModal" class="btn btn-instagram">instagram.com/</button>
+                            <div class="input-group-text" id="btnGroupAddon">@</div>
+                            <input type="text" class="form-control" disabled placeholder="${respuesta[0].instagram}" aria-label="Input group example" aria-describedby="btnGroupAddon">
+                        </div>
+                    </div>
+                </div>
+            `));
+        },
+        error:function(respuesta){
+            console.log("Error");
+        }
+    });
+});
+function cerrarSesion(){
+    UsuarioImport="";
+    localStorage.clear();
+    window.location.assign("../../index.html");
+}
 function generarinfo(){
     $("#Información").html($( `
     <div class="col-sm-10 col-md-10 col-lg-7 col-xl-7 col-12  margenDivInfo">
         <h1 class="TextPrincipal  textinfo col-12">Nombre Empresa Actual</h1>
-        <h1 class="TextSecundario  textinfo col-12">Centromatic</h1>
+        <h1 class="TextSecundario  textinfo col-12">${UsuarioGeneral[0].NombreEmpresa}</h1>
         <input class="col-sm-8 col-md-8 col-lg-8 col-xl-6 col-12 btn btn-primary" data-toggle="modal" data-target="#NombreModal" onclick="ModalNombre()" type="button" value="Cambiar Nombre">
         <div id="generarNombre" class="col-12 row" style="padding-top: 10px;">
             
@@ -10,20 +111,20 @@ function generarinfo(){
     </div>
     <div class="col-sm-10 col-md-10 col-lg-7 col-xl-7 col-12  margenDivInfo">
         <h1 class="TextPrincipal  textinfo col-12">Correo Actual</h1>
-        <h1 class="TextSecundario  textinfo col-12">Cent@Gmail.Com</h1>
+        <h1 class="TextSecundario  textinfo col-12">${UsuarioGeneral[0].Email}</h1>
         <input class="col-sm-8 col-md-8 col-lg-8 col-xl-6 col-12 btn btn-primary" data-toggle="modal" data-target="#CorreoModal" onclick="ModalCorreo()" type="button" value="Cambiar Correo">
         <div id="generarCorreo" class="col-12 row" style="padding-top: 10px;"></div>
     </div>
     <div class="col-sm-10 col-md-10 col-lg-7 col-xl-7 col-12  margenDivInfo">
         <h1 class="TextPrincipal  textinfo col-6">Contraseña cambiar</h1>
-        <h1 class="TextSecundario  textinfo col-6">R********0</h1>
+        <h1 class="TextSecundario  textinfo col-6">"${UsuarioGeneral[0].password}"</h1>
         <input class="col-sm-8 col-md-8 col-lg-8 col-xl-6 col-12 btn btn-primary" data-toggle="modal" data-target="#ContraseñaModal" onclick="ModalContraseña()" type="button" value="Cambiar Contraseña">
         <div id="generarContraseña" class="col-12 row " style="padding-top: 10px;"></div>
     </div>
     <div class="col-sm-10 col-md-10 col-lg-7 col-xl-7 col-12  margenDivInfo">
         <h1 class="TextPrincipal  textinfo col-12">Telefono Actual</h1>
         <div id="allTel" class="col-12">
-            <h1 class="TextSecundario  textinfo col-12">2284-5787</h1>
+            <h1 class="TextSecundario  textinfo col-12">${UsuarioGeneral[0].Telefono}</h1>
         </div>
         <input class="col-sm-8 col-md-8 col-lg-8 col-xl-6 col-12 btn btn-primary" data-toggle="modal" data-target="#TelefonoModal" onclick="ModalTelefono()" type="button" value="Cambiar o Agregar Telefonos">
         <div id="generarTelefono" class="col-12 row" style="padding-top: 10px;">
@@ -40,6 +141,25 @@ function ModalNombre(){
         </div>
     `));
     
+} 
+function guardarDatosNombreUsuario(){
+    var parametros = 
+    'NombreActual='+ UsuarioGeneral[0].NombreEmpresa+"&"+
+    'NombreEmpresa='+$("#NombreTextCambiar").val()+"&"+
+    'LLave='+ llaveImport;
+    console.log(parametros)
+    $.ajax({
+        url:"ajax/Empresa.php?accion=CambiarNombre",
+        method:"POST",
+        dataType:"json",
+        data: parametros,
+        success:function(respuesta){
+            console.log(respuesta);
+        },
+        error:function(respuesta){
+            console.log("Error");
+        }
+    });
 }
 function ModalCorreo(){
     $("#generarCorreo").html($( `

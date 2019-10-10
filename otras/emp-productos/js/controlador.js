@@ -8,7 +8,7 @@ function VerProductoModal(i){
                     <div class="container-fluid" >
                         <div class="row" id="contenido">
                             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 " >
-                                <img class="tamaños_visualizacion-modal" src="img/prueba.jpg">
+                                <img class="tamaños_visualizacion-modal" src="../data/user/Empresa/${productos[i].NombreEmpresa}/producto/${productos[i].Nombre}/producto.png">
                                 </img>
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 ">
@@ -67,21 +67,23 @@ function NuevoProducto(){
                     </div>
                     <div class="modal-body">
                         <form>
+                            
+                        <input type="file" name="fileGuardar" id="fileGuardar" onchange="getUrl()">
                             <div class="form-group">
                                 <label for="recipient-name" class="col-form-labelOriginal">Producto:</label>
-                                <input type="text" class="sizeTextProductNuevo form-control" id="NuevoProductoNombre">
+                                <input type="text" style="font-size: 22px;"  class="sizeTextProductNuevo form-control" id="NuevoProductoNombre">
                             </div>
                             <div class="form-group">
                                 <label for="recipient-name" class="col-form-labelOriginal">Precio:</label>
-                                <input type="text" class="sizeTextProductNuevo form-control" id="NuevoProductoPrecio">
+                                <input type="text" style="font-size: 22px;"  class="sizeTextProductNuevo form-control" id="NuevoProductoPrecio">
                             </div>
                             <div class="form-group">
                                 <label for="recipient-name" class="col-form-labelOriginal">Oferta:</label>
-                                <input type="text" class="sizeTextProductNuevo form-control" id="NuevoProductoOferta">
+                                <input type="text" style="font-size: 22px;"  class="sizeTextProductNuevo form-control" id="NuevoProductoOferta">
                             </div>
                             <div class="form-group">
                                 <label for="message-text" class="col-form-labelOriginal">Descripción Del Producto:</label>
-                                <textarea class="sizeTextProductNuevo form-control" id="NuevoProductoDescripcion"></textarea>
+                                <textarea style="font-size: 22px;"  class="sizeTextProductNuevo form-control" id="NuevoProductoDescripcion"></textarea>
                             </div>
                             <select class="select-css" id="select-css">
                                 <option value="Todas las Categorias">Todas las Categorias</option>
@@ -117,6 +119,11 @@ function NuevoProducto(){
         </div>
     `));
 }
+var url
+function getUrl(){
+    url = document.getElementById('fileGuardar').files[0].name;
+    alert(url);
+  }
 function EnviarProducto(){
  var parametros=
  'NombreProducto='+$("#NuevoProductoNombre").val()+"&"+
@@ -127,6 +134,21 @@ function EnviarProducto(){
  'Categorias='+$("#select-css").val()+"&"+
  'InformacionVendedor='+"&"+
  'NombreEmpresa='+UsuarioImport;
+ var parametros2 = parametros + "&"+
+ 'data='+ url;
+ console.log(parametros2);
+ $.ajax({
+    url:"ajax/Producto.php?accion=CopiarImagen",
+    method:"POST",
+    data: parametros2,
+    dataType:"json",
+    success:function(respuesta){
+        console.log(respuesta);
+    },
+    error:function(respuesta){
+        console.log("Error");
+    }
+});
  $.ajax({
     url:"ajax/Producto.php?accion=GuardarProducto",
     method:"POST",
@@ -183,10 +205,10 @@ $(document).ready(function(){
                     <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 col-12 " id="div-class-product">
                         <div class="movimiento">
                             <a  data-toggle="modal" data-target="#exampleModal" onclick="VerProductoModal(${i})" >
-                                <div class="tamaños_visualizacion" style="background-image: url(img/prueba.jpg);background-repeat: no-repeat; background-position: center center;background-size: cover;border-radius: 10px">
+                                <div class="tamaños_visualizacion" style="background-image: url(../data/user/Empresa/${productos[i].NombreEmpresa}/producto/${productos[i].Nombre}/producto.png);background-repeat: no-repeat; background-position: center center;background-size: cover;border-radius: 10px">
                                     <span class="fondo-span" id="modal-precios-oferta">${productos[i].Oferta}</span>
                                 </div>
-                                <h5 id="modal-producto">${productos[i].Nombre}Producto</h5>
+                                <h5 id="modal-producto">${productos[i].Nombre}</h5>
                                 <h5 id="modal-secundario">${productos[i].Descripcion}<span></span></h5>
                             </a>
                         </div>

@@ -12,5 +12,9 @@
     include("../class/Class-Producto.php");
     echo Producto::GuardarProductoLLaves($_POST);
   break;
+  case 'CopiarImagen':
+    include("../class/Class-Producto.php");
+    echo Producto::CopiarImagen($_POST);
+  break;
  };
 ?>

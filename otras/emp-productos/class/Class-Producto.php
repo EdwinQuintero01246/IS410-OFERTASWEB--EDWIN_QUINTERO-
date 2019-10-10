@@ -74,5 +74,22 @@
             curl_close($ch);
         return json_encode($datos);
         }
+        public static function CopiarImagen($datos){
+            $Url = $datos['Url'];
+            $NombreProducto = $datos['NombreProducto'];
+            $NombreEmpresa = $datos['NombreEmpresa'];
+            $Archivo = $datos['data'];
+            $dir = $Url.$NombreEmpresa."/producto"."/$NombreProducto";
+            if(!file_exists($dir)){
+                mkdir($dir);
+            }
+            $fichero =  "C:/imagenes/".$Archivo;
+            $nuevo_fichero = $dir."/producto.png";
+
+            if (!copy($fichero, $nuevo_fichero)){
+                echo "Error al copiar $fichero...\n";
+            }
+            return json_encode($dir);
+        }
     }
 ?>

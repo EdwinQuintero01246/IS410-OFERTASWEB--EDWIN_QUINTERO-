@@ -412,7 +412,25 @@
   font-weight: bold;
   color: black;
 }
+.ventasProductos{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  background-color: rgb(198, 221, 233);
+}
+.ventasProductos:hover{
+  background-color: rgb(158, 198, 218);
+}
+.modal-producto{
+  color: black;
+  font-weight: bold;
+  font-size: 17px
+}
+.modal-producto:hover{
+  color: white;
+}
 /*fin ventas*/
+
 /*select css*/
 .select-css{
   display: block;
