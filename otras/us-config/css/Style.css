@@ -1,21 +1,130 @@
-@media  screen and (min-width: 1200px){
+  @media  screen and (min-width: 1200px){
   #respuestaIncorrecta{
     font-size: 22px;
+  }
+  #buttonInfo{
+    width: 10%;
+    padding: 0px;    
+  }
+  #tamanioButton{
+    padding: 0px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #lineMargin{
+    margin-top: 45px;
+  }
+  .tittle{
+    font-size: 20px;
+  }
+  .textinfo{
+    font-size: 20px;
+  }
+  .content-text{
+    font-size: 18px;
+  }
+  .content-textInfo{
+    font-size: 18px;
   }
   }
   @media  screen and (max-width: 1200px){
     #respuestaIncorrecta{
       font-size: 22px;
     }
+
+    #buttonInfo{
+      width: 15%;
+      padding: 0px;    
+    }
+    #tamanioButton{
+      padding: 0px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #lineMargin{
+      margin-top: 45px;
+    }
+    .tittle{
+      font-size: 20px;
+    }
+    .content-text{
+      font-size: 18px;
+    }
+    .textinfo{
+      font-size: 20px;
+    }
+    .content-textInfo{
+      font-size: 18px;
+    }
   }
   @media  screen and (max-width: 992px){
     #respuestaIncorrecta{
       font-size: 22px;
     }
+    #buttonInfo{
+      width: 15%;
+      padding: 0px;    
+    }
+    #tamanioButton{
+      padding: 0px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #lineMargin{
+      margin-top: 45px;
+    }
+    .tittle{
+      font-size: 20px;
+    }
+    .content-text{
+      font-size: 18px;
+    }
+    .textinfo{
+      font-size: 20px;
+    }
+    .content-textInfo{
+      font-size: 18px;
+    }
+    #redes{
+      display:block;
+    }
   }
   @media  screen and (max-width: 768px){
     #respuestaIncorrecta{
       font-size: 15px;
+    }
+    
+    #buttonInfo{
+      width: 15%;
+      padding: 0px;    
+    }
+    #tamanioButton{
+      padding: 0px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #lineMargin{
+      margin-top: 39px;
+      margin: 15px 0;
+    }
+    .tittle{
+      font-size: 15px;
+    }
+    .content-text{
+      font-size: 14px;
+    }
+    .textinfo{
+      font-size: 20px;
+    }
+    .content-textInfo{
+      font-size: 14px;
+    }
+    #redes{
+      display:block;
     }
   }
   @media  screen and (max-width: 576px){
@@ -25,9 +134,35 @@
     #imgCheckNot{
       width: 80%;
     }
-  }
-  #body_confi{
-    background-color: #D5D5D5;
+    #buttonInfo{
+      width: 20%;
+      padding: 0px;    
+    }
+    #tamanioButton{
+      padding: 0px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #lineMargin{
+      margin-top: 39px;
+      margin: 15px;
+    }
+    .tittle{
+      font-size: 12px;
+    }
+    .content-text{
+      font-size: 11px;
+    }
+    .textinfo{
+      font-size: 17px;
+    }
+    .content-textInfo{
+      font-size: 11px;
+    }
+    #redes{
+      display: none;
+    }
   }
   /*Navbar*/
   #logo-button{
@@ -75,7 +210,13 @@
   
     font-size: 17px;
   }
-  
+  #body_confi{
+    background-color: #D5D5D5;
+    height: 100%;
+  }
+  #section{
+    background-color: #D5D5D5;
+  }
   .btn-Button-buscar-navbar:hover {
     color: rgb(240, 240, 240);
     background-color: rgb(0, 123, 255);
@@ -112,7 +253,7 @@
 .UlConfModal{
   text-decoration: none;
   list-style-type: none;
-  background-color: #7891AB;
+  background-color: #237BCE;
   border-radius: 7px;
   width: 100%;
   padding-right: 10px;
@@ -125,9 +266,6 @@ box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.57);
   margin-top: 10px;
   font-size: 20px;
   border-radius: 7px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 .ul_conf:hover{
   background-color: rgb(175, 175, 175);
@@ -139,16 +277,7 @@ box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.57);
   margin-top: 0px;
    
 }
-#color_form{
-  background-color: rgb(247, 247, 247);
-  margin-right: 40px;
-  padding-left: 3px;
-  border-radius: 7px;
-  padding-bottom: 3px;
-  -webkit-box-shadow: 10px 10px 263px 122px rgba(35,130,232,0.35);
--moz-box-shadow: 10px 10px 263px 122px rgba(35,130,232,0.35);
-box-shadow: 10px 10px 263px 122px rgba(35,130,232,0.35);
-}
+
 #ul-conf{
   margin-bottom: 0px;
   padding-top: 20px;
@@ -159,9 +288,24 @@ box-shadow: 10px 10px 263px 122px rgba(35,130,232,0.35);
   -webkit-border-radius: 33px 7px 33px 7px;
   border: 0px solid #363136;
 }
-
 #tittleModal{
   color: #fff;
+}
+#TittleModal{
+  color: #fff;
+  background-color: #237BCE;
+  color: #fff;
+  border-radius: 7px;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .btn-facebook{
@@ -199,16 +343,7 @@ box-shadow: 10px 10px 263px 122px rgba(35,130,232,0.35);
   background-color: rgba(56, 151, 240, 0.787);
   border-color: rgba(56, 151, 240, 0.787);
 }
-.boton_personalizado{
-  text-decoration: none;
-  padding: 10px;
-  font-weight: 600;
-  font-size: 10px;
-  color: #ffffff;
-  background-color: #ffffff4f;
-  border-radius: 6px;
-  border: 2px solid rgba(56, 151, 240, 0.787);
-}
+
 .boton_personalizado:hover{
   border: 2px solid rgba(11, 28, 44, 0.979);
 }
@@ -309,7 +444,7 @@ padding-left: 10px;
   margin-left: auto;
   margin-right: auto;
 }
-/*section info*/
+/*section lateral*/
 #rowGeneral{
   margin-left: 0px;
   margin-right: 0px;
@@ -318,26 +453,44 @@ padding-left: 10px;
   background-color: rgb(255, 255, 255);
   border-radius: 7px;
   margin-top: 4px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 .SizeFormLi{
   padding-top: 7.5px;
   padding-bottom: 7.5px;
 
 }
-.content-text{
-  font-size: 22px;
+.boton_personalizado{
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 10px;
+  color: #ffffff;
+  background-color: #ffffff4f;
+  border-radius: 6px;
+  border: 2px solid rgba(56, 151, 240, 0.787);
+}
+#buttonInfo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.TextPrincipal{
   color: #007BFF;
   font-weight: 400;
   text-transform: capitalize;
   font-family: Arial, Helvetica, sans-serif;
-  padding-top: 10px;
 }
-.content-text:hover{
+.TextPrincipal:hover{
   color: rgb(93, 171, 255);
-
+}
+.TexSecundario{
+  color: #175A83;
+  font-weight: 400;
+  text-transform: capitalize;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.TextSecundario:hover{
+  color: rgb(93, 171, 255);
 }
 .line{
   border-top: 1px solid #007BFF;
@@ -349,7 +502,6 @@ padding-left: 10px;
   width: 90%;
 }
 .tittle{
-  font-size: 22px;
   background-color: #007BFF;
   color: #fff;
   border-radius: 7px;
@@ -371,4 +523,39 @@ padding-left: 10px;
   padding-left: 0px;
   padding-right: 0px;
 }
-/*section info*/
+.imagenEditar{
+  width: 100%;
+}
+/*fin section lateral*/
+/*section Informatio*/
+#Información{
+  background-color: rgb(255, 255, 255);
+  border-radius: 7px;
+  margin-top: 4px;
+  border-top-left-radius: 10px;
+  border: solid rgba(66, 66, 66, 0.404);
+  padding-top: 20px;
+}
+.margenDivInfo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*fin section Informatio*/
+/*google maps*/
+#centerGooGlemaps{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 85px;
+}
+.GoogleMaps{
+  border-radius: 9px;
+  height: 400px;
+  width: 100%;
+  border-top-width: 5px;
+  border-left-width: 5px;
+  border-right-width: 5px;
+  border-bottom-width: 5px;
+}
+/*fin google maps*/

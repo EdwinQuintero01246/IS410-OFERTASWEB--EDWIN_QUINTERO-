@@ -45,7 +45,7 @@ $(document).ready(function(){
                     <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 col-12 " id="div-class-product">
                         <div class="movimiento">
                             <a data-toggle="modal" data-target="#exampleModal" onclick="Ver_Producto_Modal(${i})">
-                                <div class="tamaños_visualizacion" style="background-image: url(img/prueba.jpg);background-repeat: no-repeat; background-position: center center;background-size: cover;border-radius: 10px">
+                                <div class="tamaños_visualizacion" style="background-image: url(../data/user/Empresa/${productos[i].NombreEmpresa}/producto/${productos[i].Nombre}/producto.png);background-repeat: no-repeat; background-position: center center;background-size: cover;border-radius: 10px">
                                     <span class="fondo-span" id="modal-precios-oferta">${productos[i].Oferta}</span>
                                 </div>
                                 <h5 id="modal-producto">${productos[i].Nombre}</h5>
@@ -72,7 +72,7 @@ function Ver_Producto_Modal(i){
                         <div class="container-fluid" >
                             <div class="row" id="contenido">
                                 <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 " >
-                                    <img class="tamaños_visualizacion-modal" src="img/prueba.jpg">
+                                    <img class="tamaños_visualizacion-modal" src="../data/user/Empresa/${productos[i].NombreEmpresa}/producto/${productos[i].Nombre}/producto.png">
                                     </img>
                                 </div>
                                 <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 ">
@@ -249,7 +249,7 @@ function Todaslascategorias(){
                 <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 col-12 " id="div-class-product">
                     <div class="movimiento">
                         <a data-toggle="modal" data-target="#exampleModal" onclick="Ver_Producto_Modal(${i})">
-                            <div class="tamaños_visualizacion" style="background-image: url(img/prueba.jpg);background-repeat: no-repeat; background-position: center center;background-size: cover;border-radius: 10px">
+                            <div class="tamaños_visualizacion" style="background-image: url(../data/user/Empresa/${productos[i].NombreEmpresa}/producto/${productos[i].Nombre}/producto.png);background-repeat: no-repeat; background-position: center center;background-size: cover;border-radius: 10px">
                                 <span class="fondo-span" id="modal-precios-oferta">${productos[i].Oferta}</span>
                             </div>
                             <h5 id="modal-producto">${productos[i].Nombre}</h5>
@@ -270,7 +270,7 @@ function Vehículos(){
                 <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 col-12 " id="div-class-product">
                     <div class="movimiento">
                         <a data-toggle="modal" data-target="#exampleModal" onclick="Ver_Producto_Modal(${i})">
-                            <div class="tamaños_visualizacion" style="background-image: url(img/prueba.jpg);background-repeat: no-repeat; background-position: center center;background-size: cover;border-radius: 10px">
+                            <div class="tamaños_visualizacion" style="background-image: url(../data/user/Empresa/${productos[i].NombreEmpresa}/producto/${productos[i].Nombre}/producto.png);background-repeat: no-repeat; background-position: center center;background-size: cover;border-radius: 10px">
                                 <span class="fondo-span" id="modal-precios-oferta">${productos[i].Oferta}</span>
                             </div>
                             <h5 id="modal-producto">${productos[i].Nombre}</h5>
@@ -291,7 +291,7 @@ function Electrónica(){
                 <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 col-12 " id="div-class-product">
                     <div class="movimiento">
                         <a data-toggle="modal" data-target="#exampleModal" onclick="Ver_Producto_Modal(${i})">
-                            <div class="tamaños_visualizacion" style="background-image: url(img/prueba.jpg);background-repeat: no-repeat; background-position: center center;background-size: cover;border-radius: 10px">
+                            <div class="tamaños_visualizacion" style="background-image: url(../data/user/Empresa/${productos[i].NombreEmpresa}/producto/${productos[i].Nombre}/producto.png);background-repeat: no-repeat; background-position: center center;background-size: cover;border-radius: 10px">
                                 <span class="fondo-span" id="modal-precios-oferta">${productos[i].Oferta}</span>
                             </div>
                             <h5 id="modal-producto">${productos[i].Nombre}</h5>
@@ -312,7 +312,7 @@ function Ropa(){
                 <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 col-12 " id="div-class-product">
                     <div class="movimiento">
                         <a data-toggle="modal" data-target="#exampleModal" onclick="Ver_Producto_Modal(${i})">
-                            <div class="tamaños_visualizacion" style="background-image: url(img/prueba.jpg);background-repeat: no-repeat; background-position: center center;background-size: cover;border-radius: 10px">
+                            <div class="tamaños_visualizacion" style="background-image: url(../data/user/Empresa/${productos[i].NombreEmpresa}/producto/${productos[i].Nombre}/producto.png);background-repeat: no-repeat; background-position: center center;background-size: cover;border-radius: 10px">
                                 <span class="fondo-span" id="modal-precios-oferta">${productos[i].Oferta}</span>
                             </div>
                             <h5 id="modal-producto">${productos[i].Nombre}</h5>
@@ -333,7 +333,7 @@ function Casa(){
                 <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 col-12 " id="div-class-product">
                     <div class="movimiento">
                         <a data-toggle="modal" data-target="#exampleModal" onclick="Ver_Producto_Modal(${i})">
-                            <div class="tamaños_visualizacion" style="background-image: url(img/prueba.jpg);background-repeat: no-repeat; background-position: center center;background-size: cover;border-radius: 10px">
+                            <div class="tamaños_visualizacion" style="background-image: url(../data/user/Empresa/${productos[i].NombreEmpresa}/producto/${productos[i].Nombre}/producto.png);background-repeat: no-repeat; background-position: center center;background-size: cover;border-radius: 10px">
                                 <span class="fondo-span" id="modal-precios-oferta">${productos[i].Oferta}</span>
                             </div>
                             <h5 id="modal-producto">${productos[i].Nombre}</h5>
@@ -354,7 +354,7 @@ function Inmuebles(){
                 <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 col-12 " id="div-class-product">
                     <div class="movimiento">
                         <a data-toggle="modal" data-target="#exampleModal" onclick="Ver_Producto_Modal(${i})">
-                            <div class="tamaños_visualizacion" style="background-image: url(img/prueba.jpg);background-repeat: no-repeat; background-position: center center;background-size: cover;border-radius: 10px">
+                            <div class="tamaños_visualizacion" style="background-image: url(../data/user/Empresa/${productos[i].NombreEmpresa}/producto/${productos[i].Nombre}/producto.png);background-repeat: no-repeat; background-position: center center;background-size: cover;border-radius: 10px">
                                 <span class="fondo-span" id="modal-precios-oferta">${productos[i].Oferta}</span>
                             </div>
                             <h5 id="modal-producto">${productos[i].Nombre}</h5>
@@ -375,7 +375,7 @@ function Entretenimientos(){
                 <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 col-12 " id="div-class-product">
                     <div class="movimiento">
                         <a data-toggle="modal" data-target="#exampleModal" onclick="Ver_Producto_Modal(${i})">
-                            <div class="tamaños_visualizacion" style="background-image: url(img/prueba.jpg);background-repeat: no-repeat; background-position: center center;background-size: cover;border-radius: 10px">
+                            <div class="tamaños_visualizacion" style="background-image: url(../data/user/Empresa/${productos[i].NombreEmpresa}/producto/${productos[i].Nombre}/producto.png);background-repeat: no-repeat; background-position: center center;background-size: cover;border-radius: 10px">
                                 <span class="fondo-span" id="modal-precios-oferta">${productos[i].Oferta}</span>
                             </div>
                             <h5 id="modal-producto">${productos[i].Nombre}</h5>
@@ -396,7 +396,7 @@ function Alquileres(){
                 <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 col-12 " id="div-class-product">
                     <div class="movimiento">
                         <a data-toggle="modal" data-target="#exampleModal" onclick="Ver_Producto_Modal(${i})">
-                            <div class="tamaños_visualizacion" style="background-image: url(img/prueba.jpg);background-repeat: no-repeat; background-position: center center;background-size: cover;border-radius: 10px">
+                            <div class="tamaños_visualizacion" style="background-image: url(../data/user/Empresa/${productos[i].NombreEmpresa}/producto/${productos[i].Nombre}/producto.png);background-repeat: no-repeat; background-position: center center;background-size: cover;border-radius: 10px">
                                 <span class="fondo-span" id="modal-precios-oferta">${productos[i].Oferta}</span>
                             </div>
                             <h5 id="modal-producto">${productos[i].Nombre}</h5>

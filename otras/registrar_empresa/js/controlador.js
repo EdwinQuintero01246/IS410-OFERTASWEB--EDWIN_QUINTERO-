@@ -61,7 +61,7 @@ function activarSiguiente(){
                 $("#ValidarUsuario").html($(`
                     <i class="fas fa-exclamation-circle"></i><h1 id="VerificarUsuarioText">Campo Correo Vacio</h1>
                 `));
-            };
+            };*/
             if(respuesta=="01001010"){
                 $("#ValidarUsuario").html($(``));
                 if($("#password1").val()==$("#password2").val()){
@@ -85,7 +85,7 @@ function activarSiguiente(){
                 }else{
                     $("#ValidarPassword").html($(`<h1 id="VerificarUsuarioText">contraseñas no coinciden</h1>`));
                 };
-            };
+            };/*
             if(respuesta=="01010110"){
                 $("#ValidarUsuario").html($(`
                     <i class="fas fa-exclamation-circle"></i><h1 id="VerificarUsuarioText">Campo Nombre Vacio y Correo Existe</h1>

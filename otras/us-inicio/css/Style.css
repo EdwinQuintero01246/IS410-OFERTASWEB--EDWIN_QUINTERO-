@@ -1,17 +1,50 @@
   @media  screen and (min-width: 1200px){
-   
+   .OpcionesButtonEmpresa{
+     font-size: 18px;
+   }
+   .tittle{
+     font-size: 22px;
+   }
   }
   @media  screen and (max-width: 1200px){
-    
+    .OpcionesButtonEmpresa{
+      font-size: 17px;
+    }
+    .tittle{
+      font-size: 20px;
+    }
   }
   @media  screen and (max-width: 992px){
-    
+    .OpcionesButtonEmpresa{
+      font-size: 17px;
+    }
+    .tittle{
+      font-size: 17px;
+    }
   }
   @media  screen and (max-width: 768px){
-    
+    .OpcionesButtonEmpresa{
+      font-size: 17px;
+    }
+    .tittle{
+      font-size: 15px;
+    }
   }
   @media  screen and (max-width: 576px){
-    
+    .OpcionesButtonEmpresa{
+      font-size: 15px;
+    }
+    .tittle{
+      font-size: 15px;
+    }
+  }
+  #body_confi{
+  background-color: #ecfcff;
+  }
+  #section{
+    padding-left: 10px;
+    margin-left: 7px;
+  background-color: rgb(206, 224, 224);
   }
 /* navbar*/
 
@@ -78,3 +111,96 @@
 #Option_config{
   margin-right: 75px;
 }
+/*Barra De Empresas*/
+#div-class-perfil{
+  background-color: rgb(226, 244, 244);
+  border-radius:5px;
+  padding-left: 5px;
+}
+#div-class-option{
+  background-color: rgb(206, 224, 224);
+  border-radius:5px;
+  padding-left: 5px;
+  height: 100%;
+}
+.OpcionesButtonEmpresa{
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 5px;
+}
+.OpcionesButtonEmpresa:hover{
+  background-color: rgb(0, 123, 255);
+  color: #ecfcff;
+}
+.OpcionesHeart{
+  border-radius: 5px;
+  padding-left: 0px; 
+  padding-right: 0px;
+}
+.OpcionesHeart:hover{
+  background-color: rgb(0, 123, 255);
+}
+#TamanioImgButtonEmpresa{
+  width: 99%;
+}
+.heightButtonEmpresa{
+  height: 50px;
+}
+.tittle{
+  font-weight: bold;
+  color: #4267B2;
+}
+.tittle:hover{
+  color: rgb(138, 164, 214);
+}
+/* fin Barra De Empresas*/
+/* barra informacio*/
+.tamanio_visualizacion-perfil {
+  width: 100%;
+  border-radius: 7px;
+}
+.tamanio_visualizacion-banner {
+  width: 100%;
+  border-radius: 7px;
+  height: 140px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.btn-facebook{
+  color: #fff;
+  background-color: #4267B2;
+  border-color: #4267B2;
+}
+
+.btn-facebookhover {
+  color: #fff;
+  background-color: rgb(55, 87, 150);
+  border-color: rgb(55, 87, 150);
+}
+
+.btn-twitter{
+  color: #fff;
+  background-color: #1DA1F2;
+  border-color: #1DA1F2;
+}
+
+.btn-twitter:hover {
+  color: #fff;
+  background-color: #1B95E0;
+  border-color: #1B95E0;
+}
+
+.btn-instagram{
+  color: #fff;
+  background-color: #3897F0;
+  border-color: #3897F0;
+}
+
+.btn-instagram:hover {
+  color: #fff;
+  background-color: rgba(56, 151, 240, 0.787);
+  border-color: rgba(56, 151, 240, 0.787);
+}
+/* barra informacio*/

@@ -53,47 +53,43 @@ function EmpresasSeguidas(){
                 <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 col-6">
                     <h2 class="textInfo">Nombre empresa</h2>
                 </div>
-                <div class="col-sm-6 col-md-3 col-lg-4 col-xl-4 col-6">
-                    <h2 class="textInfo">Correo</h2>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-5 col-xl-5 col-6">
-                    <h2 class="textInfo">Longirud y Latitud</h2>
-                </div>
             </li>
     `));
-    for(var i=0 ,j=-1; i<empresas.length;i++){
-        j++;
-        if(i%2==0){
-            $("#generarContenido").append($(`
-            <li class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 liConfInfo2a liConfInfo2Comun">
-                <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 col-6">
-                    <a href="#${empresas[i].NombreUsuarioEmpresa}" onclick="verButonesUsuarioEmpresa(${j})" class="textInfo textA"><span class="textInfoSpan"> · </span>${empresas[i].NombreUsuarioEmpresa}</a>
-                </div>
-                <div class="col-sm-6 col-md-3 col-lg-4 col-xl-4 col-6">
-                    <h2 class="textInfo">${empresas[i].Correo}</h2>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-5 col-xl-5 col-6">
-                    <h2 class="textInfo">${empresas[i].LongirudyLatitud}</h2>
-                </div>
-            </li>
+    var parametro=
+    'llave='+ llaveImport;
+    $.ajax({
+        url:"ajax/Empresa.php?accion=EmpresaSeguidas",
+        method:"POST",
+        dataType: "json",
+        data: parametro,
+        success:function(respuesta){
+            for(var i=0 ,j=-1; i<respuesta.length;i++){
+                j++;
+                if(i%2==0){
+                    $("#generarContenido").append($(`
+                    <li class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 liConfInfo2a liConfInfo2Comun">
+                        <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 col-6">
+                            <a href="#${respuesta[i].NombreEmpresa}" onclick="verButonesUsuarioEmpresa(${j})" class="textInfo textA"><span class="textInfoSpan"> · </span>${respuesta[i].NombreEmpresa}</a>
+                        </div>
+                    </li>
+                    `));
+                }else{
+                $("#generarContenido").append($(`
+                    <li class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 liConfInfo2b liConfInfo2Comun">
+                        <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 col-6">
+                            <a href="#${respuesta[i].NombreEmpresa}" onclick="verButonesUsuarioEmpresa(${j})" class="textInfo textA"><span class="textInfoSpan"> · </span>${respuesta[i].NombreEmpresa}</a>
+                        </div>
+                    </li>
+                </ul>
             `));
-        }else{
-        $("#generarContenido").append($(`
-            <li class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 liConfInfo2b liConfInfo2Comun">
-                <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 col-6">
-                    <a href="#${empresas[i].NombreUsuarioEmpresa}" onclick="verButonesUsuarioEmpresa(${j})" class="textInfo textA"><span class="textInfoSpan"> · </span>${empresas[i].NombreUsuarioEmpresa}</a>
-                </div>
-                <div class="col-sm-6 col-md-3 col-lg-4 col-xl-4 col-6">
-                    <h2 class="textInfo">${empresas[i].Correo}</h2>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-5 col-xl-5 col-6">
-                    <h2 class="textInfo">${empresas[i].LongirudyLatitud}</h2>
-                </div>
-            </li>
-        </ul>
-    `));
-        };
-    };
+                };
+            };
+        },
+        error:function(respuesta){
+            console.log("error");
+        }
+    });
+    
 }
 function Compras(){
     var sumatoria=0;
@@ -263,6 +259,7 @@ function GenerarCodigoQr(){
 }var UsuarioImport;
 $(document).ready(function(){
     UsuarioImport = localStorage.getItem("NombreEmpresa");
+    llaveImport = localStorage.getItem("llave");
     console.log(UsuarioImport);
     if(UsuarioImport==null){
         alert("Inicie Seccion Primero");

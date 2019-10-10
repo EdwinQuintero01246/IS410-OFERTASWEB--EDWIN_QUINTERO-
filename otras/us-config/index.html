@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Configuración Cliente</title>
+    <title>Configuracion Empresa</title>
     <link rel="icon" type="image/png" href="../../img/logo.png">
     <link rel="estilo-boostrap" href="../../css/bootstrap.min.css">
-    <link rel="estilo-boostrap" href="../../css/Style.css">
     <link rel="stylesheet" type=" text/css" media="screen" href="../../css/bootstrap.css">
     <link rel="stylesheet" type=" text/css" media="screen" href="css/Style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -16,327 +15,49 @@
     <script src="../../js/bootstrap.min.js" crossorigin="anonymous"></script>
 </head>
 <body id="body_confi">
-    <nav class="navbar navbar-expand-lg navbar-light bg-primary" >
-            <a class="navbar-brand" id="logo-button" href="">Quintex</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-button-option-navbar" href="../us-inicio/index.html">Inicio </a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-button-option-navbar" href="../us-perfil/index.html">Perfil </a>
-                    </li>
-                </ul>
-                <div class="dropdown" id="Option_config">
-                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src="../us-inicio/img/icon/option.png" alt="" >
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="../../index.html"><img src="../us-inicio/img/icon/cerrar_seccion.png" alt="" > Cerrar Sección</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <section>
-                <div class="container-fluid" >
-                    <div class="row" id="rowGeneral">
-                        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 col-12" id="LateralButton">
-                            <div>
-                                <div><span class="tittle">Información</span></div>
-                                <div class="SizeFormLi col-12 row">
-                                    <h1 onclick="ModalNombre()" class="content-text col-10">Nombre empresa</h1>
-                                    <a onclick="ModalNombre()" data-toggle="modal" data-target="#NombreModal" class="boton_personalizado col-2" href="">
-                                        <Img src="img/icon/editar.png">
-                                        </Img>
-                                    </a>
-                                </div>
-                                <div class="SizeFormLi col-12 row">
-                                    <h1 class="content-text col-10">Correo</h1>
-                                    <a onclick="ModalCorreo()" data-toggle="modal" data-target="#CorreoModal" class="boton_personalizado col-2" href="">
-                                        <Img src="img/icon/editar.png">
-                                        </Img>
-                                    </a>
-                                </div>
-                                <div class="SizeFormLi col-12 row">
-                                    <h1 class="content-text col-10">Contraseña</h1>
-                                    <a onclick="ModalContraseña()" data-toggle="modal" data-target="#ContraseñaModal" class="boton_personalizado col-2" href="">
-                                        <Img src="img/icon/editar.png">
-                                        </Img>
-                                    </a>
-                                </div>
-                                <div class="SizeFormLi col-12 row">
-                                    <h1 class="content-text col-10">Sexo</h1>
-                                    <a onclick="ModalSexo()" data-toggle="modal" data-target="#SexoModal" class="boton_personalizado col-2" href="">
-                                        <Img src="img/icon/editar.png">
-                                        </Img>
-                                    </a>
-                                </div>
-                                <div class="SizeFormLi col-12 row">
-                                    <h1 class="content-text col-10">Telefono(s)</h1>
-                                    <a onclick="ModalTelefono()" data-toggle="modal" data-target="#TelefonoModal" class="boton_personalizado col-2" href="">
-                                        <Img src="img/icon/editar.png">
-                                        </Img>
-                                    </a>
-                                </div>
-                                <div><div class="line"></div></div>
-                                <div><span class="tittle">ubicacion</span></div>
-                                <div class="row" id="rowGeneral">
-                                    <input class="content-text col-10" type="text" name="" id="text-lugar" placeholder="Lugar,Sitio" >
-                                    <a onclick="ModalGPS()" data-toggle="modal" data-target="#GPSModal" class="boton_personalizado col-2" href="">
-                                        <Img src="img/icon/localizacion.png">
-                                        </Img>
-                                    </a>
-                                </div>
-                                <div><div class="line"></div></div>
-                                <div><span class="tittle">Numero de cuenta</span></div>
-                                <div>
-                                    <a class="content-text">XXXX-XXXX-XXXX-2989</a>
-                                    <a onclick="ModalTarjeta()" data-toggle="modal" data-target="#TarjetaModal" class="boton_personalizado" href="">
-                                        <Img src="img/icon/tarjetas.png">
-                                        </Img>
-                                    </a>
-                                </div>
-                                <div><div class="line"></div></div>
-                                <div><span class="tittle">redes sociales</span></div>
-                                <div>
-                                    <div class="btn-group col-12 ceroPadding" role="group" aria-label="Basic example">
-                                        <button type="button" onclick="ModalFacebook()" data-toggle="modal" data-target="#FacebookModal" class="btn btn-facebook">facebook/</button>
-                                        <div class="input-group-text" id="btnGroupAddon">@</div>
-                                        <input type="text" class="form-control" disabled placeholder="redes" aria-label="Input group example" aria-describedby="btnGroupAddon">
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="btn-group col-12 ceroPadding" role="group" aria-label="Basic example">
-                                        <button type="button" onclick="ModalTwitter()" data-toggle="modal" data-target="#TwitterModal" class="btn btn-twitter">twitter.com/</button>
-                                        <div class="input-group-text" id="btnGroupAddon">@</div>
-                                        <input type="text" class="form-control" disabled placeholder="redes" aria-label="Input group example" aria-describedby="btnGroupAddon">
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="btn-group col-12 ceroPadding" role="group" aria-label="Basic example">
-                                        <button type="button" onclick="ModalInstagram()" data-toggle="modal" data-target="#InstagramModal" class="btn btn-instagram">instagram.com/</button>
-                                        <div class="input-group-text" id="btnGroupAddon">@</div>
-                                        <input type="text" class="form-control" disabled placeholder="redes" aria-label="Input group example" aria-describedby="btnGroupAddon">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-    <footer>
-    </footer>
-  <script src="../../js/jquery-3.4.1.min.js"></script>
-  <script src="../../js/bootstrap.min.js"></script>
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-
-<div id="GenerarModal">
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary" style="margin-bottom: 1px;">
+        <a class="navbar-brand" id="logo-button" href="">Quintex</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         
-</div>
-<!--div class="modal fade" id="TarjetaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document" >
-        <div class="modal-content">
-            <div class="modal-body">
-                <div class="container-fluid" >
-                    <div class="row">
-                        <ul class="UlConfModal" id="nuevoTextTarjeta">
-                            <li><span class="tittle" id="tittleModal">Editar</span></li>
-                            <li><span class="content-text">Tarjeta Actual:<span class="content-text" id="colorinfoUsuarioViejo"> XXXX-XXXX-XXXX-2989</span></span></li>
-                            <li>
-                                <span class="content-text">
-                                    <form class="form-horizontal">
-                                        <div class="form-group has-success has-feedback">
-                                            <label class="col-sm-2 control-label" for="inputSuccess"></label>
-                                            <div class="col-sm-12">
-                                                <input style="display: block;" type="button" value="Datos nuevos tarjeta" class="btn btn-secondary buttonModalTarjeta" id="buttonNuevosAtribustosTarjeta" >
-                                                <input type="tel" name="" id="NuevoTelefono" id="inputSuccess" style="font-size: 2rem" class="form-control textContrasenias" placeholder="Nuevo Numero Telefonico">
-                                            </div>
-                                        </div>
-                                    </form>
-                                </span>
-                            </li>
-                            <li><input onclick="guardarDatosTarjetaUsuario()" class="btn-danger" id="ButtonGuardar" type="button" value="Guardar"></li>
-                        </ul>
-                    </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-button-option-navbar" href="../us-inicio/index.html">Inicio </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-button-option-navbar" href="../us-perfil/index.html">Perfil </a>
+                </li>
+                <li class="nav-item active" id="nombreUsuario">
+                </li>
+            </ul>
+            <div class="dropdown" id="Option_config">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="../us-inicio/img/icon/option.png" alt="" >
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" onclick="cerrarSesion()" href="../../index.html"><img src="../us-inicio/img/icon/cerrar_seccion.png" alt="" > Cerrar Sección</a>
                 </div>
             </div>
         </div>
+    </nav>
+    <section>
+        <div class="container-fluid" >
+            <div class="row" id="rowGeneral">
+                <div class="col-sm-4 col-md-4 col-lg-4 col-xl-3 col-4" id="LateralButton">
+                    
+                </div>
+                <div class="col-sm-8 col-md-8 col-lg-8 col-xl-9 col-8 row" id="Información">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="GenerarModal">
     </div>
-</div>
-<div class="modal fade" id="TelefonoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document" >
-        <div class="modal-content">
-            <div class="modal-body">
-                <div class="container-fluid" >
-                    <div class="row">
-                        <ul class="UlConfModal">
-                            <li><span class="tittle" id="tittleModal">Editar</span></li>
-                            <li><span class="content-text">Telefono Actual:<span class="content-text" id="colorinfoUsuarioViejo"> 3247-1306</span></span></li>
-                            <li>
-                                <span class="content-text">
-                                    <form class="form-horizontal">
-                                        <div class="form-group has-success has-feedback">
-                                            <label class="col-sm-2 control-label" for="inputSuccess"></label>
-                                            <div class="col-sm-12">
-                                                <input type="tel" name="" id="NuevoTelefono" id="inputSuccess" style="font-size: 2rem" class="form-control textContrasenias" placeholder="Nuevo Numero Telefonico">
-                                            </div>
-                                        </div>
-                                    </form>
-                                </span>
-                            </li>
-                            <li><input onclick="guardarDatosTelefonoUsuario()" class="btn-danger" id="ButtonGuardar" type="button" value="Guardar"></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="SexoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document" >
-        <div class="modal-content">
-            <div class="modal-body">
-                <div class="container-fluid" >
-                    <div class="row">
-                        <ul class="UlConfModal">
-                            <li><span class="tittle" id="tittleModal">Editar</span></li>
-                            <li><span class="content-text">Genero Actual:<span class="content-text" id="colorinfoUsuarioViejo"> Masculino</span></span></li>
-                            <li><select class="select-css" id="select-css" onchange="selectSexo()">
-                                    <option value="0">Seccione un Elemento</option>
-                                    <option value="1">Masculino</option>
-                                    <option value="2">Femenino</option>
-                                    <option  value="3">Otros</option>
-                                    <div id="otrosGenero"></div>
-                                </select>
-                                <div id="infoOtros">
-                                </div>
-                            </li>
-                            <li><input onclick="guardarDatosGeneroUsuario()" class="btn-danger" id="ButtonGuardar" type="button" value="Guardar"></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="CorreoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document" >
-        <div class="modal-content">
-            <div class="modal-body">
-                <div class="container-fluid" >
-                    <div class="row">
-                        <ul class="UlConfModal">
-                            <li><span class="tittle" id="tittleModal">Editar</span></li>
-                            <li><span class="content-text">Correo Actual:<span class="content-text" id="colorCorreoViejo"> Mrs.Robot@unah.hn</span></span></li>
-                            <li>
-                                <form class="form-horizontal">
-                                    <div class="form-group has-success has-feedback">
-                                        <label class="col-sm-2 control-label" for="inputSuccess"></label>
-                                        <div class="col-sm-12">
-                                            <input type="text" name="" id="Correo" id="inputSuccess" style="font-size: 2rem" class="form-control textContrasenias" placeholder="Nombre Nuevo">
-                                        </div>
-                                    </div>
-                                </form>
-                            </li>
-                            <li><input onclick="guardarDatosCorreoUsuario()" class="btn-danger" id="ButtonGuardar" type="button" value="Guardar"></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="NombreModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document" >
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="container-fluid" >
-                        <div class="row">
-                            <ul class="UlConfModal">
-                                <li><span class="tittle" id="tittleModal">Editar</span></li>
-                                <li><span class="content-text">Nombre Actual:<span class="content-text"> Mrs. Robot</span></span></li>
-                                <li>
-                                    <span class="content-text">
-                                        <form class="form-horizontal">
-                                            <div class="form-group has-success has-feedback">
-                                                <label class="col-sm-2 control-label" for="inputSuccess"></label>
-                                                <div class="col-sm-12">
-                                                    <input type="text" name="" id="Nombre" id="inputSuccess" style="font-size: 2rem" class="form-control textContrasenias" placeholder="Nombre Nuevo">
-                                                    <div id="generarSpanContaseñaNueva"></div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </span>
-                                </li>
-                                <li><input onclick="guardarDatosNombreUsuario()" class="btn-danger" id="ButtonGuardar" type="button" value="Guardar"></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-<div class="modal fade" id="ContraseñaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document" >
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="container-fluid" >
-                        <div class="row">
-                            <ul class="UlConfModal">
-                                <li><span class="tittle" id="tittleModal">Editar</span></li>
-                                <li>
-                                    <form class="form-horizontal">
-                                        <div class="form-group has-success has-feedback">
-                                            <label class="col-sm-2 control-label" for="inputSuccess"></label>
-                                            <div class="col-sm-12">
-                                                <input type="password" name="" id="Contraseña" id="inputSuccess" style="font-size: 2rem" class="form-control textContrasenias" onchange="ContraseñaLocal()" placeholder="Contraseña Anterior">
-                                                <div id="generarSpanContaseñaVieja"></div>
-                                            </div>
-                                        </div>
-                                        <div id="contentContaseñaLocal"></div>
-                                    </form>
-                                </li>
-                                <li>
-                                    <form class="form-horizontal">
-                                        <div class="form-group has-success has-feedback">
-                                            <label class="col-sm-2 control-label" for="inputSuccess"></label>
-                                            <div class="col-sm-12">
-                                                <input type="password" name="" id="ContraseñaN" id="inputSuccess" style="font-size: 2rem" class="form-control textContrasenias" onchange="vercambio()" placeholder="Contraseña Nueva">
-                                                <div id="generarSpanContaseñaNueva"></div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </li>
-                                <li>
-                                    <form class="form-horizontal">
-                                        <div class="form-group has-success has-feedback">
-                                            <label class="col-sm-2 control-label" for="inputSuccess"></label>
-                                            <div class="col-sm-12">
-                                                <input type="password" name="" id="ContraseñaC" id="inputSuccess" style="font-size: 2rem" class="form-control textContrasenias" onchange="vercambio()" placeholder="Contraseña Nueva">
-                                                <div id="generarSpanContaseñaNueva"></div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </li>
-                                <li style="height: 70px;"><div id="contenidoRespuesta"></div></li>
-                                <li class="li-form-iniciar-seccion" id="confi_li_checkbutton">
-                                    <input type="checkbox" name="" id="Checkbutton" onclick="VerContraseña()" class="ng-valid ng-dirty ng-valid-parse ng-touched ng-not-empty" >
-                                    <span style="font-size: 15px" class="span_line"> Recuérdame</span>
-                                </li>
-                                <li>
-                                    <input type="button" class="btn-danger" id="ButtonGuardar" value="Guardar">
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script src="js/controlador.js"></script>
-    </div-->
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="js/controlador.js"></script>
 </body>
